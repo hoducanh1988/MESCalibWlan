@@ -45,8 +45,6 @@ namespace EW30SX.Asset.Global {
             if (!r) goto END;
             r = checkSettingPropertyInfo(_svm, nameof(_svm.SM.logBootCompleted), out msg);
             if (!r) goto END;
-            r = checkSettingPropertyInfo(_svm, nameof(_svm.SM.timeBootCompleted), out msg);
-            if (!r) goto END;
             r = checkSettingPropertyInfo(_svm, nameof(_svm.SM.calibTesttreeFile), out msg);
             if (!r) goto END;
             r = checkSettingPropertyInfo(_svm, nameof(_svm.SM.attTesttreeFile), out msg);

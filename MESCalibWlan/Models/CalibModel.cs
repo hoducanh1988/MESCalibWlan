@@ -41,12 +41,18 @@ namespace EW30SX.Models {
         public bool Passed() {
             buttonStartContent = "START";
             totalResult = "Passed";
+            logSystem += $"\n{DateTime.Now}, End test:\n";
+            logSystem += $"...Total result: {totalResult}\n";
+            logSystem += $"...Total time: {totalTime}\n";
             return true;
         }
 
         public bool Failed() {
             buttonStartContent = "START";
             totalResult = "Failed";
+            logSystem += $"\n{DateTime.Now}, End test:\n";
+            logSystem += $"...Total result: {totalResult}\n";
+            logSystem += $"...Total time: {totalTime}\n";
             return true;
         }
 

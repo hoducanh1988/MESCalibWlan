@@ -14,5 +14,6 @@ namespace EW30SX.Asset.Global {
         public static SettingViewModel settingviewmodel = new SettingViewModel();
         public static CalibViewModel calibviewmodel = new CalibViewModel();
         public static MainHeaderViewModel mainheaderviewmodel = new MainHeaderViewModel();
+        public static QSPRHelper<CalibModel, SettingModel> qsprHelper = null;
     }
 }

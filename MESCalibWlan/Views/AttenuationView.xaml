@@ -12,7 +12,7 @@
         <StackPanel>
             <Expander Height="Auto" IsExpanded="True">
                 <Expander.Header>
-                    <Label Padding="20,5,5,5" Background="#fff6b0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO SUY HAO TRẠM SỬ DỤNG MẠCH GOLDEN SAMPLE :"/>
+                    <Label Padding="20,5,5,5" Background="#fff6b0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO/VERIFY SUY HAO TRẠM SỬ DỤNG MẠCH GOLDEN SAMPLE :"/>
                 </Expander.Header>
 
                 <Grid Margin="5,5,5,0" Height="470">
@@ -40,7 +40,7 @@
                                     <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
                                     <Setter Property="Height" Value="25"/>
                                     <Setter Property="BorderThickness" Value="1,0,1,1"/>
-                                    <Setter Property="Width" Value="180"/>
+                                    <Setter Property="Width" Value="220"/>
                                     <Setter Property="HorizontalAlignment" Value="Left"/>
                                     <Setter Property="Padding" Value="10,2,0,0"/>
                                 </Style>
@@ -49,11 +49,11 @@
                                     <Setter Property="FontSize" Value="14"/>
                                     <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
                                     <Setter Property="BorderThickness" Value="0,0,1,1"/>
-                                    <Setter Property="Width" Value="120"/>
+                                    <Setter Property="Width" Value="100"/>
                                     <Setter Property="Height" Value="25"/>
                                     <Setter Property="FontWeight" Value="SemiBold"/>
                                     <Setter Property="HorizontalAlignment" Value="Left"/>
-                                    <Setter Property="Margin" Value="180,0,0,0"/>
+                                    <Setter Property="Margin" Value="220,0,0,0"/>
                                     <Setter Property="Padding" Value="10,2,0,0"/>
                                 </Style>
 
@@ -64,7 +64,7 @@
                                     <Setter Property="Width" Value="70"/>
                                     <Setter Property="Height" Value="25"/>
                                     <Setter Property="HorizontalAlignment" Value="Left"/>
-                                    <Setter Property="Margin" Value="300,0,0,0"/>
+                                    <Setter Property="Margin" Value="320,0,0,0"/>
                                     <Setter Property="Padding" Value="10,2,0,0"/>
                                 </Style>
 
@@ -77,19 +77,24 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Margin="0,5,0,0">
-                                    <Border Width="370" HorizontalAlignment="Left" BorderBrush="{StaticResource color_border}" BorderThickness="0,0,0,1" />
+                                    <Border Width="390" HorizontalAlignment="Left" BorderBrush="{StaticResource color_border}" BorderThickness="0,0,0,1" />
                                     <Grid>
-                                        <Label Content="Mở cổng COM" Style="{StaticResource label_name}" />
+                                        <Label Content="Mở cổng com dut" Style="{StaticResource label_name}" />
                                         <Label Content="Passed" Style="{StaticResource label_content}"/>
                                         <Label Style="{StaticResource label_time}" Content="0"/>
                                     </Grid>
                                     <Grid>
-                                        <Label Content="Chờ DUT khởi động" Style="{StaticResource label_name}" />
+                                        <Label Content="Chờ dut khởi động" Style="{StaticResource label_name}" />
                                         <Label Content="Passed" Style="{StaticResource label_content}"/>
                                         <Label Style="{StaticResource label_time}" Content="0"/>
                                     </Grid>
                                     <Grid>
-                                        <Label Content="Đăng nhập vào DUT" Style="{StaticResource label_name}" />
+                                        <Label Content="Đăng nhập vào dut" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+                                    <Grid>
+                                        <Label Content="Đọc mac wan của dut" Style="{StaticResource label_name}" />
                                         <Label Content="Passed" Style="{StaticResource label_content}"/>
                                         <Label Style="{StaticResource label_time}" Content="0"/>
                                     </Grid>
@@ -99,17 +104,17 @@
                                         <Label Style="{StaticResource label_time}" Content="0"/>
                                     </Grid>
                                     <Grid>
-                                        <Label Content="Đổi ip ethernet" Style="{StaticResource label_name}" />
+                                        <Label Content="Đổi ip ethernet dut" Style="{StaticResource label_name}" />
                                         <Label Content="Passed" Style="{StaticResource label_content}"/>
                                         <Label Style="{StaticResource label_time}" Content="0"/>
                                     </Grid>
                                     <Grid>
-                                        <Label Content="Ping tới địa chỉ ip mới" Style="{StaticResource label_name}" />
+                                        <Label Content="Ping tới địa chỉ ip mới của dut" Style="{StaticResource label_name}" />
                                         <Label Content="Passed" Style="{StaticResource label_content}"/>
                                         <Label Style="{StaticResource label_time}" Content="0"/>
                                     </Grid>
                                     <Grid>
-                                        <Label Content="Chuyển mode calib" Style="{StaticResource label_name}" />
+                                        <Label Content="Chuyển dut sang FTM mode" Style="{StaticResource label_name}" />
                                         <Label Content="Passed" Style="{StaticResource label_content}"/>
                                         <Label Style="{StaticResource label_time}" Content="0"/>
                                     </Grid>
@@ -150,10 +155,6 @@
                                             <WrapPanel>
                                                 <Label Content="Cổng com sản phẩm:" />
                                                 <Label FontWeight="SemiBold" Content="COM19" />
-                                            </WrapPanel>
-                                            <WrapPanel>
-                                                <Label Content="Trạng thái kết nối sản phẩm:" />
-                                                <Label FontWeight="SemiBold" Content="Connected" />
                                             </WrapPanel>
                                             <WrapPanel>
                                                 <Label Content="Còn lại:" />
@@ -244,13 +245,13 @@
 
             <Expander Margin="0,0,0,0" Height="Auto">
                 <Expander.Header>
-                    <Label Padding="20,5,5,5" Background="#caffb0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO SUY HAO TRẠM SỬ DỤNG DÂY RF : (chưa có)"/>
+                    <Label Padding="20,5,5,5" Background="#caffb0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO/VERIFY SUY HAO TRẠM SỬ DỤNG DÂY RF :"/>
                 </Expander.Header>
             </Expander>
 
             <Expander Margin="0,0,0,0" Height="Auto">
                 <Expander.Header>
-                    <Label Padding="20,5,5,5" Background="#ffd5b0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO SUY HAO TRẠM SỬ DỤNG MẠCH CALIBRATION KIT : (chưa có)"/>
+                    <Label Padding="20,5,5,5" Background="#ffd5b0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO/VERIFY SUY HAO TRẠM SỬ DỤNG MẠCH CALIBRATION KIT :"/>
                 </Expander.Header>
             </Expander>
         </StackPanel>

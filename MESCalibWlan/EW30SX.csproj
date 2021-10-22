@@ -18,7 +18,7 @@
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -86,8 +86,12 @@
     <Compile Include="Asset\Global\mySupport.cs" />
     <Compile Include="Asset\IO\DBHelper.cs" />
     <Compile Include="Asset\IO\DUTHelper.cs" />
+    <Compile Include="Asset\IO\LogHelper.cs" />
     <Compile Include="Asset\IO\QSPRHelper.cs" />
     <Compile Include="Asset\Protocol\Serial.cs" />
+    <Compile Include="Commands\CalibOpenAttTesttreeCommand.cs" />
+    <Compile Include="Commands\CalibOpenCalibTesttreeCommand.cs" />
+    <Compile Include="Commands\CalibOpenPathlossCommand.cs" />
     <Compile Include="Commands\CalibStartCommand.cs" />
     <Compile Include="Commands\LogGoCommand.cs" />
     <Compile Include="Commands\SettingBrowserAttTestTreeCommand.cs" />

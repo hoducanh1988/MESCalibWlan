@@ -1,0 +1,22 @@
+
+
+U-Boot 2016.01 (Oct 04 2021 - 18:11:34 +0700)
+
+DRAM:  smem ram ptable found: ver: 1 len: 4
+256 MiB
+NAND:  QPIC: disabled, skipping initialization
+SPI_ADDR_LEN=4
+SF: Detected W25Q256JW with page size 256 Bytes, erase size 4 KiB, total 32 MiB
+ipq_spi: page_size: 0x100, sector_size: 0x1000, size: 0x2000000
+32 MiB
+MMC:   sdhci: Node Not found, skipping initialization
+
+PCI0 is not defined in the device tree
+PCI1 is not defined in the device tree
+In:    serial@78AF000
+Out:   serial@78AF000
+Err:   serial@78AF000
+machid: 8040000
+eth0 MAC Address from ART is not valid
+eth1 MAC Address from ART is not valid
+Hit any key to stop autoboot:  3  2  1 

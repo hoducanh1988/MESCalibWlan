@@ -56,14 +56,6 @@ namespace EW30SX.Models {
                 OnPropertyChanged(nameof(logBootCompleted));
             }
         }
-        string _time_boot;
-        public string timeBootCompleted {
-            get { return _time_boot; }
-            set {
-                _time_boot = value;
-                OnPropertyChanged(nameof(timeBootCompleted));
-            }
-        }
         string _calib_testtree;
         public string calibTesttreeFile {
             get { return _calib_testtree; }

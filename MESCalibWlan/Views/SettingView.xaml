@@ -131,10 +131,6 @@
                     <Label Style="{StaticResource label_header}" Content="Log khởi động hoàn thành"/>
                     <TextBox Text="{Binding Path=SM.logBootCompleted, UpdateSourceTrigger=PropertyChanged}"/>
                 </Grid>
-                <Grid>
-                    <Label Style="{StaticResource label_header}" Content="Thời gian khởi động (sec)"/>
-                    <TextBox Text="{Binding Path=SM.timeBootCompleted, UpdateSourceTrigger=PropertyChanged}"/>
-                </Grid>
 
                 <Label Content="-"/>
                 <Label Style="{StaticResource label_legend}" Content="Cài đặt thông tin testtree:"/>

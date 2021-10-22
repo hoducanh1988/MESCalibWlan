@@ -16,6 +16,10 @@ namespace EW30SX.ViewModels {
             _sm = myGlobal.settingviewmodel.SM;
 
             StartCommand = new CalibStartCommand(this);
+            OpenCalibTestTreeCommand = new CalibOpenCalibTesttreeCommand(this);
+            OpenAttTestTreeCommand = new CalibOpenAttTesttreeCommand(this);
+            OpenPathlossCommand = new CalibOpenPathlossCommand(this);
+
         }
 
         CalibModel _cm;
@@ -29,6 +33,18 @@ namespace EW30SX.ViewModels {
 
         //command
         public ICommand StartCommand {
+            get;
+            private set;
+        }
+        public ICommand OpenCalibTestTreeCommand {
+            get;
+            private set;
+        }
+        public ICommand OpenAttTestTreeCommand {
+            get;
+            private set;
+        }
+        public ICommand OpenPathlossCommand {
             get;
             private set;
         }

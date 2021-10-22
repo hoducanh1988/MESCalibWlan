@@ -1,4 +1,5 @@
-﻿using EW30SX.ViewModels;
+﻿using EW30SX.Asset.Global;
+using EW30SX.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace EW30SX.Views {
     /// <summary>
@@ -20,9 +22,28 @@ namespace EW30SX.Views {
     /// </summary>
     public partial class CalibView : UserControl {
 
+        DispatcherTimer timer = null;
+
         public CalibView() {
             InitializeComponent();
-            this.DataContext = new CalibViewModel();
+            this.DataContext = myGlobal.calibviewmodel;
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(500);
+            timer.Tick += (s, e) => {
+                var testing = myGlobal.calibviewmodel.CM;
+                if (testing.totalResult.Contains("Waiting...")) {
+                    this.scr_dut.ScrollToEnd();
+                    this.scr_system.ScrollToEnd();
+                    this.scr_qspr.ScrollToEnd();
+                }
+            };
+            timer.Start();
+
+        }
+
+        ~CalibView() {
+            if (timer != null && timer.IsEnabled) timer.Stop();
         }
     }
 }

@@ -47,7 +47,7 @@
                         <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
                         <Setter Property="Height" Value="25"/>
                         <Setter Property="BorderThickness" Value="1,0,1,1"/>
-                        <Setter Property="Width" Value="200"/>
+                        <Setter Property="Width" Value="220"/>
                         <Setter Property="HorizontalAlignment" Value="Left"/>
                         <Setter Property="Padding" Value="5,2,0,0"/>
                     </Style>
@@ -60,7 +60,7 @@
                         <Setter Property="Height" Value="25"/>
                         <Setter Property="FontWeight" Value="SemiBold"/>
                         <Setter Property="HorizontalAlignment" Value="Left"/>
-                        <Setter Property="Margin" Value="200,0,0,0"/>
+                        <Setter Property="Margin" Value="220,0,0,0"/>
                         <Setter Property="Padding" Value="5,0,0,0"/>
                         <Setter Property="Foreground" Value="{StaticResource color_ready}"/>
                         <Style.Triggers>
@@ -83,7 +83,7 @@
                         <Setter Property="Width" Value="70"/>
                         <Setter Property="Height" Value="25"/>
                         <Setter Property="HorizontalAlignment" Value="Left"/>
-                        <Setter Property="Margin" Value="300,0,0,0"/>
+                        <Setter Property="Margin" Value="320,0,0,0"/>
                         <Setter Property="Padding" Value="5,2,0,0"/>
                     </Style>
 
@@ -96,7 +96,7 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel Margin="0,5,0,0">
-                        <Border Width="370" HorizontalAlignment="Left" BorderBrush="{StaticResource color_border}" BorderThickness="0,0,0,1" />
+                        <Border Width="390" HorizontalAlignment="Left" BorderBrush="{StaticResource color_border}" BorderThickness="0,0,0,1" />
                         <Grid>
                             <Label Content="Mở cổng com dut" Style="{StaticResource label_name}" />
                             <Label Content="{Binding CM.openComResult, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource label_content}"/>
@@ -117,7 +117,7 @@
                             <Label Content="{Binding CM.getMacWanResult, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource label_content}"/>
                             <Label Style="{StaticResource label_time}" Content="{Binding CM.getMacWanElapsedTime, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
-                        <Grid Margin="0,0,80,0">
+                        <Grid Margin="0,0,60,0">
                             <Grid.Style>
                                 <Style TargetType="Grid">
                                     <Setter Property="Background" Value="White"/>
@@ -133,7 +133,7 @@
                             <Label Content="{Binding CM.changeIPResult, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource label_content}"/>
                             <Label Style="{StaticResource label_time}" Content="{Binding CM.changeIPElapsedTime, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
-                        <Grid Margin="0,0,80,0">
+                        <Grid Margin="0,0,60,0">
                             <Grid.Style>
                                 <Style TargetType="Grid">
                                     <Setter Property="Background" Value="White"/>
@@ -154,7 +154,7 @@
                             <Label Content="{Binding CM.switchModeResult, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource label_content}"/>
                             <Label Style="{StaticResource label_time}" Content="{Binding CM.switchModeElapsedTime, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
-                        <Grid Margin="0,0,80,0">
+                        <Grid Margin="0,0,60,0">
                             <Grid.Style>
                                 <Style TargetType="Grid">
                                     <Setter Property="Background" Value="White"/>
@@ -219,6 +219,13 @@
                                         <Setter Property="FontSize" Value="14"/>
                                         <Setter Property="TextWrapping" Value="Wrap"/>
                                         <Setter Property="FontWeight" Value="SemiBold"/>
+                                        <Setter Property="Foreground" Value="Black"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Foreground" Value="Red" />
+                                            </Trigger>
+                                        </Style.Triggers>
                                     </Style>
                                 </StackPanel.Resources>
                                 <WrapPanel>
@@ -251,11 +258,23 @@
                                 <Label Style="{StaticResource label_title}" Content="Golden verify suy hao trạm:" />
                                 <TextBlock Style="{StaticResource textblock_setting}" Text="" />
                                 <Label Style="{StaticResource label_title}" Content="Testtree calib công suất:" />
-                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding SM.calibTesttreeFile, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding SM.calibTesttreeFile, UpdateSourceTrigger=PropertyChanged}">
+                                    <TextBlock.InputBindings>
+                                        <MouseBinding Command="{Binding OpenCalibTestTreeCommand}" MouseAction="LeftClick"/>
+                                    </TextBlock.InputBindings>
+                                </TextBlock>
                                 <Label Style="{StaticResource label_title}" Content="Testtree đo suy hao:" />
-                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding SM.attTesttreeFile, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding SM.attTesttreeFile, UpdateSourceTrigger=PropertyChanged}" >
+                                    <TextBlock.InputBindings>
+                                        <MouseBinding Command="{Binding OpenAttTestTreeCommand}" MouseAction="LeftClick"/>
+                                    </TextBlock.InputBindings>
+                                </TextBlock>
                                 <Label Style="{StaticResource label_title}" Content="Pathloss:" />
-                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding SM.pathLossFile, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding SM.pathLossFile, UpdateSourceTrigger=PropertyChanged}" >
+                                    <TextBlock.InputBindings>
+                                        <MouseBinding Command="{Binding OpenPathlossCommand}" MouseAction="LeftClick"/>
+                                    </TextBlock.InputBindings>
+                                </TextBlock>
                                 <Label Content="" Height="30"/>
                             </StackPanel>
                         </ScrollViewer>
@@ -269,7 +288,7 @@
                     <Label FontSize="14" Content="Log System"/>
                 </TabItem.Header>
 
-                <ScrollViewer>
+                <ScrollViewer x:Name="scr_system">
                     <RichTextBox IsReadOnly="True" Margin="0,0,1,2" Padding="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                         <FlowDocument>
                             <Paragraph>
@@ -286,7 +305,7 @@
                     <Label FontSize="14" Content="Log QSPR"/>
                 </TabItem.Header>
 
-                <ScrollViewer>
+                <ScrollViewer x:Name="scr_qspr">
                     <RichTextBox IsReadOnly="True" Margin="0,0,1,2" Padding="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                         <FlowDocument>
                             <Paragraph>
@@ -303,7 +322,7 @@
                     <Label FontSize="14" Content="Log Dut"/>
                 </TabItem.Header>
 
-                <ScrollViewer>
+                <ScrollViewer x:Name="scr_dut">
                     <RichTextBox IsReadOnly="True" Margin="0,0,1,2" Padding="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                         <FlowDocument>
                             <Paragraph>

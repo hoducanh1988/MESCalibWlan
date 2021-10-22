@@ -1,14 +1,13 @@
 ﻿<SettingModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ipDUT>192.168.88.1</ipDUT>
-  <ipPC>192.168.88.100</ipPC>
-  <comPort>COM1</comPort>
+  <ipPC>192.168.88.101</ipPC>
+  <comPort>COM43</comPort>
   <baudRate>115200</baudRate>
   <vnptMacHeader>A06518:A4F4C2:D49AA0:CC7190</vnptMacHeader>
-  <logBootCompleted>fast-classifier: registered</logBootCompleted>
-  <timeBootCompleted>60</timeBootCompleted>
-  <calibTesttreeFile>E:\VNPT\00.BackupData\VNPT\DEV-VNPT\VNPT_Projects\37. EW30SX\Test tree\EW30XX_vnpt_MP_v1.0.cxtt</calibTesttreeFile>
-  <attTesttreeFile>E:\VNPT\00.BackupData\VNPT\DEV-VNPT\VNPT_Projects\37. EW30SX\Test tree\EW30XX_vnpt_MP_v1.0.cxtt</attTesttreeFile>
-  <pathLossFile>E:\VNPT\00.BackupData\VNPT\DEV-VNPT\VNPT_Projects\37. EW30SX\Test tree\StationCal_pathloss.xml</pathLossFile>
+  <logBootCompleted>Starting QDSS for Integrated</logBootCompleted>
+  <calibTesttreeFile>C:\Users\chien\Desktop\MES_WIFI6\Testtree\EW30XX_vnpt_MP_v1.0.cxtt</calibTesttreeFile>
+  <attTesttreeFile>C:\Users\chien\Desktop\MES_WIFI6\Testtree\EW30XX_vnpt_MP_v1.0.cxtt</attTesttreeFile>
+  <pathLossFile>C:\Users\chien\Desktop\MES_WIFI6\Testtree\StationCal_pathloss.xml</pathLossFile>
   <snVariable>SN</snVariable>
   <macWlan2GVariable>WIFI0_MAC</macWlan2GVariable>
   <macWlan5GVariable>WIFI1_MAC</macWlan5GVariable>

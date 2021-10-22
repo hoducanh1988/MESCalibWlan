@@ -50,4 +50,4 @@ G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\MESCalibWlan\bin\Debug\EW30SX\Int
 G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\MESCalibWlan\bin\Debug\EW30SX\NationalInstruments.VisaNS.dll
 G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\MESCalibWlan\bin\Debug\EW30SX\NAudio.xml
 G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\MESCalibWlan\bin\Debug\EW30SX\NationalInstruments.VisaNS.xml
-G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\MESCalibWlan\obj\Debug\EW30SX.csproj.AssemblyReference.cache
+G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\MESCalibWlan\obj\Debug\EW30SX.csproj.CopyComplete

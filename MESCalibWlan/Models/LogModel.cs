@@ -9,7 +9,7 @@ namespace EW30SX.Models {
     public class LogModel : INotifyPropertyChanged {
 
         public LogModel() {
-            isAccess = isSetting = isSoftware = isProduct = false;
+            isAccess = isSetting = isSoftware = isGolden = isLog = false;
         }
 
 
@@ -37,12 +37,20 @@ namespace EW30SX.Models {
                 OnPropertyChanged(nameof(isSoftware));
             }
         }
-        bool _is_product;
-        public bool isProduct {
-            get { return _is_product; }
+        bool _is_golden;
+        public bool isGolden {
+            get { return _is_golden; }
             set {
-                _is_product = value;
-                OnPropertyChanged(nameof(isProduct));
+                _is_golden = value;
+                OnPropertyChanged(nameof(isGolden));
+            }
+        }
+        bool _is_log;
+        public bool isLog {
+            get { return _is_log; }
+            set {
+                _is_log = value;
+                OnPropertyChanged(nameof(isLog));
             }
         }
 

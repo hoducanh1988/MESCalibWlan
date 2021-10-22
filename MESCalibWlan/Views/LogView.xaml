@@ -38,6 +38,8 @@
         <RadioButton IsChecked="{Binding Path=LM.isAccess, UpdateSourceTrigger=PropertyChanged}"  Content="Microsoft Access Database"/>
         <RadioButton IsChecked="{Binding Path=LM.isSetting, UpdateSourceTrigger=PropertyChanged}" Content="Setting file"/>
         <RadioButton IsChecked="{Binding Path=LM.isSoftware, UpdateSourceTrigger=PropertyChanged}" Content="Software config file"/>
+        <RadioButton IsChecked="{Binding Path=LM.isGolden, UpdateSourceTrigger=PropertyChanged}" Content="Golden file"/>
+        <RadioButton IsChecked="{Binding Path=LM.isLog, UpdateSourceTrigger=PropertyChanged}" Content="Log folder"/>
         <Button FontSize="17" Command="{Binding GoCommand}" Content="Go"/>
 
     </StackPanel>

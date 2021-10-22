@@ -1,0 +1,9 @@
+Tree contains 172 tests and was started with serial number: IMAP_A4F4C20B422E
+Temp: Loading Assembly: C:\Qualcomm\WCN\ProdTests\BIN\QC.CTE.WLANTestSuite.DLL
+Test started: InitializeWlanTester-SCPI at: 10/22/2021 4:49:57 PM
+Log: TesterConfig :C:\Qfigs\TesterConfigFile\Keysight_Config_Example_VXT_4x1_FW.xml
+Log: StationCal   :C:\Qfigs\stationcal\StationCalDataFile.xml
+Log: InitializeWlanTester() failed: could not find stationCalFileName 'C:\Qfigs\stationcal\StationCalDataFile.xml'.
+Error: InitializeWlanTester() failed: could not find stationCalFileName 'C:\Qfigs\stationcal\StationCalDataFile.xml'.
+Test finished: InitializeWlanTester-SCPI with result: Failed LOOP_DETAILS=testerConfigFileName__C:\Qfigs\TesterConfigFile\Keysight_Config_Example_VXT_4x1_FW.xml_ _stationCalFileName__C:\Qfigs\stationcal\StationCalDataFile.xml_ _WlanTesterResourceID__WLANTester_ _TxStationCalPathName__BH0_LP,BH1_LP,BH2_LP,BH3_LP,BH4_LP,BH5_LP,BH6_LP,BH7_LP_ _RxStationCalPathName__BH0_LP,BH1_LP,BH2_LP,BH3_LP,BH4_LP,BH5_LP,BH6_LP,BH7_LP
+Tree finished with result: Failed and error code: 

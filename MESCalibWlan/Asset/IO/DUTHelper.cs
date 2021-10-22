@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Reflection;
 
 namespace EW30SX.Asset.IO {
 
@@ -32,7 +33,48 @@ namespace EW30SX.Asset.IO {
         }
 
         public bool wait_Boot_Completed() {
-            return true;
+            if (mesh.IsConnected() == false) return false;
+            bool r = false;
+            int delay_time = 500;
+            int max_count = (int.Parse(this.setting.GetType().GetProperty("timeOutBoot").GetValue(this.setting, null).ToString()) * 1000) / delay_time;
+            string expected_data = this.setting.GetType().GetProperty("logBootCompleted").GetValue(this.setting, null).ToString();
+            int pause_max = (int.Parse(this.setting.GetType().GetProperty("timeWaitLogin").GetValue(this.setting, null).ToString()) * 1000) / delay_time;
+            int count = 0, pause = 0;
+            string data = "";
+            PropertyInfo log_system = this.testing.GetType().GetProperty("logSystem");
+
+        RE:
+            count++;
+            string s = log_system.GetValue(this.testing, null).ToString();
+            s += $"{count}..";
+            log_system.SetValue(this.testing, Convert.ChangeType(s, log_system.PropertyType), null);
+            Thread.Sleep(delay_time);
+            data += mesh.Read();
+
+            //check null
+            r = !string.IsNullOrEmpty(data);
+            if (!r) {
+                if (count < max_count) {
+                    pause++;
+                    if (pause >= pause_max) {
+                        r = mesh.Query("", 3, "root@VNPT:/#");
+                        goto END;
+                    }
+                    else goto RE;
+                }
+                else goto END;
+            }
+
+            //check expected data
+            pause = 0;
+            r = data.ToLower().Contains(expected_data.ToLower());
+            if (!r) {
+                if (count < max_count) goto RE;
+                else goto END;
+            }
+
+        END:
+            return r;
         }
 
         public bool Login() {
@@ -42,7 +84,7 @@ namespace EW30SX.Asset.IO {
 
         RE:
             count++;
-            try { r = mesh.Query("", 1, "root@VNPT:/#", "root@VNPT:~#"); }
+            try { r = mesh.Query("", 1, "root@VNPT:/#"); }
             catch { r = false; }
 
             if (!r) {
@@ -86,33 +128,37 @@ namespace EW30SX.Asset.IO {
         public bool set_Ethernet_IP() {
             if (mesh.IsConnected() == false) return false;
             string ip_dut = this.setting.GetType().GetProperty("ipDUT").GetValue(this.setting, null).ToString();
-            mesh.WriteLine("");
-            Thread.Sleep(100);
-            mesh.WriteLine($"ifconfig br-lan {ip_dut}");
-            Thread.Sleep(100);
-            mesh.WriteLine("");
-            Thread.Sleep(100);
-            mesh.WriteLine("netmask 255.255.255.0 up");
-            Thread.Sleep(100);
-
-            return true;
+            bool r = false;
+            r = mesh.Query($"ifconfig br-lan {ip_dut}", 3, "root@VNPT:/#");
+            if (!r) return false;
+            r = mesh.Query("netmask 255.255.255.0 up", 3, "root@VNPT:/#");
+            return r;
         }
 
         public bool set_FTM_Mode() {
             if (mesh.IsConnected() == false) return false;
             string ip_pc = this.setting.GetType().GetProperty("ipPC").GetValue(this.setting, null).ToString();
-            mesh.WriteLine("wifi down");
-            mesh.WriteLine("rmmod wifi_3_0");
-            mesh.WriteLine("rmmod qca_ol");
-            mesh.WriteLine("insmod qca_ol testmode=1");
-            mesh.WriteLine("insmod wifi_3_0");
-            mesh.WriteLine("insmod diagchar");
-            mesh.WriteLine($"diag_socket_app -a {ip_pc} &");
-            mesh.WriteLine("/etc/init.d/ftm start");
-            mesh.WriteLine("ftm -n -dd &");
-            return true;
+            bool r = false;
+            r = mesh.Query("wifi down", 10, "root@VNPT:/#");
+            if (!r) return false;
+            r = mesh.Query("rmmod wifi_3_0", 10, "root@VNPT:/#");
+            if (!r) return false;
+            r = mesh.Query("rmmod qca_ol", 3, "root@VNPT:/#");
+            if (!r) return false;
+            r = mesh.Query("insmod qca_ol testmode=1", 3, "root@VNPT:/#");
+            if (!r) return false;
+            r = mesh.Query("insmod wifi_3_0", 10, "root@VNPT:/#");
+            if (!r) return false;
+            r = mesh.Query("insmod diagchar", 3, "root@VNPT:/#");
+            if (!r) return false;
+            r = mesh.Query($"diag_socket_app -a {ip_pc} &", 30, "diag_socket_log: Successful connect to address");
+            if (!r) return false;
+            r = mesh.Query("/etc/init.d/ftm start", 10, "root@VNPT:/#");
+            if (!r) return false;
+            r = mesh.Query("ftm -n -dd &", 10, "FTMDaemon: Diag_LSM_Init succesful");
+            return r;
         }
-        
+
         public void Dispose() {
             if (mesh != null) mesh.Close();
         }
