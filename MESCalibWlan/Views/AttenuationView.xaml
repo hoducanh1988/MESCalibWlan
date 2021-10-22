@@ -1,0 +1,261 @@
+﻿<UserControl x:Class="EW30SX.Views.AttenuationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EW30SX.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="800" Background="White">
+
+
+    <ScrollViewer>
+        <StackPanel>
+            <Expander Height="Auto" IsExpanded="True">
+                <Expander.Header>
+                    <Label Padding="20,5,5,5" Background="#fff6b0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO SUY HAO TRẠM SỬ DỤNG MẠCH GOLDEN SAMPLE :"/>
+                </Expander.Header>
+
+                <Grid Margin="5,5,5,0" Height="470">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <WrapPanel>
+                        <Button Content="ĐO" FontSize="17" FontWeight="SemiBold" Width="120" Height="40" HorizontalAlignment="Left"/>
+                        <Button Margin="10,0,0,0" Content="VERIFY" FontSize="17" FontWeight="SemiBold" Width="120" Height="40" HorizontalAlignment="Left"/>
+                    </WrapPanel>
+
+
+                    <TabControl Grid.Row="1" TabStripPlacement="Bottom">
+                        <TabItem>
+                            <TabItem.Header>
+                                <Label FontSize="14" Content="Log Item"/>
+                            </TabItem.Header>
+
+                            <TabItem.Resources>
+
+                                <Style TargetType="Label" x:Key="label_name">
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+                                    <Setter Property="Height" Value="25"/>
+                                    <Setter Property="BorderThickness" Value="1,0,1,1"/>
+                                    <Setter Property="Width" Value="180"/>
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                    <Setter Property="Padding" Value="10,2,0,0"/>
+                                </Style>
+
+                                <Style TargetType="Label" x:Key="label_content">
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+                                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                    <Setter Property="Width" Value="120"/>
+                                    <Setter Property="Height" Value="25"/>
+                                    <Setter Property="FontWeight" Value="SemiBold"/>
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                    <Setter Property="Margin" Value="180,0,0,0"/>
+                                    <Setter Property="Padding" Value="10,2,0,0"/>
+                                </Style>
+
+                                <Style TargetType="Label" x:Key="label_time">
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+                                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                    <Setter Property="Width" Value="70"/>
+                                    <Setter Property="Height" Value="25"/>
+                                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                                    <Setter Property="Margin" Value="300,0,0,0"/>
+                                    <Setter Property="Padding" Value="10,2,0,0"/>
+                                </Style>
+
+                            </TabItem.Resources>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="450"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Margin="0,5,0,0">
+                                    <Border Width="370" HorizontalAlignment="Left" BorderBrush="{StaticResource color_border}" BorderThickness="0,0,0,1" />
+                                    <Grid>
+                                        <Label Content="Mở cổng COM" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+                                    <Grid>
+                                        <Label Content="Chờ DUT khởi động" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+                                    <Grid>
+                                        <Label Content="Đăng nhập vào DUT" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+                                    <Grid>
+                                        <Label Content="Xác nhận mạch golden" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+                                    <Grid>
+                                        <Label Content="Đổi ip ethernet" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+                                    <Grid>
+                                        <Label Content="Ping tới địa chỉ ip mới" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+                                    <Grid>
+                                        <Label Content="Chuyển mode calib" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+                                    <Grid>
+                                        <Label Content="Đo/verify suy hao trạm" Style="{StaticResource label_name}" />
+                                        <Label Content="Passed" Style="{StaticResource label_content}"/>
+                                        <Label Style="{StaticResource label_time}" Content="0"/>
+                                    </Grid>
+
+                                    <WrapPanel Margin="0,10,0,0">
+                                        <Label Content="Mac wan mạch golden: " FontSize="14" />
+                                        <Label Content="A4F4C20A0B0C" FontWeight="SemiBold" FontSize="14" />
+                                    </WrapPanel>
+                                    <WrapPanel Margin="0,-5,0,0">
+                                        <Label Content="Tổng thời gian: " FontSize="14" />
+                                        <Label Content="00:00:00" FontWeight="SemiBold" FontSize="14" />
+                                    </WrapPanel>
+                                    <Label Margin="0,-5,0,0" Content="Kết quả: " FontSize="14" />
+                                    <Label Margin="0,-15,0,0" Content="Passed" FontWeight="SemiBold" FontSize="50" Foreground="Lime" />
+
+                                </StackPanel>
+
+                                <Grid Grid.Column="1" Background="{StaticResource color_background}">
+                                    <ScrollViewer>
+                                        <StackPanel Margin="10,0,0,0">
+                                            <StackPanel.Resources>
+                                                <Style TargetType="Label">
+                                                    <Setter Property="FontSize" Value="14"/>
+                                                </Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Setter Property="FontSize" Value="14"/>
+                                                </Style>
+                                            </StackPanel.Resources>
+                                            <WrapPanel>
+                                                <Label Content="Địa chỉ ip calib:" />
+                                                <Label FontWeight="SemiBold" Content="192.168.88.10" />
+                                            </WrapPanel>
+                                            <WrapPanel>
+                                                <Label Content="Cổng com sản phẩm:" />
+                                                <Label FontWeight="SemiBold" Content="COM19" />
+                                            </WrapPanel>
+                                            <WrapPanel>
+                                                <Label Content="Trạng thái kết nối sản phẩm:" />
+                                                <Label FontWeight="SemiBold" Content="Connected" />
+                                            </WrapPanel>
+                                            <WrapPanel>
+                                                <Label Content="Còn lại:" />
+                                                <Label FontWeight="SemiBold" Content="500 / 500" />
+                                            </WrapPanel>
+                                            <WrapPanel>
+                                                <Label Content="Độ lệch công suất golden (dBm):" />
+                                                <Label FontWeight="SemiBold" Content="1" />
+                                            </WrapPanel>
+                                            <WrapPanel>
+                                                <Label Content="Số lượng golden verify suy hao:" />
+                                                <Label FontWeight="SemiBold" Content="4" />
+                                            </WrapPanel>
+                                            <WrapPanel>
+                                                <Label Content="Golden đo suy hao trạm:" />
+                                                <Label FontWeight="SemiBold" Content="A4F4C2000001" />
+                                            </WrapPanel>
+
+                                            <Label Content="Golden verify suy hao trạm:" />
+                                            <TextBlock FontWeight="SemiBold" TextWrapping="Wrap" Text="A4F4C2000001 :: A4F4C2000002 :: A4F4C2000003 :: A4F4C2000004" />
+                                            <Label Content="Testtree calib công suất:" />
+                                            <TextBlock FontWeight="SemiBold" TextWrapping="Wrap" Text="G:\Mesh_FE\IMAP_iPA_Anritsu_Test_Tree\2G\1_Setup attenuation\IMAP_iPA_Verify_Attenuation_Anritsu_WLAN_2G v1.0_NewBoaddata_191102.xtt" />
+                                            <Label Content="Testtree đo suy hao:" />
+                                            <TextBlock FontWeight="SemiBold" TextWrapping="Wrap" Text="G:\Mesh_FE\IMAP_iPA_Anritsu_Test_Tree\2G\1_Setup attenuation\IMAP_iPA_Verify_Attenuation_Anritsu_WLAN_2G v1.0_NewBoaddata_191102.xtt" />
+                                            <Label Content="Pathloss:" />
+                                            <TextBlock FontWeight="SemiBold" TextWrapping="Wrap" Text="C:\Users\chien\Desktop\Mesh-SG\Attenuation\iMAP_EW12CG_StationCal_V1.0_29APR2020\StationCal_pathloss_IMAP_Anritsu.xml" />
+                                            <Label Content="" Height="30"/>
+                                        </StackPanel>
+                                    </ScrollViewer>
+
+
+                                </Grid>
+
+                            </Grid>
+                        </TabItem>
+
+                        <TabItem>
+                            <TabItem.Header>
+                                <Label FontSize="14" Content="Log System"/>
+                            </TabItem.Header>
+
+                            <ScrollViewer>
+                                <RichTextBox IsReadOnly="True" Margin="0,0,1,2" Padding="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <FlowDocument>
+                                        <Paragraph>
+                                            <Run Text="{Binding Path=sshLog, UpdateSourceTrigger=PropertyChanged}"/>
+                                        </Paragraph>
+                                    </FlowDocument>
+                                </RichTextBox>
+                            </ScrollViewer>
+                        </TabItem>
+
+                        <TabItem>
+                            <TabItem.Header>
+                                <Label FontSize="14" Content="Log QSPR"/>
+                            </TabItem.Header>
+
+                            <ScrollViewer>
+                                <RichTextBox IsReadOnly="True" Margin="0,0,1,2" Padding="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <FlowDocument>
+                                        <Paragraph>
+                                            <Run Text="{Binding Path=sshLog, UpdateSourceTrigger=PropertyChanged}"/>
+                                        </Paragraph>
+                                    </FlowDocument>
+                                </RichTextBox>
+                            </ScrollViewer>
+                        </TabItem>
+
+                        <TabItem>
+                            <TabItem.Header>
+                                <Label FontSize="14" Content="Log Dut"/>
+                            </TabItem.Header>
+
+                            <ScrollViewer>
+                                <RichTextBox IsReadOnly="True" Margin="0,0,1,2" Padding="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <FlowDocument>
+                                        <Paragraph>
+                                            <Run Text="{Binding Path=sshLog, UpdateSourceTrigger=PropertyChanged}"/>
+                                        </Paragraph>
+                                    </FlowDocument>
+                                </RichTextBox>
+                            </ScrollViewer>
+                        </TabItem>
+
+                    </TabControl>
+                </Grid>
+            </Expander>
+
+            <Expander Margin="0,0,0,0" Height="Auto">
+                <Expander.Header>
+                    <Label Padding="20,5,5,5" Background="#caffb0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO SUY HAO TRẠM SỬ DỤNG DÂY RF : (chưa có)"/>
+                </Expander.Header>
+            </Expander>
+
+            <Expander Margin="0,0,0,0" Height="Auto">
+                <Expander.Header>
+                    <Label Padding="20,5,5,5" Background="#ffd5b0" Width="500" FontSize="15" FontWeight="SemiBold" Content="ĐO SUY HAO TRẠM SỬ DỤNG MẠCH CALIBRATION KIT : (chưa có)"/>
+                </Expander.Header>
+            </Expander>
+        </StackPanel>
+
+    </ScrollViewer>
+
+
+</UserControl>
