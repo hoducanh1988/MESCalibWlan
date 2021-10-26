@@ -12,12 +12,14 @@ using System.Diagnostics;
 using System.Net.NetworkInformation;
 using EW30SX.Asset.Global;
 using UtilityPack.IO;
+using System.IO;
 
 namespace EW30SX.Commands {
     public class CalibStartCommand : ICommand {
 
         private CalibViewModel _cvm;
         private CalibModel testing = null;
+        private AttenuationModel am = null;
         private SettingModel setting = null;
 
         public CalibStartCommand(CalibViewModel cvm) {
@@ -66,6 +68,8 @@ namespace EW30SX.Commands {
                 r = login_to_dut(dut, testing, setting); if (!r) goto END;
                 //get mac wan
                 r = get_mac_wan(dut, testing, setting); if (!r) goto END;
+                //check mac is golden or not
+                r = is_mac_golden(testing); if (r) goto END;
 
                 if (setting.isChangeIp) {
                     //change ip dut
@@ -211,6 +215,37 @@ namespace EW30SX.Commands {
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        private bool is_mac_golden(CalibModel t) {
+            Stopwatch st = new Stopwatch();
+            st.Start();
+            bool r = false;
+            t.logSystem += $"\n{DateTime.Now}, Check mac sản phẩm có phải là golden hay không:\n";
+            t.checkGoldenResult = "Waiting...";
+
+            var fs = new DirectoryInfo($"{AppDomain.CurrentDomain.BaseDirectory}Goldens").GetFiles();
+            if (fs != null) {
+                var buffer = fs.Select(x => x.Name);
+                t.logSystem += $"...mac wan = {t.macWan}\n";
+                t.logSystem += "...Golden:\n";
+                foreach (var f in buffer) t.logSystem += $"{f}\n";
+                foreach (var f in buffer) {
+                    r = f.ToLower().Contains(t.macWan.ToLower());
+                    if (r) break;
+                }
+            }
+
+            t.logSystem += $"...Kết quả = {r}\n";
+            t.checkGoldenResult = r == false ? "Passed" : "Failed";
+            st.Stop();
+            t.checkGoldenElapsedTime = st.ElapsedMilliseconds.ToString();
+            return r;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="dut"></param>
         /// <param name="t"></param>
         /// <param name="s"></param>
@@ -331,8 +366,8 @@ namespace EW30SX.Commands {
             z.IsBackground = true;
             z.Start();
 
-            if (myGlobal.qsprHelper == null) myGlobal.qsprHelper = new QSPRHelper<CalibModel, SettingModel>();
-            myGlobal.qsprHelper.setObject(testing, setting);
+            if (myGlobal.qsprHelper == null) myGlobal.qsprHelper = new QSPRHelper<CalibModel, AttenuationModel, SettingModel>();
+            myGlobal.qsprHelper.setObject(testing, am, setting, true);
             myGlobal.qsprHelper.run_Test_Tree(setting.calibTesttreeFile);
             int c = 0;
         RE:

@@ -1,0 +1,11 @@
+
+10/25/2021 5:38:48 PM, Mở cổng COM43,115200:
+...Kết quả = True
+
+10/25/2021 5:38:48 PM, Chờ sản phẩm khởi động xong:
+1..2..3..4..5..6..7..8..9..10..
+...Kết quả = False
+
+10/25/2021 5:38:56 PM, End test:
+...Total result: Failed
+...Total time: 00:00:08

@@ -1,0 +1,276 @@
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.101, port number: 2500
+diag: unable to switch logging mode to 5, err: -1, errno: 22
+diag_socket_log: Peer closed connection. Trying to recover connection
+diag: no actual logging switch required
+diag_socket_log: Translating address: 192.168.88.101
+diag_socket_log: Trying to connect to address: 192.168.88.101, port: 2500

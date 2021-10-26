@@ -80,7 +80,7 @@ namespace EW30SX.Asset.IO
 
         bool save_log_total() {
             try {
-                string title = "DATE_TIME_CREATED,MAC_WAN,RESULT,TOTAL_TIME,OPEN_COM,BOOT,LOGIN,GET_MAC,CHANGE_IP,PING_IP,FTM_MODE,CALIB";
+                string title = "DATE_TIME_CREATED,MAC_WAN,RESULT,TOTAL_TIME,OPEN_COM,BOOT,LOGIN,GET_MAC,CHECK_GOLDEN,CHANGE_IP,PING_IP,FTM_MODE,CALIB";
                 string log_content = $"{DateTime.Now.ToString()}," +
                                      $"{testing.GetType().GetProperty("macWan").GetValue(testing, null).ToString()}," +
                                      $"{testing.GetType().GetProperty("totalResult").GetValue(testing, null).ToString()}," +
@@ -89,6 +89,7 @@ namespace EW30SX.Asset.IO
                                      $"{testing.GetType().GetProperty("bootCompleteResult").GetValue(testing, null).ToString()}," +
                                      $"{testing.GetType().GetProperty("loginResult").GetValue(testing, null).ToString()}," +
                                      $"{testing.GetType().GetProperty("getMacWanResult").GetValue(testing, null).ToString()}," +
+                                     $"{testing.GetType().GetProperty("checkGoldenResult").GetValue(testing, null).ToString()}," +
                                      $"{testing.GetType().GetProperty("changeIPResult").GetValue(testing, null).ToString()}," +
                                      $"{testing.GetType().GetProperty("pingDUTResult").GetValue(testing, null).ToString()}," +
                                      $"{testing.GetType().GetProperty("switchModeResult").GetValue(testing, null).ToString()}," +

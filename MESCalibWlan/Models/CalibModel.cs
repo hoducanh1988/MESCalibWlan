@@ -21,6 +21,7 @@ namespace EW30SX.Models {
                           = pingDUTResult
                           = switchModeResult
                           = calibWlanResult 
+                          = checkGoldenResult
                           = "-";
 
             openComElapsedTime = bootCompleteElapsedTime
@@ -30,6 +31,7 @@ namespace EW30SX.Models {
                                = pingDUTElapsedTime
                                = switchModeElapsedTime
                                = calibWlanElapsedTime 
+                               = checkGoldenElapsedTime
                                = "-";
 
             macWan = "";
@@ -156,6 +158,22 @@ namespace EW30SX.Models {
             set {
                 _get_mac_elapsed = value;
                 OnPropertyChanged(nameof(getMacWanElapsedTime));
+            }
+        }
+        string _check_golden_result;
+        public string checkGoldenResult {
+            get { return _check_golden_result; }
+            set {
+                _check_golden_result = value;
+                OnPropertyChanged(nameof(checkGoldenResult));
+            }
+        }
+        string _check_golden_elapsed;
+        public string checkGoldenElapsedTime {
+            get { return _check_golden_elapsed; }
+            set {
+                _check_golden_elapsed = value;
+                OnPropertyChanged(nameof(checkGoldenElapsedTime));
             }
         }
         string _change_ip_result;

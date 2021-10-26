@@ -117,6 +117,11 @@
                             <Label Content="{Binding CM.getMacWanResult, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource label_content}"/>
                             <Label Style="{StaticResource label_time}" Content="{Binding CM.getMacWanElapsedTime, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
+                        <Grid>
+                            <Label Content="Mac wan không phải golden" Style="{StaticResource label_name}" />
+                            <Label Content="{Binding CM.checkGoldenResult, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource label_content}"/>
+                            <Label Style="{StaticResource label_time}" Content="{Binding CM.checkGoldenElapsedTime, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
                         <Grid Margin="0,0,60,0">
                             <Grid.Style>
                                 <Style TargetType="Grid">

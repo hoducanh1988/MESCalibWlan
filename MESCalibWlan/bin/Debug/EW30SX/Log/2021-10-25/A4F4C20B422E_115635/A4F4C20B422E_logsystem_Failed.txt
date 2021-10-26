@@ -1,0 +1,43 @@
+
+10/25/2021 11:56:13 AM, Mở cổng COM43,115200:
+...Kết quả = True
+
+10/25/2021 11:56:13 AM, Chờ sản phẩm khởi động xong:
+1..2..3..4..5..6..7..8..9..10..
+...Kết quả = True
+
+10/25/2021 11:56:18 AM, Đăng nhập vào sản phẩm:
+...Kết quả = True
+
+10/25/2021 11:56:18 AM, Đọc mac wan từ sản phẩm:
+...mac wan = A4F4C20B422E
+...Kết quả = True
+
+10/25/2021 11:56:19 AM, Check mac sản phẩm có phải là golden hay không:
+...mac wan = A4F4C20B422E
+...Golden:
+GOLDEN_A4F4C22172CF.txt
+GOLDEN_A4F4C2217B4F.txt
+GOLDEN_A4F4C2218173.txt
+GOLDEN_A4F4C221CEA4.txt
+...Kết quả = False
+
+10/25/2021 11:56:19 AM, Đổi ip sản phẩm thành 192.168.88.1:
+...Kết quả = True
+
+10/25/2021 11:56:19 AM, Ping tới địa chỉ ip 192.168.88.1:
+...Pinging 192.168.88.1 with 32 bytes of data:
+...Reply from 192.168.88.1: bytes=32 time<1ms TTL=64
+...Kết quả = True
+
+10/25/2021 11:56:20 AM, Chuyển mode dut sang FTM:
+1..2..3..4..5..6..7..8..9..10..11..12..13..14..15..16..
+...Kết quả = True
+
+10/25/2021 11:56:28 AM, Run testtree calib C:\Users\chien\Desktop\MES_WIFI6\Testtree\EW30XX_vnpt_MP_v1.0.cxtt:
+1..2..3..4..5..6..7..8..9..10..11..12..13..
+...Kết quả = False
+
+10/25/2021 11:56:35 AM, End test:
+...Total result: Failed
+...Total time: 00:00:22

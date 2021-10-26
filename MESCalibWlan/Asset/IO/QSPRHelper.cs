@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EW30SX.Asset.IO {
-    public class QSPRHelper <T, S> where T : class, new() where S: class, new() {
+    public class QSPRHelper <T,U,S> where T : class, new() where S: class, new() where U :class, new() {
 
         QSPRScheduler _scheduler;
         QSPRTestTree _testTree;
-        T testinfo;
+        T testinfo_1;
+        U testinfo_2;
         S settinginfo;
+        bool is_T_not_U = false;
         string xmsg_name = "logQSPR";
 
         public QSPRHelper() {
@@ -23,9 +25,11 @@ namespace EW30SX.Asset.IO {
             _scheduler.LoadWorkspaceConfig(@"C:\Qualcomm\QSPR\QSPRConfigurations\Workspace.config");
         }
 
-        public void setObject(T obj_t, S obj_s) {
-            testinfo = obj_t;
+        public void setObject(T obj_t1, U obj_t2, S obj_s, bool is_t) {
+            testinfo_1 = obj_t1;
+            testinfo_2 = obj_t2;
             settinginfo = obj_s;
+            is_T_not_U = is_t;
         }
 
         private void _scheduler_OnDebugMessage(string strWin, string strText, int traceLevel, bool NoEndOfLine) {
@@ -74,15 +78,19 @@ namespace EW30SX.Asset.IO {
         }
 
         private void UpdateStatusWindow(string msg) {
-            PropertyInfo xmsg = testinfo.GetType().GetProperty(xmsg_name);
-            string str_curr = xmsg.GetValue(testinfo, null).ToString();
+            PropertyInfo xmsg = is_T_not_U ? testinfo_1.GetType().GetProperty(xmsg_name) : testinfo_2.GetType().GetProperty(xmsg_name);
+            string str_curr = "";
+            if (is_T_not_U == true) str_curr = xmsg.GetValue(testinfo_1, null).ToString();
+            else str_curr = xmsg.GetValue(testinfo_2, null).ToString();
             str_curr += string.Format("{0}\r\n", msg);
-            xmsg.SetValue(testinfo, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
+            if (is_T_not_U) xmsg.SetValue(testinfo_1, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
+            else xmsg.SetValue(testinfo_2, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
         }
 
         private void ClearStatusWindow() {
-            PropertyInfo xmsg = testinfo.GetType().GetProperty(xmsg_name);
-            xmsg.SetValue(testinfo, Convert.ChangeType("", xmsg.PropertyType), null);
+            PropertyInfo xmsg = is_T_not_U ? testinfo_1.GetType().GetProperty(xmsg_name) : testinfo_2.GetType().GetProperty(xmsg_name);
+            if (is_T_not_U) xmsg.SetValue(testinfo_1, Convert.ChangeType("", xmsg.PropertyType), null);
+            else xmsg.SetValue(testinfo_2, Convert.ChangeType("", xmsg.PropertyType), null);
         }
 
 
@@ -96,7 +104,8 @@ namespace EW30SX.Asset.IO {
                 string g_macEth0 = "";
                 string g_SN = "";
 
-                g_macEth0 = testinfo.GetType().GetProperty("macWan").GetValue(testinfo, null).ToString();
+                if (is_T_not_U) g_macEth0 = testinfo_1.GetType().GetProperty("macWan").GetValue(testinfo_1, null).ToString();
+                else g_macEth0 = testinfo_2.GetType().GetProperty("macWan").GetValue(testinfo_2, null).ToString();
                 g_SN = "IMAP_" + g_macEth0;
                 string AddMac_Value_tam = g_macEth0.Substring(6, 6);
                 g_mac2G_onboard = g_macEth0.Substring(0, 6) + GetMAC2G(AddMac_Value_tam);
@@ -110,11 +119,14 @@ namespace EW30SX.Asset.IO {
                 return true;
             }
             else {
-                PropertyInfo xmsg = testinfo.GetType().GetProperty(xmsg_name);
-                string str_curr = xmsg.GetValue(testinfo, null).ToString();
+                PropertyInfo xmsg = is_T_not_U ? testinfo_1.GetType().GetProperty(xmsg_name) : testinfo_2.GetType().GetProperty(xmsg_name);
+                string str_curr = "";
+                if (is_T_not_U) str_curr = xmsg.GetValue(testinfo_1, null).ToString();
+                else str_curr = xmsg.GetValue(testinfo_2, null).ToString();
                 string msg = "Error in command line arguments. The first cmd argument should be an cxtt filename that exists.";
                 str_curr += string.Format("{0}\r\n", msg);
-                xmsg.SetValue(testinfo, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
+                if (is_T_not_U) xmsg.SetValue(testinfo_1, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
+                else xmsg.SetValue(testinfo_2, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
                 return false;
             }
         }
@@ -133,8 +145,10 @@ namespace EW30SX.Asset.IO {
 
         public int tree_Execution_Status() {
             try {
-                PropertyInfo xmsg = testinfo.GetType().GetProperty(xmsg_name);
-                string str_curr = xmsg.GetValue(testinfo, null).ToString();
+                PropertyInfo xmsg = is_T_not_U ? testinfo_1.GetType().GetProperty(xmsg_name) : testinfo_2.GetType().GetProperty(xmsg_name);
+                string str_curr = "";
+                if (is_T_not_U) str_curr = xmsg.GetValue(testinfo_1, null).ToString();
+                else str_curr = xmsg.GetValue(testinfo_2, null).ToString();
                 bool r = str_curr.Contains("Tree finished with result: ");
                 if (!r) return 4;
                 else {

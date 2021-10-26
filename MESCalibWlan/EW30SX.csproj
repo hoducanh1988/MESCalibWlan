@@ -82,6 +82,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Asset\Custom\FocusExtension.cs" />
+    <Compile Include="Asset\Custom\GoldenFrequencyInfo.cs" />
+    <Compile Include="Asset\Custom\PathlossFrequencyInfo.cs" />
+    <Compile Include="Asset\Custom\PowerDifferenceInfo.cs" />
+    <Compile Include="Asset\Custom\TestFrequencyInfo.cs" />
     <Compile Include="Asset\Global\myGlobal.cs" />
     <Compile Include="Asset\Global\mySupport.cs" />
     <Compile Include="Asset\IO\DBHelper.cs" />
@@ -89,6 +93,11 @@
     <Compile Include="Asset\IO\LogHelper.cs" />
     <Compile Include="Asset\IO\QSPRHelper.cs" />
     <Compile Include="Asset\Protocol\Serial.cs" />
+    <Compile Include="Commands\AttenuationMeasureCommand.cs" />
+    <Compile Include="Commands\AttenuationOpenAttTesttreeCommand.cs" />
+    <Compile Include="Commands\AttenuationOpenCalibTesttreeCommand.cs" />
+    <Compile Include="Commands\AttenuationOpenPathlossCommand.cs" />
+    <Compile Include="Commands\AttenuationVerifyCommand.cs" />
     <Compile Include="Commands\CalibOpenAttTesttreeCommand.cs" />
     <Compile Include="Commands\CalibOpenCalibTesttreeCommand.cs" />
     <Compile Include="Commands\CalibOpenPathlossCommand.cs" />
