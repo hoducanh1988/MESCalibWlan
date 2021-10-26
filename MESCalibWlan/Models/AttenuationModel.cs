@@ -43,6 +43,7 @@ namespace EW30SX.Models {
                                = updatePathlossElapsedTime
                                = "-";
 
+            statusString = "";
             macWan = "";
             totalTime = "00:00:00";
             totalResult = "-";
@@ -50,6 +51,7 @@ namespace EW30SX.Models {
         }
 
         public bool Passed() {
+            statusString = "";
             buttonMeasureContent = "ĐO";
             buttonVerifyContent = "VERIFY";
             totalResult = "Passed";
@@ -60,6 +62,7 @@ namespace EW30SX.Models {
         }
 
         public bool Failed() {
+            statusString = "";
             buttonMeasureContent = "ĐO";
             buttonVerifyContent = "VERIFY";
             totalResult = "Failed";
@@ -72,10 +75,19 @@ namespace EW30SX.Models {
         public bool Waiting(bool is_verify) {
             buttonMeasureContent = is_verify ? "ĐO" : "STOP";
             buttonVerifyContent = is_verify ? "STOP" : "VERIFY";
+            statusString = is_verify ? "Đang verify suy hao..." : "Đang đo suy hao...";
             totalResult = "Waiting...";
             return true;
         }
 
+        string _status_string;
+        public string statusString {
+            get { return _status_string; }
+            set {
+                _status_string = value;
+                OnPropertyChanged(nameof(statusString));
+            }
+        }
         string _update_pathloss_result;
         public string updatePathlossResult {
             get { return _update_pathloss_result; }

@@ -36,12 +36,7 @@ namespace EW30SX.Commands {
                 case var b when _lvm.LM.isSetting: { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "setting.xml"); break; }
                 case var c when _lvm.LM.isSoftware: { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "main.xml"); break; }
                 case var d when _lvm.LM.isGolden: { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "Goldens"); break; }
-                case var e when _lvm.LM.isLog: {
-                        if (Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Log") == false)
-                            Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Log");
-                        Process.Start(AppDomain.CurrentDomain.BaseDirectory + "Log");
-                        break;
-                    }
+                case var e when _lvm.LM.isLog: { Process.Start(AppDomain.CurrentDomain.BaseDirectory); break; }
             }
         }
 

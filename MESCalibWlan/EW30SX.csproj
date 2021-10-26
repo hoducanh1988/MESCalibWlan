@@ -85,6 +85,7 @@
     <Compile Include="Asset\Custom\GoldenFrequencyInfo.cs" />
     <Compile Include="Asset\Custom\PathlossFrequencyInfo.cs" />
     <Compile Include="Asset\Custom\PowerDifferenceInfo.cs" />
+    <Compile Include="Asset\Custom\StationInfo.cs" />
     <Compile Include="Asset\Custom\TestFrequencyInfo.cs" />
     <Compile Include="Asset\Global\myGlobal.cs" />
     <Compile Include="Asset\Global\mySupport.cs" />

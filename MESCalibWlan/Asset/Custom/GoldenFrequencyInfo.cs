@@ -18,7 +18,7 @@ namespace EW30SX.Asset.Custom {
         public double powerAntenna2 { get; set; }
 
         public override string ToString() {
-            return $"{Frequency.PadLeft(10, ' ')}{powerAntenna1.ToString().PadLeft(10, ' ')}{powerAntenna2.ToString().PadLeft(10, ' ')}";
+            return $"{Frequency.PadLeft(20, ' ')}{powerAntenna1.ToString().PadLeft(20, ' ')}{powerAntenna2.ToString().PadLeft(20, ' ')}";
         }
 
     }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EW30SX"
         xmlns:control="clr-namespace:EW30SX.Views"
         mc:Ignorable="d"
-        Height="620" Width="1000" WindowStartupLocation="CenterScreen">
+        Height="710" Width="1000" WindowStartupLocation="CenterScreen">
     
     <Window.Title>
         <MultiBinding StringFormat="{}Version: {0} - Build time: {1} - Copyright of {2}">

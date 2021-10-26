@@ -1,7 +1,0 @@
-
-10/25/2021 4:25:39 PM, Mở cổng COM43,115200:
-...Kết quả = False
-
-10/25/2021 4:25:39 PM, End test:
-...Total result: Failed
-...Total time: 00:00:00

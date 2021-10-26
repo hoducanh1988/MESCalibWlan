@@ -243,9 +243,7 @@
                                 </WrapPanel>
                                 <WrapPanel>
                                     <Label Style="{StaticResource label_title}" Content="Còn lại:" />
-                                    <Label Style="{StaticResource label_setting}" Content="0" />
-                                    <Label Style="{StaticResource label_setting}" Content="/" />
-                                    <Label Style="{StaticResource label_setting}" Content="{Binding SM.cycleMeasureAtt, UpdateSourceTrigger=PropertyChanged}" />
+                                    <Label Style="{StaticResource label_setting}" Content="{Binding Path=SI.qty_remain, UpdateSourceTrigger=PropertyChanged}" />
                                 </WrapPanel>
                                 <WrapPanel>
                                     <Label Style="{StaticResource label_title}" Content="Độ lệch công suất golden (dBm):" />
@@ -257,11 +255,11 @@
                                 </WrapPanel>
                                 <WrapPanel>
                                     <Label Style="{StaticResource label_title}" Content="Golden đo suy hao trạm:" />
-                                    <Label Style="{StaticResource label_setting}" Content="" />
+                                    <Label Style="{StaticResource label_setting}" Content="{Binding Path=SI.golden_attenuation, UpdateSourceTrigger=PropertyChanged}" />
                                 </WrapPanel>
 
                                 <Label Style="{StaticResource label_title}" Content="Golden verify suy hao trạm:" />
-                                <TextBlock Style="{StaticResource textblock_setting}" Text="" />
+                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding Path=SI.golden_verification, UpdateSourceTrigger=PropertyChanged}" />
                                 <Label Style="{StaticResource label_title}" Content="Testtree calib công suất:" />
                                 <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding SM.calibTesttreeFile, UpdateSourceTrigger=PropertyChanged}">
                                     <TextBlock.InputBindings>

@@ -11,6 +11,7 @@ using System.Threading;
 namespace EW30SX.Asset.Global {
     public class myGlobal {
 
+        public static StationInfo stationinfo = new StationInfo();
         public static List<string> listProduct = null;
         public static SettingViewModel settingviewmodel = new SettingViewModel();
         public static CalibViewModel calibviewmodel = new CalibViewModel();
@@ -21,5 +22,6 @@ namespace EW30SX.Asset.Global {
         public static List<TestFrequencyInfo> goldenTestResults = null;
         public static List<PowerDifferenceInfo> powerDifferenceValues = null;
         public static List<PathlossFrequencyInfo> pathlossInfos = null;
+        
     }
 }

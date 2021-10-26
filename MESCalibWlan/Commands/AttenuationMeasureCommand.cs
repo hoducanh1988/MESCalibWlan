@@ -97,8 +97,11 @@ namespace EW30SX.Commands {
             END:
                 bool ___ = r ? testing.Passed() : testing.Failed();
                 if (dut != null) dut.Dispose();
-                LogHelper<AttenuationModel> log = new LogHelper<AttenuationModel>(testing);
+                LogHelper<AttenuationModel> log = new LogHelper<AttenuationModel>(testing, LogHelper<AttenuationModel>.log_type.Attenuation);
                 log.save_all_log();
+                if (r) {
+                    myGlobal.stationinfo.set_golden_att(testing.macWan);
+                }
             }));
             t.IsBackground = true;
             t.Start();
@@ -239,7 +242,7 @@ namespace EW30SX.Commands {
                 t.logSystem += "...Golden:\n";
                 foreach (var f in buffer) t.logSystem += $"{f}\n";
                 foreach (var f in buffer) {
-                    r = f.ToLower().Contains(t.macWan.ToLower());
+                    r = f.ToUpper().Contains(t.macWan.ToUpper().Trim().Replace("\n", "").Replace("\r", ""));
                     if (r) break;
                 }
             }
@@ -407,7 +410,7 @@ namespace EW30SX.Commands {
             Stopwatch st = new Stopwatch();
             st.Start();
             bool r = false;
-            t.logSystem += $"\n{DateTime.Now}, Run testtree calib {s.calibTesttreeFile}:\n";
+            t.logSystem += $"\n{DateTime.Now}, Run testtree calib {s.attTesttreeFile}:\n";
             t.calibWlanResult = "Waiting...";
 
             Thread z = new Thread(new ThreadStart(() => {
@@ -426,7 +429,7 @@ namespace EW30SX.Commands {
 
             if (myGlobal.qsprHelper == null) myGlobal.qsprHelper = new QSPRHelper<CalibModel, AttenuationModel, SettingModel>();
             myGlobal.qsprHelper.setObject(cm, testing, setting, false);
-            myGlobal.qsprHelper.run_Test_Tree(setting.calibTesttreeFile);
+            myGlobal.qsprHelper.run_Test_Tree(setting.attTesttreeFile);
             int c = 0;
         RE:
             c++;

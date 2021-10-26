@@ -18,7 +18,7 @@ namespace EW30SX.Asset.Custom {
         public List<double> averagePowers { get; set; }
 
         public override string ToString() {
-            return $"{Frequency.PadLeft(10,' ')}{Antenna.PadLeft(10, ' ')}{string.Join(",", averagePowers)}";
+            return $"{Frequency.PadLeft(20,' ')}{Antenna.PadLeft(20, ' ')}{string.Join(",", averagePowers)}";
         }
     }
 }

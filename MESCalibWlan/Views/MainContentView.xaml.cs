@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -32,6 +32,12 @@ namespace EW30SX.Views {
             InitializeComponent();
             mcvm = new MainContentViewModel();
             this.DataContext = mcvm;
+
+            Thread t = new Thread(new ThreadStart(() => {
+                myGlobal.stationinfo.load_from_db();
+            }));
+            t.IsBackground = true;
+            t.Start();
         }
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e) {

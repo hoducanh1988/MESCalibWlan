@@ -1,4 +1,5 @@
-﻿using EW30SX.Asset.Global;
+﻿using EW30SX.Asset.Custom;
+using EW30SX.Asset.Global;
 using EW30SX.Commands;
 using EW30SX.Models;
 using System;
@@ -14,6 +15,7 @@ namespace EW30SX.ViewModels {
         public CalibViewModel() {
             _cm = new CalibModel();
             _sm = myGlobal.settingviewmodel.SM;
+            _si = myGlobal.stationinfo;
 
             StartCommand = new CalibStartCommand(this);
             OpenCalibTestTreeCommand = new CalibOpenCalibTesttreeCommand(this);
@@ -29,6 +31,10 @@ namespace EW30SX.ViewModels {
         SettingModel _sm;
         public SettingModel SM {
             get => _sm;
+        }
+        StationInfo _si;
+        public StationInfo SI {
+            get => _si;
         }
 
         //command

@@ -1,4 +1,5 @@
-﻿using EW30SX.Asset.Global;
+﻿using EW30SX.Asset.Custom;
+using EW30SX.Asset.Global;
 using EW30SX.Commands;
 using EW30SX.Models;
 using System;
@@ -14,8 +15,10 @@ namespace EW30SX.ViewModels {
         public AttenuationViewModel() {
             _am = new AttenuationModel();
             _sm = myGlobal.settingviewmodel.SM;
+            _si = myGlobal.stationinfo;
+
             MeasureCommand = new AttenuationMeasureCommand(this);
-            //VerifyCommand = new AttenuationVerifyCommand(this);
+            VerifyCommand = new AttenuationVerifyCommand(this);
             OpenCalibTestTreeCommand = new AttenuationOpenCalibTesttreeCommand(this);
             OpenAttTestTreeCommand = new AttenuationOpenAttTesttreeCommand(this);
             OpenPathlossCommand = new AttenuationOpenPathlossCommand(this);
@@ -28,6 +31,10 @@ namespace EW30SX.ViewModels {
         SettingModel _sm;
         public SettingModel SM {
             get => _sm;
+        }
+        StationInfo _si;
+        public StationInfo SI {
+            get => _si;
         }
 
         //command

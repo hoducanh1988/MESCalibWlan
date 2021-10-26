@@ -9,11 +9,14 @@ namespace EW30SX.Asset.IO
 {
     public class LogHelper <T> where T : class, new() {
 
-        T testing = null;
-        string dir = $"{AppDomain.CurrentDomain.BaseDirectory}Log\\{DateTime.Now.ToString("yyyy-MM-dd")}";
+        public enum log_type { Calibration, Attenuation, Verification };
 
-        public LogHelper(T t) {
+        T testing = null;
+        string dir = "";
+
+        public LogHelper(T t, log_type _type) {
             testing = t;
+            dir = $"{AppDomain.CurrentDomain.BaseDirectory}Log_{_type.ToString()}\\{DateTime.Now.ToString("yyyy-MM-dd")}";
             if (Directory.Exists(dir) == false) Directory.CreateDirectory(dir);
         }
 

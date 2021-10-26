@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EW30SX.Asset.Global;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace EW30SX.Asset.Custom {
             get { return _pw_dif1; }
             set {
                 _pw_dif1 = value;
-                resultAnten1 = Math.Abs(value) <= 1 ? "PASS" : "FAIL";
+                resultAnten1 = Math.Abs(value) <= double.Parse(myGlobal.settingviewmodel.SM.powerDiffGolden) ? "PASS" : "FAIL";
                 if (resultAnten2 != null)
                     resultTotal = (resultAnten1.Equals("PASS") && resultAnten2.Equals("PASS")) ? "PASS" : "FAIL";
             }
@@ -33,7 +34,7 @@ namespace EW30SX.Asset.Custom {
             get { return _pw_dif2; }
             set {
                 _pw_dif2 = value;
-                resultAnten2 = Math.Abs(value) <= 1 ? "PASS" : "FAIL";
+                resultAnten2 = Math.Abs(value) <= double.Parse(myGlobal.settingviewmodel.SM.powerDiffGolden) ? "PASS" : "FAIL";
                 if (resultAnten1 != null)
                     resultTotal = (resultAnten1.Equals("PASS") && resultAnten2.Equals("PASS")) ? "PASS" : "FAIL";
             }

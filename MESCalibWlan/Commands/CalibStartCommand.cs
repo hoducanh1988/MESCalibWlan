@@ -56,6 +56,16 @@ namespace EW30SX.Commands {
                     return;
                 }
 
+                //check remain
+                string msg = "";
+                r = check_condition(ref msg);
+                if (!r) {
+                    System.Windows.MessageBox.Show(msg, "ATTENUATION ERROR",
+                       System.Windows.MessageBoxButton.OK,
+                       System.Windows.MessageBoxImage.Error);
+                    return;
+                }
+
                 DUTHelper<CalibModel, SettingModel> dut = new DUTHelper<CalibModel, SettingModel>(testing, setting);
                 testing.Init();
                 testing.Waiting();
@@ -69,7 +79,7 @@ namespace EW30SX.Commands {
                 //get mac wan
                 r = get_mac_wan(dut, testing, setting); if (!r) goto END;
                 //check mac is golden or not
-                r = is_mac_golden(testing); if (r) goto END;
+                r = is_mac_golden(testing); if (r) { r = false; goto END; }
 
                 if (setting.isChangeIp) {
                     //change ip dut
@@ -89,8 +99,9 @@ namespace EW30SX.Commands {
             END:
                 bool ___ = r ? testing.Passed() : testing.Failed();
                 if (dut != null) dut.Dispose();
-                LogHelper<CalibModel> log = new LogHelper<CalibModel>(testing);
+                LogHelper<CalibModel> log = new LogHelper<CalibModel>(testing, LogHelper<CalibModel>.log_type.Calibration);
                 log.save_all_log();
+                myGlobal.stationinfo.remain_down();
             }));
             t.IsBackground = true;
             t.Start();
@@ -161,7 +172,6 @@ namespace EW30SX.Commands {
             return r;
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -184,7 +194,6 @@ namespace EW30SX.Commands {
             t.loginElapsedTime = st.ElapsedMilliseconds.ToString();
             return r;
         }
-
 
         /// <summary>
         /// 
@@ -211,7 +220,6 @@ namespace EW30SX.Commands {
             return r;
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -231,7 +239,7 @@ namespace EW30SX.Commands {
                 t.logSystem += "...Golden:\n";
                 foreach (var f in buffer) t.logSystem += $"{f}\n";
                 foreach (var f in buffer) {
-                    r = f.ToLower().Contains(t.macWan.ToLower());
+                    r = f.ToUpper().Contains(t.macWan.ToUpper().Trim().Replace("\n", "").Replace("\r", ""));
                     if (r) break;
                 }
             }
@@ -266,7 +274,6 @@ namespace EW30SX.Commands {
             return r;
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -299,7 +306,6 @@ namespace EW30SX.Commands {
             t.pingDUTElapsedTime = st.ElapsedMilliseconds.ToString();
             return r;
         }
-
 
         /// <summary>
         /// 
@@ -337,7 +343,6 @@ namespace EW30SX.Commands {
             t.switchModeElapsedTime = st.ElapsedMilliseconds.ToString();
             return r;
         }
-
 
         /// <summary>
         /// 
@@ -388,7 +393,6 @@ namespace EW30SX.Commands {
             return r;
         }
 
-
         /// <summary>
         /// 
         /// </summary>
@@ -418,6 +422,29 @@ namespace EW30SX.Commands {
             catch {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+        private bool check_condition(ref string msg) {
+            bool r = false;
+            r = int.Parse(myGlobal.stationinfo.qty_remain) > 0;
+            msg = "Vui lòng đo lại suy hao trạm calib wlan.";
+            if (!r) return false;
+            r = string.IsNullOrEmpty(myGlobal.stationinfo.golden_attenuation);
+            msg = "Vui lòng đo lại suy hao trạm calib wlan.";
+            if (r) return false;
+            r = string.IsNullOrEmpty(myGlobal.stationinfo.golden_verification);
+            msg = "Vui lòng verify suy hao trạm calib wlan.";
+            if (r) return false;
+            string[] buffer = myGlobal.stationinfo.golden_verification.Split(new string[] { "::" }, StringSplitOptions.None);
+            r = buffer.Length == int.Parse(setting.qtyGoldenVerify);
+            msg = "Số lượng golden verify trạm chưa đủ so với setting.";
+            if (!r) return false;
+            return true;
         }
 
         #endregion
