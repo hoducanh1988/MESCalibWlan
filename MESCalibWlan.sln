@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EW30SX", "EW30SX\EW30SX.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EW30CX", "EW30CX\EW30CX.csproj", "{08C58745-5D13-462F-9D56-C2D8F6EAABDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MESCalibWlan", "MESCalibWlan\MESCalibWlan.csproj", "{B5476BD5-CD12-4794-A5A2-5F0E793D3B5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{08C58745-5D13-462F-9D56-C2D8F6EAABDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08C58745-5D13-462F-9D56-C2D8F6EAABDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08C58745-5D13-462F-9D56-C2D8F6EAABDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5476BD5-CD12-4794-A5A2-5F0E793D3B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5476BD5-CD12-4794-A5A2-5F0E793D3B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5476BD5-CD12-4794-A5A2-5F0E793D3B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5476BD5-CD12-4794-A5A2-5F0E793D3B5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
