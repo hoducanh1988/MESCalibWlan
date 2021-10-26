@@ -1,0 +1,231 @@
+﻿<UserControl x:Class="EW30SX.Views.SettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EW30SX.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="1050" d:DesignWidth="800" Background="White">
+
+    <UserControl.Resources>
+
+        <Style TargetType="Label" x:Key="label_legend">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="Margin" Value="0,0,50,0"/>
+        </Style>
+        
+        <Style TargetType="Label" x:Key="label_header">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+            <Setter Property="BorderThickness" Value="1,0,1,1"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+            <Setter Property="Margin" Value="250,0,50,0"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused"  Value="True">
+                    <Setter Property="Background" Value="{StaticResource color_focused}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+            <Setter Property="Margin" Value="250,0,50,0"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="IsEditable" Value="True"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10,0,0,0"/>
+            <Setter Property="Foreground" Value="Blue"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="open_file">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="{StaticResource color_border}"/>
+            <Setter Property="BorderThickness" Value="1,0,1,1"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="5,0,0,0"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="select_file">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0,0,50,0"/>
+            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+        </Style>
+
+
+        <Style TargetType="CheckBox" x:Key="checkbox_testitem">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Margin" Value="20,0,0,10"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=Self}, Path=IsChecked}" Value="True">
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="Foreground" Value="Blue"/>
+                </DataTrigger>
+            </Style.Triggers>
+
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid Margin="5,0,5,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <Label Style="{StaticResource label_legend}" Content="Cài đặt thông tin sản phẩm :"/>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Địa chỉ ip calib"/>
+                    <TextBox Text="{Binding Path=SM.ipDUT, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Địa chỉ cổng com"/>
+                    <ComboBox ItemsSource="{Binding collectionSerialPort}" Text="{Binding Path=SM.comPort, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Tốc độ baud"/>
+                    <ComboBox ItemsSource="{Binding collectionBaudRate}" Text="{Binding Path=SM.baudRate, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="VNPT mac header"/>
+                    <TextBox Text="{Binding Path=SM.vnptMacHeader, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Log khởi động hoàn thành"/>
+                    <TextBox Text="{Binding Path=SM.logBootCompleted, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+
+                <Label Content="-"/>
+                <Label Style="{StaticResource label_legend}" Content="Cài đặt thông tin testtree:"/>
+                <Grid>
+                    <Button Style="{StaticResource open_file}" Command="{Binding OpenCalibTesttreeCommand}" Content="File testtree calib"/>
+                    <TextBox Margin="250,0,80,0" TextAlignment="Right" Text="{Binding Path=SM.calibTesttreeFile, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Style="{StaticResource select_file}" Command="{Binding BrowserCalibTesttreeCommand}" Content="..."/>
+                </Grid>
+                <Grid>
+                    <Button Style="{StaticResource open_file}" Command="{Binding OpenAttTesttreeCommand}" Content="File testtree đo suy hao"/>
+                    <TextBox Margin="250,0,80,0" TextAlignment="Right" Text="{Binding Path=SM.attTesttreeFile, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Style="{StaticResource select_file}" Command="{Binding BrowserAttTesttreeCommand}" Content="..."/>
+                </Grid>
+                <Grid>
+                    <Button Style="{StaticResource open_file}" Command="{Binding OpenPathLossCommand}" Content="File suy hao"/>
+                    <TextBox Margin="250,0,80,0" TextAlignment="Right" Text="{Binding Path=SM.pathLossFile, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Style="{StaticResource select_file}" Command="{Binding BrowserPathLossCommand}" Content="..."/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Tên biến serial number"/>
+                    <TextBox Text="{Binding Path=SM.snVariable, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Tên biến mac wlan 2G"/>
+                    <TextBox Text="{Binding Path=SM.macWlan2GVariable, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Tên biến mac wlan 5G"/>
+                    <TextBox Text="{Binding Path=SM.macWlan5GVariable, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+
+
+                <Label Content="-"/>
+                <Label Style="{StaticResource label_legend}" Content="Cài đặt thông tin chung:"/>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Địa chỉ ip máy tính"/>
+                    <TextBox Text="{Binding Path=SM.ipPC, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Timeout khởi động (sec)"/>
+                    <TextBox Text="{Binding Path=SM.timeOutBoot, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Timeout thay đổi ip (sec)"/>
+                    <TextBox Text="{Binding Path=SM.timeOutChangeIP, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Thời gian chờ trước khi login (sec)"/>
+                    <TextBox Text="{Binding Path=SM.timeWaitLogin, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Độ lệch công suất golden (dBm)"/>
+                    <TextBox Text="{Binding Path=SM.powerDiffGolden, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Suy hao trạm tối đa (dBm)"/>
+                    <TextBox Text="{Binding Path=SM.valueAttMax, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Chu kì tính suy hao (sản phẩm)"/>
+                    <TextBox Text="{Binding Path=SM.cycleMeasureAtt, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Số lượng golden verify suy hao trạm"/>
+                    <TextBox Text="{Binding Path=SM.qtyGoldenVerify, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+
+                <Label Content="-"/>
+                <Label Style="{StaticResource label_legend}" Content="Cài đặt bài test:"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label BorderBrush="{StaticResource color_border}" BorderThickness="1,0,1,1" FontSize="14" Height="55" Grid.Column="0" Content="Lựa chọn bài test"/>
+
+                    <Border BorderBrush="{StaticResource color_border}" BorderThickness="0,0,1,1" Grid.Column="1" Margin="0,0,50,0">
+                        <StackPanel>
+                            <CheckBox Style="{StaticResource checkbox_testitem}" Margin="10,5,0,0" Content="Change ip address"
+                                          IsChecked="{Binding Path=SM.isChangeIp, UpdateSourceTrigger=PropertyChanged}"/>
+                            <CheckBox Style="{StaticResource checkbox_testitem}" Margin="10,5,0,0" Content="Run testtree"
+                                          IsChecked="{Binding Path=SM.isRunTesttree, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+                
+                <Label Margin="0,30,0,0" Content=""/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button Grid.Row="1" Command="{Binding SaveCommand}" FontSize="17" Content="Lưu tham số cài đặt"/>
+
+    </Grid>
+    
+   
+    
+</UserControl>

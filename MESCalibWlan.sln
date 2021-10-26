@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31515.178
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EW30SX", "MESCalibWlan\EW30SX.csproj", "{657AD2A9-5C6D-4A2A-BB93-D5112B3B6BB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EW30SX", "EW30SX\EW30SX.csproj", "{657AD2A9-5C6D-4A2A-BB93-D5112B3B6BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EW30CX", "EW30CX\EW30CX.csproj", "{08C58745-5D13-462F-9D56-C2D8F6EAABDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{657AD2A9-5C6D-4A2A-BB93-D5112B3B6BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{657AD2A9-5C6D-4A2A-BB93-D5112B3B6BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{657AD2A9-5C6D-4A2A-BB93-D5112B3B6BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C58745-5D13-462F-9D56-C2D8F6EAABDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C58745-5D13-462F-9D56-C2D8F6EAABDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C58745-5D13-462F-9D56-C2D8F6EAABDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C58745-5D13-462F-9D56-C2D8F6EAABDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

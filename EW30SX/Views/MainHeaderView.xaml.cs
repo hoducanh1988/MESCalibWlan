@@ -1,0 +1,28 @@
+﻿using EW30SX.Asset.Global;
+using EW30SX.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace EW30SX.Views {
+    /// <summary>
+    /// Interaction logic for MainHeaderView.xaml
+    /// </summary>
+    public partial class MainHeaderView : UserControl {
+        public MainHeaderView() {
+            InitializeComponent();
+            this.DataContext = myGlobal.mainheaderviewmodel;
+        }
+    }
+}
