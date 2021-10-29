@@ -18,6 +18,6 @@
   <valueAttMax>30</valueAttMax>
   <cycleMeasureAtt>500</cycleMeasureAtt>
   <qtyGoldenVerify>1</qtyGoldenVerify>
-  <isChangeIp>true</isChangeIp>
+  <isChangeIp>false</isChangeIp>
   <isRunTesttree>true</isRunTesttree>
 </SettingModel>

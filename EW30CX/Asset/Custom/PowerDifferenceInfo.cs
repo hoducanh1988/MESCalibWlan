@@ -39,5 +39,9 @@ namespace EW30CX.Asset.Custom {
                     resultTotal = (resultAnten1.Equals("PASS") && resultAnten2.Equals("PASS")) ? "PASS" : "FAIL";
             }
         }
+
+        public override string ToString() {
+            return $"{Frequency.PadLeft(20, ' ')}{powerDifferenceAnten1.ToString().PadLeft(20, ' ')}{powerDifferenceAnten2.ToString().PadLeft(20, ' ')}{resultTotal.PadLeft(20, ' ')}";
+        }
     }
 }

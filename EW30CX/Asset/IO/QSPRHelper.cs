@@ -12,6 +12,10 @@ namespace EW30CX.Asset.IO {
 
         QSPRScheduler _scheduler;
         QSPRTestTree _testTree;
+        string _qsprInstallDirectory = @"C:\Program Files (x86)\Qualcomm\QDART\bin";
+        string _pluginsDirectory = @"C:\Program Files (x86)\Qualcomm\QDART\QSPRPlugins";
+        string _workspaceConfig = @"C:\Qualcomm\QSPR\QSPRConfigurations\Workspace.config";
+
         T testinfo_1;
         U testinfo_2;
         S settinginfo;
@@ -19,10 +23,11 @@ namespace EW30CX.Asset.IO {
         string xmsg_name = "logQSPR";
 
         public QSPRHelper() {
-            _scheduler = new QSPRScheduler();
-            _scheduler.OnDebugMessage += new QSPRScheduler.OnDebugMessageEventHandler(_scheduler_OnDebugMessage);
+            _scheduler = new QSPRScheduler(_pluginsDirectory);
             _scheduler.OnTestMessage += new QSPRScheduler.OnTestMessageEventHandler(_scheduler_OnTestMessage);
-            _scheduler.LoadWorkspaceConfig(@"C:\Qualcomm\QSPR\QSPRConfigurations\Workspace.config");
+            _scheduler.OnRealTimeParamMessage += new QSPRScheduler.OnRealTimeParamMsgEventHandler(_scheduler_OnRealTimeParamMessage);
+            _scheduler.LoadWorkspaceConfig(_workspaceConfig);
+            
         }
 
         public void setObject(T obj_t1, U obj_t2, S obj_s, bool is_t) {
@@ -32,13 +37,17 @@ namespace EW30CX.Asset.IO {
             is_T_not_U = is_t;
         }
 
+        private void _scheduler_OnRealTimeParamMessage(string messageType, string id, string name = "", string value = "", string units = "", string lowerLimit = "", string upperLimit = "", byte pluginTypes = 7, string pluginNames = "") {
+            UpdateStatusWindow("MessageType - " + messageType + " Name - " + name + " Value - " + value);
+        }
+
         private void _scheduler_OnDebugMessage(string strWin, string strText, int traceLevel, bool NoEndOfLine) {
             UpdateStatusWindow(strWin + ": " + strText);
         }
 
+
         private void _scheduler_OnTestMessage(int messageType, QSPRTestMessage messageData) {
             switch ((TestMsgTypes)messageType) {
-
                 case TestMsgTypes.ON_UNIT_START: {
                         string sn = messageData.GetValue(TestMsgItemNames.SN);
                         string testCount = messageData.GetValue(TestMsgItemNames.TEST_COUNT);
@@ -61,6 +70,7 @@ namespace EW30CX.Asset.IO {
                         string testName = messageData.GetValue(TestMsgItemNames.TESTNAME);
                         string testResult = messageData.GetValue(TestMsgItemNames.TESTRESULT);
                         string loopInfo = messageData.GetValue(TestMsgItemNames.LOOP_DETAILS);
+
                         UpdateStatusWindow("Test finished: " + testName + " with result: " + testResult + " LOOP_DETAILS=" + loopInfo ?? "");
 
                         string[] msgItemNames = messageData.GetItemNames();
@@ -69,6 +79,7 @@ namespace EW30CX.Asset.IO {
                             // if the item is an output parameter
                             if (itemName.StartsWith(TestMsgItemNames.OUTPUT_PARAM_PREFIX)) {
                                 string outParamValue = messageData.GetValue(itemName);
+                                UpdateStatusWindow(itemName + ":" + outParamValue);
                             }
                         }
 

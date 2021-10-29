@@ -85,7 +85,7 @@ namespace EW30SX.Commands {
                 //switch to ftm mode
                 r = switch_ftm_mode(dut, testing, setting); if (!r) goto END;
                 //run testtree calib
-                r = run_test_tree(testing, setting); if (!r) goto END;
+                r = run_test_tree(testing, setting);
                 //extract qspr log
                 r = extract_qspr_log(testing); if (!r) goto END;
                 //calculate golden data

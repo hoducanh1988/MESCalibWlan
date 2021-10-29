@@ -82,6 +82,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Asset\IO\LogQSPRHelper.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\AttenuationViewModel.cs" />
     <Compile Include="ViewModels\CalibViewModel.cs" />

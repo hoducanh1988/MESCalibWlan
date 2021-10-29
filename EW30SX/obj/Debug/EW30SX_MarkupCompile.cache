@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\EW30SX\obj\Debug\
+G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\EW30SX\obj\Debug\
 EW30SX
 none
 false
 DEBUG;TRACE
-G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\EW30SX\App.xaml
+G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\EW30SX\App.xaml
 9671628858
 
 60-782520186
-23-378244608
+23-1835780646
 MainWindow.xaml;Views\AboutView.xaml;Views\AttenuationView.xaml;Views\CalibView.xaml;Views\HelpView.xaml;Views\LogView.xaml;Views\MainContentView.xaml;Views\MainHeaderView.xaml;Views\SettingView.xaml;
 
 False
