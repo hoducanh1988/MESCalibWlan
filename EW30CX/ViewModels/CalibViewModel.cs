@@ -15,7 +15,6 @@ namespace EW30CX.ViewModels {
         public CalibViewModel() {
             _cm = new CalibModel();
             _sm = myGlobal.settingviewmodel.SM;
-            _si = myGlobal.stationinfo;
 
             StartCommand = new CalibStartCommand(this);
             OpenCalibTestTreeCommand = new CalibOpenCalibTesttreeCommand(this);
@@ -31,10 +30,6 @@ namespace EW30CX.ViewModels {
         SettingModel _sm;
         public SettingModel SM {
             get => _sm;
-        }
-        StationInfo _si;
-        public StationInfo SI {
-            get => _si;
         }
 
         //command

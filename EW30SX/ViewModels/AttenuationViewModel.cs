@@ -15,7 +15,6 @@ namespace EW30SX.ViewModels {
         public AttenuationViewModel() {
             _am = new AttenuationModel();
             _sm = myGlobal.settingviewmodel.SM;
-            _si = myGlobal.stationinfo;
 
             MeasureCommand = new AttenuationMeasureCommand(this);
             VerifyCommand = new AttenuationVerifyCommand(this);
@@ -31,10 +30,6 @@ namespace EW30SX.ViewModels {
         SettingModel _sm;
         public SettingModel SM {
             get => _sm;
-        }
-        StationInfo _si;
-        public StationInfo SI {
-            get => _si;
         }
 
         //command

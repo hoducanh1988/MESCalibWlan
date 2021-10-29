@@ -10,15 +10,15 @@ namespace EW30SX.Asset.Custom {
         public TestFrequencyInfo() {
             Frequency = "";
             Antenna = "";
-            averagePowers = new List<double>();
+            averagePower = 0;
         }
 
         public string Frequency { get; set; }
         public string Antenna { get; set; }
-        public List<double> averagePowers { get; set; }
+        public double averagePower { get; set; }
 
         public override string ToString() {
-            return $"{Frequency.PadLeft(20,' ')}{Antenna.PadLeft(20, ' ')}{string.Join(",", averagePowers)}";
+            return $"{Frequency.PadLeft(20,' ')}{Antenna.PadLeft(20, ' ')}{averagePower.ToString().PadLeft(20, ' ')}";
         }
     }
 }

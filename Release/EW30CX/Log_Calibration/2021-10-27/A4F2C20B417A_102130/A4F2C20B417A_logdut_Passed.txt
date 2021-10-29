@@ -1,0 +1,169 @@
+
+
+
+BusyBox v1.30.1 () built-in shell (ash)
+
+o         o o         o ooooooooo  ooooooooo ooooooooo               o
+o        o  oo        o o        o     o         o                   o
+o       o   o o       o o        o     o         o                   o
+o      o    o  o      o o        o     o         o                   o
+o     o     o   o     o ooooooooo      o         o       oo     oo   o
+o    o      o    o    o o              o         o      o  o   o  o  oooooo
+o   o       o     o   o o              o         o     o    o o      o     o
+o  o        o      o  o o              o         o     oooooo o      o     o
+o o         o       o o o              o         o     o      o      o     o
+oo          o        oo o              o         o      o  o   o  o  o     o
+o           o         o o              o         o       oo     oo   o     o
+root@VNPT:/# 
+root@VNPT:/# 
+root@VNPT:/# 
+root@VNPT:/# 
+root@VNPT:/# cat /sys/class/net/eth0/address
+a4:f2:c2:0b:41:7a
+root@VNPT:/# 
+root@VNPT:/# wifi down
+[  100.719836] mc_detach: disabled snooping on br-lan.
+qcawificfg80211 disable radio wifi0
+[  100.867162] device ath0 left promiscuous mode
+[  100.867288] br-lan: port 3(ath0) entered disabled state
+OK
+[  100.953600] wlan: [0:E:ANY] ol_peer_delete_response_event_handler: peer_del_resp: mac: a4:f4:c2:0b:41:7b vdevid: 0 Unable to find vdev
+[  101.948410] wlan: [3928:E:NSS] [nss-wifili]: sending soc stop message to NSS
+[  102.450444] wlan: [3928:E:NSS] [nss-wifili]: calling pdev de-attach with id 0 
+[  102.455196] wlan: [3928:E:NSS] nss-wifili: Free Host Pool Memory
+[  102.459885] cnss[2]: INFO: Sending mode message, mode: OFF(4), state: 0x7
+[  102.464854] wlan: [3928:E:NSS] [nss-wifili]: stop ERROR - Null nss context
+[  102.464870] cnss[2]: INFO: QMI WLFW service disconnected, state: 0x26
+[  102.594727] remoteproc remoteproc1: q6v5_wcss_userpd1 wcss powered down successfully
+[  102.594760] remoteproc remoteproc1: stopped remote processor q6v5_wcss_userpd1
+qcawificfg80211 disable radio wifi1
+[  102.756991] device ath1 left promiscuous mode
+[  102.757126] br-lan: port 4(ath1) entered disabled state
+OK
+[  102.843185] wlan: [0:E:ANY] ol_peer_delete_response_event_handler: peer_del_resp: mac: a4:f4:c2:0b:41:7c vdevid: 0 Unable to find vdev
+[  103.840117] wlan: [3987:E:NSS] [nss-wifili]: sending soc stop message to NSS
+[  104.340298] wlan: [3987:E:NSS] [nss-wifili]: calling pdev de-attach with id 0 
+[  104.345125] wlan: [3987:E:NSS] nss-wifili: Free Host Pool Memory
+[  104.350611] cnss[41]: INFO: Sending mode message, mode: OFF(4), state: 0x7
+[  104.354703] wlan: [3987:E:NSS] [nss-wifili]: stop ERROR - Null nss context
+[  104.354708] cnss[41]: INFO: QMI WLFW service disconnected, state: 0x26
+[  104.529598] remoteproc remoteproc2: stopped remote processor q6v5_wcss_userpd2
+[  104.529668] cnss[41]: INFO: Freeing BAR Info for QCN6122_1
+[  104.551345] remoteproc remoteproc0: stopped remote processor cd00000.qcom_q6v5_wcss
+device: wifi0 vifs: cfg023579
+device: wifi1 vifs: cfg043579
+root@VNPT:/# 
+root@VNPT:/# rmmod wifi_3_0
+[  104.911745] wlan: [4029:E:NSS] [nss-wifili]: stop ERROR - Null nss context
+[  104.911843] wlan: [4029:E:QLD] qld_register: Handle or address is NULL
+[  104.996851] PCIe: User of event deregistration is NULL
+[  105.046769] wlan: [4029:E:WMI] wmi_unified_unregister_event_handler: Event id 55 is unavailable
+[  105.046804] wlan: [4029:I:MSCS] qca_mscs_module_deinit: 
+[  105.046804] ****QCA MSCS De-Initialization Done**** SoC 88240480
+[  105.054349] wlan: [4029:E:WMI] wmi_unified_unregister_event_handler: Event id 141 is unavailable
+[  105.065805] wlan: [4029:E:WMI] wmi_unified_unregister_event_handler: Event id 137 is unavailable
+[  105.116630] wlan: [4029:E:NSS] [nss-wifili]: stop ERROR - Null nss context
+[  105.116705] wlan: [4029:E:QLD] qld_register: Handle or address is NULL
+[  105.196792] PCIe: User of event deregistration is NULL
+[  105.246732] wlan: [4029:E:WMI] wmi_unified_unregister_event_handler: Event id 55 is unavailable
+[  105.246777] wlan: [4029:E:WMI] wmi_unified_unregister_event_handler: Event id 141 is unavailable
+[  105.254310] wlan: [4029:E:WMI] wmi_unified_unregister_event_handler: Event id 137 is unavailable
+root@VNPT:/# 
+root@VNPT:/# rmmod qca_ol
+root@VNPT:/# 
+root@VNPT:/# insmod qca_ol testmode=1
+[  106.287988] mc_attach: enabled snooping on br-lan.
+root@VNPT:/# 
+root@VNPT:/# insmod wifi_3_0
+[  107.208136] remoteproc remoteproc0: powering up cd00000.qcom_q6v5_wcss
+[  107.243982] remoteproc remoteproc0: Booting fw image IPQ5018/q6_fw.mdt, size 1820
+[  109.800736] Subsystem error monitoring/handling services are up
+[  109.801043] remoteproc remoteproc0: remote processor cd00000.qcom_q6v5_wcss is now up
+[  109.801297] rpmsg_dev_probe: No pm domain
+[  109.801611] rpmsg_dev_probe: No pm domain
+[  109.817523] remoteproc remoteproc1: powering up q6v5_wcss_userpd1
+[  109.829535] q6v5_wcss_userpd1 wcss powered up successfully
+[  109.831461] Subsystem error monitoring/handling services are up
+[  109.833057] cnss[2]: INFO: QMI WLFW service connected, state: 0x1
+[  109.833329] cnss[2]: INFO: device_id : 65532 mem mode : [2]
+[  109.834406] cnss[2]: INFO: platform name: Qualcomm Technologies, Inc. IPQ5018/AP-MP02.1
+[  109.834408] cnss[2]: INFO: Target capability: chip_id: 0x0, chip_family: 0x4, board_id: 0xff, soc_id: 0xffffffff, fw_version: 0x250902ab, fw_build_timestamp: 2021-06-18 04:00, otp_version: 0x0 eeprom_caldata_read_timeout 0s
+[  109.834421] cnss[2]: INFO: Using Boardid from bootargs:0x10
+[  109.844487] cnss[2]: INFO: BDF location : 0x4c400000
+[  109.844527] cnss[2]: INFO: BDF IPQ5018/bdwlan.b10 size 131072
+[  109.845673] cnss[2]: INFO: per device BDF location : 0x4c420000
+[  109.845801] cnss[2]: INFO: CALDATA IPQ5018/caldata.bin size 131072 offset 0x20000
+[  109.901358] remoteproc remoteproc1: remote processor q6v5_wcss_userpd1 is now up
+[  109.909017] cnss[2]: INFO: Waiting for FW ready. Device: 0xfffc, FW ready timeout: 15 seconds
+[  109.916381] cnss[2]: INFO: FW ready received for device 0xfffc
+[  109.925406] cnss[2]: INFO: Sending mode message, mode: FTM(1), state: 0x7
+[  109.934668] wlan: [305:D:dfs] WLAN_DEBUG_DFS1 : dfs_psoc_obj_create_notification: DFS obj attach to psoc successfully
+[  109.964928] wlan: [305:E:CONFIG] cfg_ini_parse_to_store: Failed to parse *.ini file @ QCA5018.ini; status:4
+[  110.324982] wlan: [220:E:TIF] init_deinit_ready_event_handler: Host Requested 137 peers. FW Supports 100 peers
+[  110.330541] wlan: [305:E:NSS] [nss-wifili]: pdev:854c0480 radio_ifnum:32 scheme_id:0 radio_priority:1 
+[  110.336738] wlan: [305:E:TIF] target_if_lro_hash_config: pdev with id 0 is NULL
+[  110.343432] wlan: [305:I:MSCS] qca_mscs_module_init: 
+[  110.343432] ****QCA MSCS Initialization Done**** SoC 86340480
+[  110.351523] wlan: [0:E:NSS] [nss-wifili]: NSS Wifili DBDC Repeater enable message passed
+[  110.351526] wlan: [305:E:ANY] ol_ath_set_obss_pd_enable_bit: Self Spatial Reuse disabled in FTM
+[  110.351547] wlan: [305:E:ANY] ol_ath_set_obss_pd_enable_bit: Self Spatial Reuse disabled in FTM
+[  110.352854] wlan: [305:I:Dynamic Mode Change] ol_ath_check_and_reconfig_hw_mode: Running with HW mode = 0
+[  110.353463] wlan: [305:E:QLD] qld_register: Handle or address is NULL
+[  110.353576] remoteproc remoteproc2: powering up q6v5_wcss_userpd2
+[  110.361193] Subsystem error monitoring/handling services are up
+[  110.361245] remoteproc remoteproc2: remote processor q6v5_wcss_userpd2 is now up
+[  110.361295] cnss[41]: INFO: Waiting for FW ready. Device: 0xfffb, FW ready timeout: 15 seconds
+[  110.432400] cnss[41]: INFO: QMI WLFW service connected, state: 0x1
+[  110.432833] cnss[41]: INFO: device_id : 65531 mem mode : [2]
+[  110.437539] cnss[41]: INFO: platform name: Qualcomm Technologies, Inc. IPQ5018/AP-MP02.1
+[  110.444462] cnss[41]: INFO: Target capability: chip_id: 0x0, chip_family: 0x4, board_id: 0xff, soc_id: 0xffffffff, fw_version: 0x250902ab, fw_build_timestamp: 2021-06-18 04:00, otp_version: 0x0 eeprom_caldata_read_timeout 0s
+[  110.451695] cnss[41]: INFO: Device BAR Info pa: 0x81e00000, va: 0x97600000, size: 0x200000
+[  110.471360] cnss[41]: INFO: Using Boardid from bootargs:0x60
+[  110.490195] cnss[41]: INFO: BDF location : 0x4d300000
+[  110.490221] cnss[41]: INFO: BDF qcn6122/bdwlan.b60 size 131072
+[  110.495465] cnss[41]: INFO: per device BDF location : 0x4d320000
+[  110.500178] cnss[41]: INFO: CALDATA qcn6122/caldata_1.bin size 131072 offset 0x20000
+[  110.576582] cnss[41]: INFO: FW ready received for device 0xfffb
+[  110.577037] cnss[41]: INFO: Sending mode message, mode: FTM(1), state: 0x7
+[  110.591078] wlan: [305:D:dfs] WLAN_DEBUG_DFS1 : dfs_psoc_obj_create_notification: DFS obj attach to psoc successfully
+[  110.591771] wlan: [305:E:QDF] CONFIG creation failed
+[  110.600721] wlan: [305:E:QDF] cmdresp creation failed 0x00000000
+[  111.368100] wlan: [220:E:TIF] init_deinit_ready_event_handler: Host Requested 137 peers. FW Supports 100 peers
+[  111.373752] wlan: [305:E:NSS] [nss-wifili]: pdev:87660480 radio_ifnum:33 scheme_id:1 radio_priority:0 
+[  111.380170] wlan: [305:E:TIF] target_if_lro_hash_config: pdev with id 0 is NULL
+[  111.389271] wlan: [305:E:ANY] ol_ath_set_obss_pd_enable_bit: Self Spatial Reuse disabled in FTM
+[  111.389315] wlan: [0:E:NSS] [nss-wifili]: NSS Wifili DBDC Repeater enable message passed
+[  111.402216] wlan: [305:E:ANY] ol_ath_set_obss_pd_enable_bit: Self Spatial Reuse disabled in FTM
+[  111.412200] wlan: [305:I:Dynamic Mode Change] ol_ath_check_and_reconfig_hw_mode: Running with HW mode = 0
+[  111.419762] wlan: [305:E:QLD] qld_register: Handle or address is NULL
+root@VNPT:/# 
+root@VNPT:/# insmod diagchar
+[  111.697566] diag: IPC Logging disabled
+[  111.698560] TRACK: P[0]	PMask[4]
+[  111.700229] TRACK: P[1]	PMask[4]
+[  111.703610] TRACK: P[2]	PMask[4]
+[  111.707380] TRACK: P[3]	PMask[4]
+[  111.710086] nik 4097 info->svc_id
+[  111.714865] diag: Receiving feature mask length more than Apps support
+[  111.714974] diag: In diag_send_feature_mask_update, control channel is not open, p: 2, 7f4c5c04
+root@VNPT:/# 
+root@VNPT:/# diag_socket_app -a 192.168.88.100 &
+root@VNPT:/# diag_socket_log: Diag_LSM_Init succeeded.
+diag_socket_log: This device does not have any remote devices
+diag_socket_log: socket_count is: 1
+diag: In diag_register_socket_cb, registered socket callback function
+diag_socket_log: Translating address: 192.168.88.100
+diag_socket_log: Trying to connect to address: 192.168.88.100, port: 2500
+diag_socket_log: Successful connect to address: 192.168.88.100, port number: 2500
+ logging switched 
+
+root@VNPT:/# /etc/init.d/ftm start
+**** Platform Name: ap-mp02.1 *****
+896+0 records in
+896+0 records out
+458752 bytes (448.0KB) copied, 0.157587 seconds, 2.8MB/s
+Copy ART caldata from /dev/mtdblock7 to /tmp/virtual_art.bin
+root@VNPT:/# 
+root@VNPT:/# ftm -n -dd &
+root@VNPT:/# FTM Daemon calling LSM init
+FTMDaemon: Diag_LSM_Init succesful

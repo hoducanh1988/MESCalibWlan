@@ -26,5 +26,5 @@
             <sys:Double x:Key="fontSizeController">17</sys:Double>
         </ResourceDictionary>
     </Application.Resources>
-
+    
 </Application>

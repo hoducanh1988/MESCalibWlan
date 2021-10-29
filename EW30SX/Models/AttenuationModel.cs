@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EW30SX.Asset.Global;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -47,7 +48,7 @@ namespace EW30SX.Models {
             macWan = "";
             totalTime = "00:00:00";
             totalResult = "-";
-            logSystem = logQSPR = logDUT = "";
+            logSystem = logQSPR = logDUT = logQSPRMini = "";
         }
 
         public bool Passed() {
@@ -75,6 +76,7 @@ namespace EW30SX.Models {
         public bool Waiting(bool is_verify) {
             buttonMeasureContent = is_verify ? "ĐO" : "STOP";
             buttonVerifyContent = is_verify ? "STOP" : "VERIFY";
+            logSystem += is_verify ? "VERIFY SUY HAO:\n" : "ĐO SUY HAO:\n";
             statusString = is_verify ? "Đang verify suy hao..." : "Đang đo suy hao...";
             totalResult = "Waiting...";
             return true;
@@ -344,12 +346,23 @@ namespace EW30SX.Models {
                 OnPropertyChanged(nameof(logSystem));
             }
         }
+        string _log_qspr_mini;
+        public string logQSPRMini {
+            get { return _log_qspr_mini; }
+            set {
+                _log_qspr_mini = value;
+                OnPropertyChanged(nameof(logQSPRMini));
+            }
+        }
         string _log_qspr;
         public string logQSPR {
             get { return _log_qspr; }
             set {
                 _log_qspr = value;
                 OnPropertyChanged(nameof(logQSPR));
+                int limit_len = myGlobal.settingviewmodel.SM.logLimitLen;
+                logQSPRMini = logQSPR.Length <= limit_len ? logQSPR : logQSPR.Substring(logQSPR.Length - limit_len - 1, limit_len);
+
             }
         }
         string _log_dut;

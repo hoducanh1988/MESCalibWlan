@@ -15,7 +15,7 @@ namespace EW30SX.ViewModels {
                 ID = "1",
                 Version = "EW30SXVN0U0001",
                 Content = "- Phát hành lần đầu.",
-                Date = "20/10/2021", ChangeType = "Tạo mới",
+                Date = "19/10/2021", ChangeType = "Tạo mới",
                 Person = "Hồ Đức Anh"
             });
         }

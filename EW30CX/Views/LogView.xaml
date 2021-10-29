@@ -35,7 +35,6 @@
     
     <StackPanel Margin="5,0,5,0">
         <Label Content="Vui lòng chọn loại dữ liệu cần truy vấn:"/>
-        <RadioButton IsChecked="{Binding Path=LM.isAccess, UpdateSourceTrigger=PropertyChanged}"  Content="Microsoft Access Database"/>
         <RadioButton IsChecked="{Binding Path=LM.isSetting, UpdateSourceTrigger=PropertyChanged}" Content="Setting file"/>
         <RadioButton IsChecked="{Binding Path=LM.isSoftware, UpdateSourceTrigger=PropertyChanged}" Content="Software config file"/>
         <RadioButton IsChecked="{Binding Path=LM.isGolden, UpdateSourceTrigger=PropertyChanged}" Content="Golden file"/>

@@ -12,6 +12,10 @@ namespace EW30SX.Asset.IO {
 
         QSPRScheduler _scheduler;
         QSPRTestTree _testTree;
+        string _qsprInstallDirectory = @"C:\Program Files (x86)\Qualcomm\QDART\bin";
+        string _pluginsDirectory = @"C:\Program Files (x86)\Qualcomm\QDART\QSPRPlugins";
+        string _workspaceConfig = @"C:\Qualcomm\QSPR\QSPRConfigurations\Workspace.config";
+
         T testinfo_1;
         U testinfo_2;
         S settinginfo;
@@ -19,10 +23,12 @@ namespace EW30SX.Asset.IO {
         string xmsg_name = "logQSPR";
 
         public QSPRHelper() {
-            _scheduler = new QSPRScheduler();
+            _scheduler = new QSPRScheduler(_pluginsDirectory);
             _scheduler.OnDebugMessage += new QSPRScheduler.OnDebugMessageEventHandler(_scheduler_OnDebugMessage);
             _scheduler.OnTestMessage += new QSPRScheduler.OnTestMessageEventHandler(_scheduler_OnTestMessage);
-            _scheduler.LoadWorkspaceConfig(@"C:\Qualcomm\QSPR\QSPRConfigurations\Workspace.config");
+            _scheduler.OnRealTimeParamMessage += new QSPRScheduler.OnRealTimeParamMsgEventHandler(_scheduler_OnRealTimeParamMessage);
+            _scheduler.LoadWorkspaceConfig(_workspaceConfig);
+            
         }
 
         public void setObject(T obj_t1, U obj_t2, S obj_s, bool is_t) {
@@ -32,13 +38,17 @@ namespace EW30SX.Asset.IO {
             is_T_not_U = is_t;
         }
 
+        private void _scheduler_OnRealTimeParamMessage(string messageType, string id, string name = "", string value = "", string units = "", string lowerLimit = "", string upperLimit = "", byte pluginTypes = 7, string pluginNames = "") {
+            UpdateStatusWindow("MessageType - " + messageType + " Name - " + name + " Value - " + value);
+        }
+
         private void _scheduler_OnDebugMessage(string strWin, string strText, int traceLevel, bool NoEndOfLine) {
             UpdateStatusWindow(strWin + ": " + strText);
         }
 
+
         private void _scheduler_OnTestMessage(int messageType, QSPRTestMessage messageData) {
             switch ((TestMsgTypes)messageType) {
-
                 case TestMsgTypes.ON_UNIT_START: {
                         string sn = messageData.GetValue(TestMsgItemNames.SN);
                         string testCount = messageData.GetValue(TestMsgItemNames.TEST_COUNT);
@@ -61,6 +71,7 @@ namespace EW30SX.Asset.IO {
                         string testName = messageData.GetValue(TestMsgItemNames.TESTNAME);
                         string testResult = messageData.GetValue(TestMsgItemNames.TESTRESULT);
                         string loopInfo = messageData.GetValue(TestMsgItemNames.LOOP_DETAILS);
+
                         UpdateStatusWindow("Test finished: " + testName + " with result: " + testResult + " LOOP_DETAILS=" + loopInfo ?? "");
 
                         string[] msgItemNames = messageData.GetItemNames();
@@ -69,6 +80,7 @@ namespace EW30SX.Asset.IO {
                             // if the item is an output parameter
                             if (itemName.StartsWith(TestMsgItemNames.OUTPUT_PARAM_PREFIX)) {
                                 string outParamValue = messageData.GetValue(itemName);
+                                UpdateStatusWindow(itemName + ":" + outParamValue);
                             }
                         }
 
@@ -76,6 +88,7 @@ namespace EW30SX.Asset.IO {
                     }
             }
         }
+
 
         private void UpdateStatusWindow(string msg) {
             PropertyInfo xmsg = is_T_not_U ? testinfo_1.GetType().GetProperty(xmsg_name) : testinfo_2.GetType().GetProperty(xmsg_name);
@@ -86,6 +99,7 @@ namespace EW30SX.Asset.IO {
             if (is_T_not_U) xmsg.SetValue(testinfo_1, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
             else xmsg.SetValue(testinfo_2, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
         }
+
 
         private void ClearStatusWindow() {
             PropertyInfo xmsg = is_T_not_U ? testinfo_1.GetType().GetProperty(xmsg_name) : testinfo_2.GetType().GetProperty(xmsg_name);
@@ -112,8 +126,8 @@ namespace EW30SX.Asset.IO {
                 g_mac5G_onboard = g_macEth0.Substring(0, 6) + GetMAC5G(AddMac_Value_tam);
 
                 set_global_variable(settinginfo.GetType().GetProperty("snVariable").GetValue(settinginfo, null).ToString(), g_SN);
-                set_global_variable(settinginfo.GetType().GetProperty("macWlan2GVariable").GetValue(settinginfo, null).ToString(), g_mac2G_onboard);
-                set_global_variable(settinginfo.GetType().GetProperty("macWlan5GVariable").GetValue(settinginfo, null).ToString(), g_mac5G_onboard);
+                set_global_variable(settinginfo.GetType().GetProperty("macWlan2GVariable").GetValue(settinginfo, null).ToString(), format_testtree_mac(g_mac2G_onboard));
+                set_global_variable(settinginfo.GetType().GetProperty("macWlan5GVariable").GetValue(settinginfo, null).ToString(), format_testtree_mac(g_mac5G_onboard));
                 _testTree.RunTree();
 
                 return true;
@@ -159,19 +173,39 @@ namespace EW30SX.Asset.IO {
             catch { return 2; }
         }
 
+
         private bool set_global_variable(string var_name, string var_value) {
             try {
                 bool r = false;
                 int count = 0;
+                PropertyInfo pri = null;
+                string data = "";
+                if (is_T_not_U) {
+                    pri = testinfo_1.GetType().GetProperty("logSystem");
+                    data = pri.GetValue(testinfo_1, null).ToString();
+                }
+                else {
+                    pri = testinfo_2.GetType().GetProperty("logSystem");
+                    data = pri.GetValue(testinfo_2, null).ToString();
+                }
+
             RE:
                 count++;
                 _scheduler.SetGlobalVariable(var_name, var_value);
+                data += $"...set {var_name} = {var_value}\n";
+
                 string fvalue = "";
                 _scheduler.GetGlobalVariable(var_name, out fvalue);
                 r = fvalue.ToLower().Equals(var_value.ToLower());
+                data += $"...get {var_name} = {fvalue}\n";
+
                 if (!r) {
                     if (count < 3) goto RE;
                 }
+
+                if (is_T_not_U) pri.SetValue(testinfo_1, Convert.ChangeType(data, pri.PropertyType), null);
+                else pri.SetValue(testinfo_2, Convert.ChangeType(data, pri.PropertyType), null);
+                
                 return r;
             }
             catch { return false; }
@@ -219,6 +253,10 @@ namespace EW30SX.Asset.IO {
             catch { }
 
             return hexMAC;
+        }
+
+        private string format_testtree_mac(string mac) {
+            return $"{mac.Substring(0,2)}.{mac.Substring(2, 2)}.{mac.Substring(4, 2)}.{mac.Substring(6, 2)}.{mac.Substring(8, 2)}.{mac.Substring(10, 2)}";
         }
 
     }

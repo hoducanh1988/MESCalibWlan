@@ -143,13 +143,13 @@ namespace EW30SX.Asset.IO {
             if (!r) return false;
             r = mesh.Query("rmmod wifi_3_0", 10, "root@VNPT:/#");
             if (!r) return false;
-            r = mesh.Query("rmmod qca_ol", 3, "root@VNPT:/#");
+            r = mesh.Query("rmmod qca_ol", 10, "root@VNPT:/#");
             if (!r) return false;
-            r = mesh.Query("insmod qca_ol testmode=1", 3, "root@VNPT:/#");
+            r = mesh.Query("insmod qca_ol testmode=1", 10, "root@VNPT:/#");
             if (!r) return false;
-            r = mesh.Query("insmod wifi_3_0", 10, "root@VNPT:/#");
+            r = mesh.Query("insmod wifi_3_0", 30, "root@VNPT:/#");
             if (!r) return false;
-            r = mesh.Query("insmod diagchar", 3, "root@VNPT:/#");
+            r = mesh.Query("insmod diagchar", 10, "root@VNPT:/#");
             if (!r) return false;
             r = mesh.Query($"diag_socket_app -a {ip_pc} &", 30, "diag_socket_log: Successful connect to address");
             if (!r) return false;

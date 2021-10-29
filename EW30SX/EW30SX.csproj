@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{657AD2A9-5C6D-4A2A-BB93-D5112B3B6BB9}</ProjectGuid>
+    <ProjectGuid>{7B760E81-BB57-4D98-934D-092AE22F106C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>EW30SX</RootNamespace>
     <AssemblyName>EW30SX</AssemblyName>
@@ -12,14 +12,10 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -41,25 +37,15 @@
     <ApplicationIcon>Asset\Icon\mesh.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Access, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Office.Interop.Access.15.0.4420.1017\lib\net20\Microsoft.Office.Interop.Access.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="NAudio, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NAudio.1.9.0\lib\net35\NAudio.dll</HintPath>
     </Reference>
-    <Reference Include="QSPRSchedulerWrapper, Version=5.701.6372.17267, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\EW30SX\QSPRSchedulerWrapper.dll</HintPath>
-    </Reference>
-    <Reference Include="QTMInterface, Version=5.701.6372.17263, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\EW30SX\QTMInterface.dll</HintPath>
+    <Reference Include="QSPRSchedulerWrapper">
+      <HintPath>..\Release\EW30SX\QSPRSchedulerWrapper.dll</HintPath>
     </Reference>
     <Reference Include="reachframework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,17 +68,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\AboutViewModel.cs" />
+    <Compile Include="ViewModels\AttenuationViewModel.cs" />
+    <Compile Include="ViewModels\CalibViewModel.cs" />
+    <Compile Include="ViewModels\HelpViewModel.cs" />
+    <Compile Include="ViewModels\LogViewModel.cs" />
+    <Compile Include="ViewModels\MainContentViewModel.cs" />
+    <Compile Include="ViewModels\MainHeaderViewModel.cs" />
+    <Compile Include="ViewModels\SettingViewModel.cs" />
+    <Compile Include="Views\AboutView.xaml.cs" />
+    <Compile Include="Views\AttenuationView.xaml.cs" />
+    <Compile Include="Views\CalibView.xaml.cs" />
+    <Compile Include="Views\HelpView.xaml.cs" />
+    <Compile Include="Views\LogView.xaml.cs" />
+    <Compile Include="Views\MainContentView.xaml.cs" />
+    <Compile Include="Views\MainHeaderView.xaml.cs" />
+    <Compile Include="Views\SettingView.xaml.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Asset\Custom\FocusExtension.cs" />
     <Compile Include="Asset\Custom\GoldenFrequencyInfo.cs" />
     <Compile Include="Asset\Custom\PathlossFrequencyInfo.cs" />
     <Compile Include="Asset\Custom\PowerDifferenceInfo.cs" />
-    <Compile Include="Asset\Custom\StationInfo.cs" />
     <Compile Include="Asset\Custom\TestFrequencyInfo.cs" />
     <Compile Include="Asset\Global\myGlobal.cs" />
     <Compile Include="Asset\Global\mySupport.cs" />
-    <Compile Include="Asset\IO\DBHelper.cs" />
     <Compile Include="Asset\IO\DUTHelper.cs" />
     <Compile Include="Asset\IO\LogHelper.cs" />
+    <Compile Include="Asset\IO\LogQSPRHelper.cs" />
     <Compile Include="Asset\IO\QSPRHelper.cs" />
     <Compile Include="Asset\Protocol\Serial.cs" />
     <Compile Include="Commands\AttenuationMeasureCommand.cs" />
@@ -113,6 +122,44 @@
     <Compile Include="Commands\SettingOpenLayoutFileCommand.cs" />
     <Compile Include="Commands\SettingOpenPathLossCommand.cs" />
     <Compile Include="Commands\SettingSaveCommand.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\AboutView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AttenuationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CalibView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HelpView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LogView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainContentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainHeaderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SettingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Models\AboutModel.cs" />
     <Compile Include="Models\AttenuationModel.cs" />
     <Compile Include="Models\CalibModel.cs" />
@@ -121,84 +168,6 @@
     <Compile Include="Models\MainContentModel.cs" />
     <Compile Include="Models\MainHeaderModel.cs" />
     <Compile Include="Models\SettingModel.cs" />
-    <Compile Include="ViewModels\AboutViewModel.cs" />
-    <Compile Include="ViewModels\AttenuationViewModel.cs" />
-    <Compile Include="ViewModels\CalibViewModel.cs" />
-    <Compile Include="ViewModels\HelpViewModel.cs" />
-    <Compile Include="ViewModels\LogViewModel.cs" />
-    <Compile Include="ViewModels\MainContentViewModel.cs" />
-    <Compile Include="ViewModels\MainHeaderViewModel.cs" />
-    <Compile Include="ViewModels\SettingViewModel.cs" />
-    <Compile Include="Views\AboutView.xaml.cs">
-      <DependentUpon>AboutView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AttenuationView.xaml.cs">
-      <DependentUpon>AttenuationView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CalibView.xaml.cs">
-      <DependentUpon>CalibView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\HelpView.xaml.cs">
-      <DependentUpon>HelpView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\LogView.xaml.cs">
-      <DependentUpon>LogView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainContentView.xaml.cs">
-      <DependentUpon>MainContentView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MainHeaderView.xaml.cs">
-      <DependentUpon>MainHeaderView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\SettingView.xaml.cs">
-      <DependentUpon>SettingView.xaml</DependentUpon>
-    </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Views\AboutView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\AttenuationView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\CalibView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\HelpView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\LogView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainContentView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainHeaderView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\SettingView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -225,45 +194,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Asset\Image\attenuation.png" />
-    <Resource Include="Asset\Image\verify.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Image\calib.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Image\log.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Image\setting.png" />
+    <Resource Include="Asset\Icon\mesh.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Asset\Image\about.png" />
+    <Resource Include="Asset\Image\attenuation.png" />
+    <Resource Include="Asset\Image\calib.png" />
     <Resource Include="Asset\Image\help.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="ADODB">
-      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
-      <VersionMajor>6</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="ADOX">
-      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
-      <VersionMajor>6</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Icon\mesh.ico" />
+    <Resource Include="Asset\Image\log.png" />
+    <Resource Include="Asset\Image\setting.png" />
+    <Resource Include="Asset\Image\verify.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

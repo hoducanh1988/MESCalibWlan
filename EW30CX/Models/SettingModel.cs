@@ -8,6 +8,15 @@ using System.Threading.Tasks;
 namespace EW30CX.Models {
     public class SettingModel : INotifyPropertyChanged {
 
+        int _log_limit;
+        public int logLimitLen {
+            get { return _log_limit; }
+            set {
+                _log_limit = value;
+                OnPropertyChanged(nameof(logLimitLen));
+            }
+
+        }
         string _ip_dut;
         public string ipDUT {
             get { return _ip_dut; }
@@ -174,6 +183,30 @@ namespace EW30CX.Models {
             set {
                 _is_run_testtree = value;
                 OnPropertyChanged(nameof(isRunTesttree));
+            }
+        }
+        string _remain;
+        public string qty_remain {
+            get { return _remain; }
+            set {
+                _remain = value;
+                OnPropertyChanged(nameof(qty_remain));
+            }
+        }
+        string _att;
+        public string golden_attenuation {
+            get { return _att; }
+            set {
+                _att = value;
+                OnPropertyChanged(nameof(golden_attenuation));
+            }
+        }
+        string _veri;
+        public string golden_verification {
+            get { return _veri; }
+            set {
+                _veri = value;
+                OnPropertyChanged(nameof(golden_verification));
             }
         }
 

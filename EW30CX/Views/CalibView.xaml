@@ -243,7 +243,7 @@
                                 </WrapPanel>
                                 <WrapPanel>
                                     <Label Style="{StaticResource label_title}" Content="Còn lại:" />
-                                    <Label Style="{StaticResource label_setting}" Content="{Binding Path=SI.qty_remain, UpdateSourceTrigger=PropertyChanged}" />
+                                    <Label Style="{StaticResource label_setting}" Content="{Binding Path=SM.qty_remain, UpdateSourceTrigger=PropertyChanged}" />
                                 </WrapPanel>
                                 <WrapPanel>
                                     <Label Style="{StaticResource label_title}" Content="Độ lệch công suất golden (dBm):" />
@@ -255,11 +255,11 @@
                                 </WrapPanel>
                                 <WrapPanel>
                                     <Label Style="{StaticResource label_title}" Content="Golden đo suy hao trạm:" />
-                                    <Label Style="{StaticResource label_setting}" Content="{Binding Path=SI.golden_attenuation, UpdateSourceTrigger=PropertyChanged}" />
+                                    <Label Style="{StaticResource label_setting}" Content="{Binding Path=SM.golden_attenuation, UpdateSourceTrigger=PropertyChanged}" />
                                 </WrapPanel>
 
                                 <Label Style="{StaticResource label_title}" Content="Golden verify suy hao trạm:" />
-                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding Path=SI.golden_verification, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding Path=SM.golden_verification, UpdateSourceTrigger=PropertyChanged}" />
                                 <Label Style="{StaticResource label_title}" Content="Testtree calib công suất:" />
                                 <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding SM.calibTesttreeFile, UpdateSourceTrigger=PropertyChanged}">
                                     <TextBlock.InputBindings>
@@ -312,7 +312,7 @@
                     <RichTextBox IsReadOnly="True" Margin="0,0,1,2" Padding="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                         <FlowDocument>
                             <Paragraph>
-                                <Run Text="{Binding Path=CM.logQSPR, UpdateSourceTrigger=PropertyChanged}"/>
+                                <Run Text="{Binding Path=CM.logQSPRMini, UpdateSourceTrigger=PropertyChanged}"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>

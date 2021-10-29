@@ -24,6 +24,7 @@ namespace EW30CX.Asset.IO {
 
         public QSPRHelper() {
             _scheduler = new QSPRScheduler(_pluginsDirectory);
+            _scheduler.OnDebugMessage += new QSPRScheduler.OnDebugMessageEventHandler(_scheduler_OnDebugMessage);
             _scheduler.OnTestMessage += new QSPRScheduler.OnTestMessageEventHandler(_scheduler_OnTestMessage);
             _scheduler.OnRealTimeParamMessage += new QSPRScheduler.OnRealTimeParamMsgEventHandler(_scheduler_OnRealTimeParamMessage);
             _scheduler.LoadWorkspaceConfig(_workspaceConfig);
@@ -88,6 +89,7 @@ namespace EW30CX.Asset.IO {
             }
         }
 
+
         private void UpdateStatusWindow(string msg) {
             PropertyInfo xmsg = is_T_not_U ? testinfo_1.GetType().GetProperty(xmsg_name) : testinfo_2.GetType().GetProperty(xmsg_name);
             string str_curr = "";
@@ -97,6 +99,7 @@ namespace EW30CX.Asset.IO {
             if (is_T_not_U) xmsg.SetValue(testinfo_1, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
             else xmsg.SetValue(testinfo_2, Convert.ChangeType(str_curr, xmsg.PropertyType), null);
         }
+
 
         private void ClearStatusWindow() {
             PropertyInfo xmsg = is_T_not_U ? testinfo_1.GetType().GetProperty(xmsg_name) : testinfo_2.GetType().GetProperty(xmsg_name);
@@ -123,8 +126,8 @@ namespace EW30CX.Asset.IO {
                 g_mac5G_onboard = g_macEth0.Substring(0, 6) + GetMAC5G(AddMac_Value_tam);
 
                 set_global_variable(settinginfo.GetType().GetProperty("snVariable").GetValue(settinginfo, null).ToString(), g_SN);
-                set_global_variable(settinginfo.GetType().GetProperty("macWlan2GVariable").GetValue(settinginfo, null).ToString(), g_mac2G_onboard);
-                set_global_variable(settinginfo.GetType().GetProperty("macWlan5GVariable").GetValue(settinginfo, null).ToString(), g_mac5G_onboard);
+                set_global_variable(settinginfo.GetType().GetProperty("macWlan2GVariable").GetValue(settinginfo, null).ToString(), format_testtree_mac(g_mac2G_onboard));
+                set_global_variable(settinginfo.GetType().GetProperty("macWlan5GVariable").GetValue(settinginfo, null).ToString(), format_testtree_mac(g_mac5G_onboard));
                 _testTree.RunTree();
 
                 return true;
@@ -170,19 +173,39 @@ namespace EW30CX.Asset.IO {
             catch { return 2; }
         }
 
+
         private bool set_global_variable(string var_name, string var_value) {
             try {
                 bool r = false;
                 int count = 0;
+                PropertyInfo pri = null;
+                string data = "";
+                if (is_T_not_U) {
+                    pri = testinfo_1.GetType().GetProperty("logSystem");
+                    data = pri.GetValue(testinfo_1, null).ToString();
+                }
+                else {
+                    pri = testinfo_2.GetType().GetProperty("logSystem");
+                    data = pri.GetValue(testinfo_2, null).ToString();
+                }
+
             RE:
                 count++;
                 _scheduler.SetGlobalVariable(var_name, var_value);
+                data += $"...set {var_name} = {var_value}\n";
+
                 string fvalue = "";
                 _scheduler.GetGlobalVariable(var_name, out fvalue);
                 r = fvalue.ToLower().Equals(var_value.ToLower());
+                data += $"...get {var_name} = {fvalue}\n";
+
                 if (!r) {
                     if (count < 3) goto RE;
                 }
+
+                if (is_T_not_U) pri.SetValue(testinfo_1, Convert.ChangeType(data, pri.PropertyType), null);
+                else pri.SetValue(testinfo_2, Convert.ChangeType(data, pri.PropertyType), null);
+                
                 return r;
             }
             catch { return false; }
@@ -230,6 +253,10 @@ namespace EW30CX.Asset.IO {
             catch { }
 
             return hexMAC;
+        }
+
+        private string format_testtree_mac(string mac) {
+            return $"{mac.Substring(0,2)}.{mac.Substring(2, 2)}.{mac.Substring(4, 2)}.{mac.Substring(6, 2)}.{mac.Substring(8, 2)}.{mac.Substring(10, 2)}";
         }
 
     }

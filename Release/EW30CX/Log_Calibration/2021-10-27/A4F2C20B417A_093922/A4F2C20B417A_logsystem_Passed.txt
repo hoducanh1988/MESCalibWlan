@@ -1,0 +1,28 @@
+
+10/27/2021 9:39:01 AM, Mở cổng COM5,115200:
+...Kết quả = True
+
+10/27/2021 9:39:01 AM, Chờ sản phẩm khởi động xong:
+1..2..3..4..5..6..7..8..9..10..
+...Kết quả = True
+
+10/27/2021 9:39:07 AM, Đăng nhập vào sản phẩm:
+...Kết quả = True
+
+10/27/2021 9:39:07 AM, Đọc mac wan từ sản phẩm:
+...mac wan = A4F2C20B417A
+...Kết quả = True
+
+10/27/2021 9:39:07 AM, Check mac sản phẩm có phải là golden hay không:
+...mac wan = A4F2C20B417A
+...Golden:
+GOLDEN_A4F2C20B417B.txt
+...Kết quả = False
+
+10/27/2021 9:39:07 AM, Chuyển mode dut sang FTM:
+1..2..3..4..5..6..7..8..9..10..11..12..13..14..15..16..17..18..19..20..21..22..23..24..25..26..27..28..
+...Kết quả = True
+
+10/27/2021 9:39:21 AM, End test:
+...Total result: Passed
+...Total time: 00:00:19

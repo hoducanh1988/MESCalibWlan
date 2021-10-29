@@ -39,18 +39,6 @@
     <ApplicationIcon>Asset\Icon\mesh.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.ADODB">
-      <HintPath>..\MESCalibWlan\bin\Debug\EW30CX\Interop.ADODB.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Interop.ADOX">
-      <HintPath>..\MESCalibWlan\bin\Debug\EW30CX\Interop.ADOX.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.Office.Interop.Access, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Office.Interop.Access.15.0.4420.1017\lib\net20\Microsoft.Office.Interop.Access.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="NAudio, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NAudio.1.9.0\lib\net35\NAudio.dll</HintPath>
     </Reference>
@@ -111,11 +99,9 @@
     <Compile Include="Asset\Custom\GoldenFrequencyInfo.cs" />
     <Compile Include="Asset\Custom\PathlossFrequencyInfo.cs" />
     <Compile Include="Asset\Custom\PowerDifferenceInfo.cs" />
-    <Compile Include="Asset\Custom\StationInfo.cs" />
     <Compile Include="Asset\Custom\TestFrequencyInfo.cs" />
     <Compile Include="Asset\Global\myGlobal.cs" />
     <Compile Include="Asset\Global\mySupport.cs" />
-    <Compile Include="Asset\IO\DBHelper.cs" />
     <Compile Include="Asset\IO\DUTHelper.cs" />
     <Compile Include="Asset\IO\LogHelper.cs" />
     <Compile Include="Asset\IO\QSPRHelper.cs" />

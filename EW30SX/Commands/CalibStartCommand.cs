@@ -101,7 +101,8 @@ namespace EW30SX.Commands {
                 if (dut != null) dut.Dispose();
                 LogHelper<CalibModel> log = new LogHelper<CalibModel>(testing, LogHelper<CalibModel>.log_type.Calibration);
                 log.save_all_log();
-                myGlobal.stationinfo.remain_down();
+                setting.qty_remain = (int.Parse(setting.qty_remain) - 1).ToString();
+                XmlHelper<SettingModel>.ToXmlFile(setting, AppDomain.CurrentDomain.BaseDirectory + "setting.xml");
             }));
             t.IsBackground = true;
             t.Start();
@@ -431,16 +432,19 @@ namespace EW30SX.Commands {
         /// <returns></returns>
         private bool check_condition(ref string msg) {
             bool r = false;
-            r = int.Parse(myGlobal.stationinfo.qty_remain) > 0;
+            r = string.IsNullOrEmpty(setting.qty_remain);
+            msg = "Vui lòng đo lại suy hao trạm calib wlan.";
+            if (r) return false;
+            r = int.Parse(setting.qty_remain) > 0;
             msg = "Vui lòng đo lại suy hao trạm calib wlan.";
             if (!r) return false;
-            r = string.IsNullOrEmpty(myGlobal.stationinfo.golden_attenuation);
+            r = string.IsNullOrEmpty(setting.golden_attenuation);
             msg = "Vui lòng đo lại suy hao trạm calib wlan.";
             if (r) return false;
-            r = string.IsNullOrEmpty(myGlobal.stationinfo.golden_verification);
+            r = string.IsNullOrEmpty(setting.golden_verification);
             msg = "Vui lòng verify suy hao trạm calib wlan.";
             if (r) return false;
-            string[] buffer = myGlobal.stationinfo.golden_verification.Split(new string[] { "::" }, StringSplitOptions.None);
+            string[] buffer = setting.golden_verification.Split(new string[] { "::" }, StringSplitOptions.None);
             r = buffer.Length == int.Parse(setting.qtyGoldenVerify);
             msg = "Số lượng golden verify trạm chưa đủ so với setting.";
             if (!r) return false;

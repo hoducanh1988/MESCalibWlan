@@ -25,7 +25,6 @@ G:\Backup_Tool_Test\repos\06.MESH\MESCalibWlan\Release\MESCalibWlan.pdb
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\Release\MESCalibWlan.exe.config
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\Release\MESCalibWlan.exe
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\Release\MESCalibWlan.pdb
-G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\MESCalibWlan.csprojAssemblyReference.cache
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\MainWindow.g.cs
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\App.g.cs
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\MESCalibWlan_MarkupCompile.cache
@@ -38,3 +37,4 @@ G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\MESCal
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\MESCalibWlan.csproj.CopyComplete
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\MESCalibWlan.exe
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\MESCalibWlan.pdb
+G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\MESCalibWlan\obj\Debug\MESCalibWlan.csprojAssemblyReference.cache

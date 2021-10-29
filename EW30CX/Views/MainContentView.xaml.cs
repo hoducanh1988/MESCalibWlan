@@ -32,12 +32,6 @@ namespace EW30CX.Views {
             InitializeComponent();
             mcvm = new MainContentViewModel();
             this.DataContext = mcvm;
-
-            Thread t = new Thread(new ThreadStart(() => {
-                myGlobal.stationinfo.load_from_db();
-            }));
-            t.IsBackground = true;
-            t.Start();
         }
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e) {

@@ -99,7 +99,8 @@ namespace EW30SX.Commands {
                 LogHelper<AttenuationModel> log = new LogHelper<AttenuationModel>(testing, LogHelper<AttenuationModel>.log_type.Verification);
                 log.save_all_log();
                 if (r) {
-                    myGlobal.stationinfo.set_golden_vri(testing.macWan);
+                    setting.golden_verification += string.IsNullOrEmpty(setting.golden_verification) ? testing.macWan : $"::{testing.macWan}";
+                    XmlHelper<SettingModel>.ToXmlFile(setting, AppDomain.CurrentDomain.BaseDirectory + "setting.xml");
                 }
             }));
             t.IsBackground = true;
@@ -212,8 +213,13 @@ namespace EW30SX.Commands {
 
             t.macWan = dut.get_Mac_Wan();
             r = t.macWan != null;
-
             t.logSystem += $"...mac wan = {t.macWan}\n";
+            if (t.macWan != null) {
+                r = !s.golden_verification.ToUpper().Contains(t.macWan.ToUpper());
+                t.logSystem += $"...sản phẩm đã verify suy hao rồi.\n";
+            }
+
+           
             t.logSystem += $"...Kết quả = {r}\n";
             t.getMacWanResult = r ? "Passed" : "Failed";
             st.Stop();
@@ -438,7 +444,7 @@ namespace EW30SX.Commands {
                 Thread.Sleep(1000);
                 goto RE;
             }
-            r = x == 1;
+            r = x == 1 || x == 2;
 
             myGlobal.qsprHelper.close_Test_Tree();
             t.logSystem += $"\n...Kết quả = {r}\n";
@@ -449,11 +455,6 @@ namespace EW30SX.Commands {
         }
 
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="t"></param>
-        /// <returns></returns>
         private bool extract_qspr_log(AttenuationModel t) {
             Stopwatch st = new Stopwatch();
             st.Start();
@@ -465,33 +466,9 @@ namespace EW30SX.Commands {
                 string log_content = t.logQSPR;
 
                 if (log_content == null || log_content.Length == 0) goto END;
-                string[] buffer = log_content.Split('\n');
-
-                myGlobal.goldenTestResults = new List<TestFrequencyInfo>();
-                int count = 0;
-                int max_count = buffer.Length - 1;
-                string result_channel = "";
-                const string STRING_START = "Test started: WlanTxVerifyPowerTest at:";
-                const string STRING_END = "Test finished: WlanTxVerifyPowerTest with result:";
-                bool add_flag = false;
-
-            RE:
-                string data_line = buffer[count];
-                if (data_line.ToLower().Contains(STRING_START.ToLower())) { add_flag = true; }
-                if (add_flag == true) {
-                    result_channel += data_line + "\n";
-                }
-                if (data_line.ToLower().Contains(STRING_END.ToLower())) {
-                    var item = _getWlanVerifyResultItem(result_channel);
-                    t.logSystem += $"{item.ToString()}\n";
-                    myGlobal.goldenTestResults.Add(item);
-                    result_channel = "";
-                    add_flag = false;
-                }
-                count++;
-                if (count < max_count) goto RE;
-
-                r = myGlobal.goldenTestResults.Count > 0;
+                LogQSPRHelper log_qspr = new LogQSPRHelper();
+                myGlobal.goldenTestResults = log_qspr.Extract(log_content);
+                r = !(myGlobal.goldenTestResults == null || myGlobal.goldenTestResults.Count == 0);
             }
             catch (Exception ex) {
                 t.logSystem += $"...{ex.ToString()}\n";
@@ -499,12 +476,14 @@ namespace EW30SX.Commands {
             }
 
         END:
+            if (r) foreach (var item in myGlobal.goldenTestResults) t.logSystem += item.ToString() + "\n";
             t.logSystem += $"...Kết quả = {r}\n";
             t.extractQsprResult = r ? "Passed" : "Failed";
             st.Stop();
             t.extractQsprElapsedTime = st.ElapsedMilliseconds.ToString();
             return r;
         }
+
 
         /// <summary>
         /// 
@@ -531,44 +510,16 @@ namespace EW30SX.Commands {
                 }
             }
 
+            
+
             r = myGlobal.powerDifferenceValues.Count > 0;
 
         END:
+            if (r) foreach (var item in myGlobal.powerDifferenceValues) t.logSystem += item.ToString() + "\n";
             t.logSystem += $"...Kết quả = {r}\n";
             t.calcGoldenResult = r ? "Passed" : "Failed";
             st.Stop();
             t.calcGoldenElapsedTime = st.ElapsedMilliseconds.ToString();
-            return r;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="t"></param>
-        /// <param name="s"></param>
-        /// <returns></returns>
-        private bool save_path_loss(AttenuationModel t, SettingModel s) {
-            Stopwatch st = new Stopwatch();
-            st.Start();
-            bool r = false;
-            t.logSystem += $"\n{DateTime.Now}, Lưu dữ liệu suy hao ra file pathloss {s.pathLossFile}:\n";
-            t.updatePathlossResult = "Waiting...";
-
-            myGlobal.pathlossInfos = _getPathLossInfoFromFile(s.pathLossFile);
-            if (myGlobal.pathlossInfos == null || myGlobal.pathlossInfos.Count == 0) goto END;
-
-            foreach (var item in myGlobal.powerDifferenceValues) {
-                _updateLossInfo("bh0_lp", item.Frequency, item.powerDifferenceAnten1, myGlobal.pathlossInfos);
-                _updateLossInfo("bh1_lp", item.Frequency, item.powerDifferenceAnten2, myGlobal.pathlossInfos);
-            }
-
-            _savePathLossFile(s.pathLossFile, myGlobal.pathlossInfos);
-
-        END:
-            t.logSystem += $"...Kết quả = {r}\n";
-            t.updatePathlossResult = r ? "Passed" : "Failed";
-            st.Stop();
-            t.updatePathlossElapsedTime = st.ElapsedMilliseconds.ToString();
             return r;
         }
 
@@ -631,123 +582,16 @@ namespace EW30SX.Commands {
             }
         }
 
-        TestFrequencyInfo _getWlanVerifyResultItem(string result_channel) {
-            TestFrequencyInfo itemResult = new TestFrequencyInfo();
-            string[] buffer = result_channel.Split('\n');
-            foreach (var data_line in buffer) {
-                //get average power
-                if (data_line.ToLower().Contains("Average Power:".ToLower())) {
-                    string s = data_line.ToLower();
-                    string[] bff = s.Split(new string[] { "average power:" }, StringSplitOptions.None);
-                    string pw_str = bff[1].Split(new string[] { "dbm" }, StringSplitOptions.None)[0].Trim();
-                    double pw_double;
-                    bool r = double.TryParse(pw_str, out pw_double);
-                    if (r) itemResult.averagePowers.Add(pw_double);
-                }
-                //get frequency && antenna
-                if (data_line.ToLower().Contains("channel") && data_line.ToLower().Contains("wlan_chain")) {
-                    string s = data_line.ToLower();
-                    int idx = s.IndexOf("channel");
-                    string freq = s.Substring(idx + 9, 4);
-                    idx = s.IndexOf("wlan_chain");
-                    string anten = s.Substring(idx + 11, 1);
-                    itemResult.Antenna = anten;
-                    itemResult.Frequency = freq;
-                }
-            }
-            return itemResult;
-        }
-
 
         double _getWlanAveragePower(string freq, string anten, List<TestFrequencyInfo> wlanTestResults) {
             try {
-                var items = wlanTestResults.Where(x => x.Frequency.Equals(freq) && x.Antenna.Equals(anten)).Select(x => x.averagePowers);
-                List<double> pw_doubles = new List<double>();
-                foreach (var item in items) pw_doubles.Add(item.Average());
-                return Math.Round(pw_doubles.Average(), 4);
+                var items = wlanTestResults.Where(x => x.Frequency.Equals(freq) && x.Antenna.Equals(anten)).ToList();
+                return items[0].averagePower;
             }
             catch {
                 return double.MaxValue;
             }
         }
-
-        List<PathlossFrequencyInfo> _getPathLossInfoFromFile(string file_path_loss) {
-            if (System.IO.File.Exists(file_path_loss) == false) return null;
-            string[] lines = File.ReadAllLines(file_path_loss);
-
-            List<PathlossFrequencyInfo> lossInfos = new List<PathlossFrequencyInfo>();
-            for (int i = 0; i < lines.Length; i++) {
-                string line = lines[i].ToLower();
-                if (line.Contains("<frequency>")) {
-                    PathlossFrequencyInfo lossinfo = new PathlossFrequencyInfo();
-                    lossinfo.lineNumber = i;
-                    lossinfo.Frequency = line.Replace("<frequency>", "").Replace("</frequency>", "").Trim();
-                    lossinfo.lossValue = double.Parse(lines[i + 1].ToLower().Replace("<value>", "").Replace("</value>", "").Trim());
-
-                    for (int k = i; k >= 0; k--) {
-                        if (lines[k].ToLower().Contains("<pathname>")) {
-                            lossinfo.bhName = lines[k].ToLower().Replace("<pathname>", "").Replace("</pathname>", "").Trim();
-                            break;
-                        }
-                    }
-                    lossInfos.Add(lossinfo);
-                }
-            }
-            return lossInfos;
-        }
-
-
-        bool _updateLossInfo(string bh_name, string center_frequency, double diff_value, List<PathlossFrequencyInfo> pathlossInfo) {
-            //update center frequency
-            double center_loss_value = 0;
-            foreach (var item in pathlossInfo) {
-                if (item.Frequency.Equals(center_frequency) && item.bhName.Equals(bh_name)) {
-                    item.lossValue = item.lossValue + diff_value;
-                    center_loss_value = item.lossValue;
-                    break;
-                }
-            }
-            if (center_loss_value == 0) return true;
-
-            //update side frequency
-            string lower_freq = (int.Parse(center_frequency) - 10).ToString();
-            string upper_freq = (int.Parse(center_frequency) + 10).ToString();
-            bool r1 = false;
-            bool r2 = false;
-
-            foreach (var item in pathlossInfo) {
-                if (item.Frequency.Equals(lower_freq) && item.bhName.Equals(bh_name)) {
-                    item.lossValue = center_loss_value;
-                    r1 = true;
-                }
-                if (item.Frequency.Equals(upper_freq) && item.bhName.Equals(bh_name)) {
-                    item.lossValue = center_loss_value;
-                    r2 = true;
-                }
-                if (r1 == true && r2 == true) break;
-            }
-
-            return true;
-        }
-
-
-        bool _savePathLossFile(string file_path_loss, List<PathlossFrequencyInfo> pathlossInfo) {
-            if (System.IO.File.Exists(file_path_loss) == false) return false;
-            string[] buffer = File.ReadAllLines(file_path_loss);
-
-            foreach (var item in pathlossInfo) {
-                //        <Value>8.0299</Value>
-                string s = buffer[item.lineNumber + 1].ToLower();
-                string[] bff = s.Split(new string[] { "value" }, StringSplitOptions.None);
-                buffer[item.lineNumber + 1] = string.Format("{0}Value>{1}</Value{2}", bff[0], item.lossValue, bff[2]);
-            }
-
-            File.WriteAllLines(file_path_loss, buffer);
-            //System.Diagnostics.Process.Start(file_path_loss);
-
-            return true;
-        }
-
 
         #endregion
     }

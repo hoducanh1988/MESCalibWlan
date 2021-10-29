@@ -100,7 +100,10 @@ namespace EW30CX.Commands {
                 LogHelper<AttenuationModel> log = new LogHelper<AttenuationModel>(testing, LogHelper<AttenuationModel>.log_type.Attenuation);
                 log.save_all_log();
                 if (r) {
-                    myGlobal.stationinfo.set_golden_att(testing.macWan);
+                    setting.golden_attenuation = testing.macWan;
+                    setting.golden_verification = "";
+                    setting.qty_remain = setting.cycleMeasureAtt;
+                    XmlHelper<SettingModel>.ToXmlFile(setting, AppDomain.CurrentDomain.BaseDirectory + "setting.xml");
                 }
             }));
             t.IsBackground = true;
@@ -507,7 +510,7 @@ namespace EW30CX.Commands {
             r = myGlobal.powerDifferenceValues.Count > 0;
 
         END:
-            if (r) foreach (var item in myGlobal.powerDifferenceValues) t.logSystem += item.ToString() + "\n"; 
+            if (r) foreach (var item in myGlobal.powerDifferenceValues) t.logSystem += item.ToString() + "\n";
             t.logSystem += $"...Kết quả = {r}\n";
             t.calcGoldenResult = r ? "Passed" : "Failed";
             st.Stop();

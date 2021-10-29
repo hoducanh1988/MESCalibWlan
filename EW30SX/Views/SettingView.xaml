@@ -136,17 +136,17 @@
                 <Label Style="{StaticResource label_legend}" Content="Cài đặt thông tin testtree:"/>
                 <Grid>
                     <Button Style="{StaticResource open_file}" Command="{Binding OpenCalibTesttreeCommand}" Content="File testtree calib"/>
-                    <TextBox Margin="250,0,80,0" TextAlignment="Right" Text="{Binding Path=SM.calibTesttreeFile, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Margin="250,0,80,0" Text="{Binding Path=SM.calibTesttreeFile, UpdateSourceTrigger=PropertyChanged}"/>
                     <Button Style="{StaticResource select_file}" Command="{Binding BrowserCalibTesttreeCommand}" Content="..."/>
                 </Grid>
                 <Grid>
                     <Button Style="{StaticResource open_file}" Command="{Binding OpenAttTesttreeCommand}" Content="File testtree đo suy hao"/>
-                    <TextBox Margin="250,0,80,0" TextAlignment="Right" Text="{Binding Path=SM.attTesttreeFile, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Margin="250,0,80,0" Text="{Binding Path=SM.attTesttreeFile, UpdateSourceTrigger=PropertyChanged}"/>
                     <Button Style="{StaticResource select_file}" Command="{Binding BrowserAttTesttreeCommand}" Content="..."/>
                 </Grid>
                 <Grid>
                     <Button Style="{StaticResource open_file}" Command="{Binding OpenPathLossCommand}" Content="File suy hao"/>
-                    <TextBox Margin="250,0,80,0" TextAlignment="Right" Text="{Binding Path=SM.pathLossFile, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox Margin="250,0,80,0" Text="{Binding Path=SM.pathLossFile, UpdateSourceTrigger=PropertyChanged}"/>
                     <Button Style="{StaticResource select_file}" Command="{Binding BrowserPathLossCommand}" Content="..."/>
                 </Grid>
                 <Grid>
@@ -196,6 +196,10 @@
                 <Grid>
                     <Label Style="{StaticResource label_header}" Content="Số lượng golden verify suy hao trạm"/>
                     <TextBox Text="{Binding Path=SM.qtyGoldenVerify, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+                <Grid>
+                    <Label Style="{StaticResource label_header}" Content="Giới hạn kí tự log hiển thị"/>
+                    <TextBox IsEnabled="False" Text="{Binding Path=SM.logLimitLen, UpdateSourceTrigger=PropertyChanged}"/>
                 </Grid>
 
                 <Label Content="-"/>

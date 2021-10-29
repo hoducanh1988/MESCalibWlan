@@ -7,7 +7,7 @@
         xmlns:control="clr-namespace:EW30SX.Views"
         mc:Ignorable="d"
         Height="710" Width="1000" WindowStartupLocation="CenterScreen">
-    
+
     <Window.Title>
         <MultiBinding StringFormat="{}Version: {0} - Build time: {1} - Copyright of {2}">
             <Binding Path="MHM.Version" />
@@ -15,7 +15,7 @@
             <Binding Path="MHM.copyRight" />
         </MultiBinding>
     </Window.Title>
-    
+
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -27,5 +27,5 @@
         <control:MainContentView Grid.Row="1"/>
 
     </Grid>
-    
+
 </Window>

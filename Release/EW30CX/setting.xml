@@ -1,4 +1,5 @@
 ﻿<SettingModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <logLimitLen>30000</logLimitLen>
   <ipDUT>192.168.88.1</ipDUT>
   <ipPC>192.168.88.100</ipPC>
   <comPort>COM5</comPort>
@@ -19,5 +20,8 @@
   <cycleMeasureAtt>500</cycleMeasureAtt>
   <qtyGoldenVerify>1</qtyGoldenVerify>
   <isChangeIp>false</isChangeIp>
-  <isRunTesttree>false</isRunTesttree>
+  <isRunTesttree>true</isRunTesttree>
+  <qty_remain>494</qty_remain>
+  <golden_attenuation>A4F2C20B417A</golden_attenuation>
+  <golden_verification>A4F2C20B417A</golden_verification>
 </SettingModel>

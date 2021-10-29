@@ -1,0 +1,24 @@
+
+10/27/2021 10:03:23 AM, Mở cổng COM5,115200:
+...Kết quả = True
+
+10/27/2021 10:03:23 AM, Chờ sản phẩm khởi động xong:
+1..2..3..4..5..6..7..8..9..10..
+...Kết quả = True
+
+10/27/2021 10:03:28 AM, Đăng nhập vào sản phẩm:
+...Kết quả = True
+
+10/27/2021 10:03:29 AM, Đọc mac wan từ sản phẩm:
+...mac wan = A4F2C20B417A
+...Kết quả = True
+
+10/27/2021 10:03:29 AM, Check mac sản phẩm có phải là golden hay không:
+...mac wan = A4F2C20B417A
+...Golden:
+GOLDEN_A4F2C20B417A.txt
+...Kết quả = True
+
+10/27/2021 10:03:29 AM, End test:
+...Total result: Failed
+...Total time: 00:00:05

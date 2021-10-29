@@ -100,7 +100,10 @@ namespace EW30SX.Commands {
                 LogHelper<AttenuationModel> log = new LogHelper<AttenuationModel>(testing, LogHelper<AttenuationModel>.log_type.Attenuation);
                 log.save_all_log();
                 if (r) {
-                    myGlobal.stationinfo.set_golden_att(testing.macWan);
+                    setting.golden_attenuation = testing.macWan;
+                    setting.golden_verification = "";
+                    setting.qty_remain = setting.cycleMeasureAtt;
+                    XmlHelper<SettingModel>.ToXmlFile(setting, AppDomain.CurrentDomain.BaseDirectory + "setting.xml");
                 }
             }));
             t.IsBackground = true;
@@ -439,7 +442,7 @@ namespace EW30SX.Commands {
                 Thread.Sleep(1000);
                 goto RE;
             }
-            r = x == 1;
+            r = x == 1 || x == 2;
 
             myGlobal.qsprHelper.close_Test_Tree();
             t.logSystem += $"\n...Kết quả = {r}\n";
@@ -450,11 +453,6 @@ namespace EW30SX.Commands {
         }
 
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="t"></param>
-        /// <returns></returns>
         private bool extract_qspr_log(AttenuationModel t) {
             Stopwatch st = new Stopwatch();
             st.Start();
@@ -466,33 +464,9 @@ namespace EW30SX.Commands {
                 string log_content = t.logQSPR;
 
                 if (log_content == null || log_content.Length == 0) goto END;
-                string[] buffer = log_content.Split('\n');
-
-                myGlobal.goldenTestResults = new List<TestFrequencyInfo>();
-                int count = 0;
-                int max_count = buffer.Length - 1;
-                string result_channel = "";
-                const string STRING_START = "Test started: WlanTxVerifyPowerTest at:";
-                const string STRING_END = "Test finished: WlanTxVerifyPowerTest with result:";
-                bool add_flag = false;
-
-            RE:
-                string data_line = buffer[count];
-                if (data_line.ToLower().Contains(STRING_START.ToLower())) { add_flag = true; }
-                if (add_flag == true) {
-                    result_channel += data_line + "\n";
-                }
-                if (data_line.ToLower().Contains(STRING_END.ToLower())) {
-                    var item = _getWlanVerifyResultItem(result_channel);
-                    t.logSystem += $"{item.ToString()}\n";
-                    myGlobal.goldenTestResults.Add(item);
-                    result_channel = "";
-                    add_flag = false;
-                }
-                count++;
-                if (count < max_count) goto RE;
-
-                r = myGlobal.goldenTestResults.Count > 0;
+                LogQSPRHelper log_qspr = new LogQSPRHelper();
+                myGlobal.goldenTestResults = log_qspr.Extract(log_content);
+                r = !(myGlobal.goldenTestResults == null || myGlobal.goldenTestResults.Count == 0);
             }
             catch (Exception ex) {
                 t.logSystem += $"...{ex.ToString()}\n";
@@ -500,6 +474,7 @@ namespace EW30SX.Commands {
             }
 
         END:
+            if (r) foreach (var item in myGlobal.goldenTestResults) t.logSystem += item.ToString() + "\n";
             t.logSystem += $"...Kết quả = {r}\n";
             t.extractQsprResult = r ? "Passed" : "Failed";
             st.Stop();
@@ -535,6 +510,7 @@ namespace EW30SX.Commands {
             r = myGlobal.powerDifferenceValues.Count > 0;
 
         END:
+            if (r) foreach (var item in myGlobal.powerDifferenceValues) t.logSystem += item.ToString() + "\n";
             t.logSystem += $"...Kết quả = {r}\n";
             t.calcGoldenResult = r ? "Passed" : "Failed";
             st.Stop();
@@ -557,7 +533,7 @@ namespace EW30SX.Commands {
                 _updateLossInfo("bh1_lp", item.Frequency, item.powerDifferenceAnten2, myGlobal.pathlossInfos);
             }
 
-            _savePathLossFile(s.pathLossFile, myGlobal.pathlossInfos);
+            r = _savePathLossFile(s.pathLossFile, myGlobal.pathlossInfos);
 
         END:
             t.logSystem += $"...Kết quả = {r}\n";
@@ -598,40 +574,11 @@ namespace EW30SX.Commands {
             }
         }
 
-        TestFrequencyInfo _getWlanVerifyResultItem(string result_channel) {
-            TestFrequencyInfo itemResult = new TestFrequencyInfo();
-            string[] buffer = result_channel.Split('\n');
-            foreach (var data_line in buffer) {
-                //get average power
-                if (data_line.ToLower().Contains("Average Power:".ToLower())) {
-                    string s = data_line.ToLower();
-                    string[] bff = s.Split(new string[] { "average power:" }, StringSplitOptions.None);
-                    string pw_str = bff[1].Split(new string[] { "dbm" }, StringSplitOptions.None)[0].Trim();
-                    double pw_double;
-                    bool r = double.TryParse(pw_str, out pw_double);
-                    if (r) itemResult.averagePowers.Add(pw_double);
-                }
-                //get frequency && antenna
-                if (data_line.ToLower().Contains("channel") && data_line.ToLower().Contains("wlan_chain")) {
-                    string s = data_line.ToLower();
-                    int idx = s.IndexOf("channel");
-                    string freq = s.Substring(idx + 9, 4);
-                    idx = s.IndexOf("wlan_chain");
-                    string anten = s.Substring(idx + 11, 1);
-                    itemResult.Antenna = anten;
-                    itemResult.Frequency = freq;
-                }
-            }
-            return itemResult;
-        }
-
 
         double _getWlanAveragePower(string freq, string anten, List<TestFrequencyInfo> wlanTestResults) {
             try {
-                var items = wlanTestResults.Where(x => x.Frequency.Equals(freq) && x.Antenna.Equals(anten)).Select(x => x.averagePowers);
-                List<double> pw_doubles = new List<double>();
-                foreach (var item in items) pw_doubles.Add(item.Average());
-                return Math.Round(pw_doubles.Average(), 4);
+                var items = wlanTestResults.Where(x => x.Frequency.Equals(freq) && x.Antenna.Equals(anten)).ToList();
+                return items[0].averagePower;
             }
             catch {
                 return double.MaxValue;
@@ -710,7 +657,7 @@ namespace EW30SX.Commands {
             }
 
             File.WriteAllLines(file_path_loss, buffer);
-            //System.Diagnostics.Process.Start(file_path_loss);
+            System.Diagnostics.Process.Start(file_path_loss);
 
             return true;
         }

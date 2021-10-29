@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EW30SX.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="800" Background="White">
+             d:DesignHeight="650" d:DesignWidth="800" Background="White">
 
 
     <ScrollViewer>
@@ -278,7 +278,7 @@
                                             </WrapPanel>
                                             <WrapPanel>
                                                 <Label Content="Còn lại:" />
-                                                <Label FontWeight="SemiBold" Content="{Binding Path=SI.qty_remain, UpdateSourceTrigger=PropertyChanged}" />
+                                                <Label FontWeight="SemiBold" Content="{Binding Path=SM.qty_remain, UpdateSourceTrigger=PropertyChanged}" />
                                             </WrapPanel>
                                             <WrapPanel>
                                                 <Label Content="Độ lệch công suất golden (dBm):" />
@@ -290,11 +290,11 @@
                                             </WrapPanel>
                                             <WrapPanel>
                                                 <Label Content="Golden đo suy hao trạm:" />
-                                                <Label FontWeight="SemiBold" Content="{Binding Path=SI.golden_attenuation, UpdateSourceTrigger=PropertyChanged}" />
+                                                <Label FontWeight="SemiBold" Content="{Binding Path=SM.golden_attenuation, UpdateSourceTrigger=PropertyChanged}" />
                                             </WrapPanel>
 
                                             <Label Content="Golden verify suy hao trạm:" />
-                                            <TextBlock FontWeight="SemiBold" TextWrapping="Wrap" Text="{Binding Path=SI.golden_verification, UpdateSourceTrigger=PropertyChanged}" />
+                                            <TextBlock FontWeight="SemiBold" TextWrapping="Wrap" Text="{Binding Path=SM.golden_verification, UpdateSourceTrigger=PropertyChanged}" />
                                             <Label Content="Testtree calib công suất:" />
                                             <TextBlock Style="{StaticResource textblock_setting}" Text="{Binding Path=SM.calibTesttreeFile, UpdateSourceTrigger=PropertyChanged}" >
                                                 <TextBlock.InputBindings>
@@ -348,7 +348,7 @@
                                 <RichTextBox IsReadOnly="True" Margin="0,0,1,2" Padding="5,5,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                     <FlowDocument>
                                         <Paragraph>
-                                            <Run Text="{Binding Path=AM.logQSPR, UpdateSourceTrigger=PropertyChanged}"/>
+                                            <Run Text="{Binding Path=AM.logQSPRMini, UpdateSourceTrigger=PropertyChanged}"/>
                                         </Paragraph>
                                     </FlowDocument>
                                 </RichTextBox>
