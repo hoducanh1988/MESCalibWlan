@@ -32,6 +32,7 @@ namespace EW30CX.Commands {
         public void Execute(object parameter) {
             bool r = false;
             switch (r) {
+                case var a when _lvm.LM.isQPST: { Process.Start(@"C:\Program Files (x86)\Qualcomm\QPST\bin\QPSTConfig.exe"); break; };
                 case var b when _lvm.LM.isSetting: { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "setting.xml"); break; }
                 case var c when _lvm.LM.isSoftware: { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "main.xml"); break; }
                 case var d when _lvm.LM.isGolden: { Process.Start(AppDomain.CurrentDomain.BaseDirectory + "Goldens"); break; }

@@ -39,6 +39,7 @@
         <RadioButton IsChecked="{Binding Path=LM.isSoftware, UpdateSourceTrigger=PropertyChanged}" Content="Software config file"/>
         <RadioButton IsChecked="{Binding Path=LM.isGolden, UpdateSourceTrigger=PropertyChanged}" Content="Golden file"/>
         <RadioButton IsChecked="{Binding Path=LM.isLog, UpdateSourceTrigger=PropertyChanged}" Content="Log folder"/>
+        <RadioButton IsChecked="{Binding Path=LM.isQPST, UpdateSourceTrigger=PropertyChanged}" Content="QPST Server"/>
         <Button FontSize="17" Command="{Binding GoCommand}" Content="Go"/>
 
     </StackPanel>

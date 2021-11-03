@@ -5,19 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace EW30CX.Asset.IO
-{
-    public class LogHelper <T> where T : class, new() {
+namespace EW30CX.Asset.IO {
+    public class LogHelper<T> where T : class, new() {
 
         public enum log_type { Calibration, Attenuation, Verification };
 
         T testing = null;
         string dir = "";
+        string mac = "";
+        string result = "";
+        log_type l_type;
 
         public LogHelper(T t, log_type _type) {
             testing = t;
-            dir = $"{AppDomain.CurrentDomain.BaseDirectory}Log_{_type.ToString()}\\{DateTime.Now.ToString("yyyy-MM-dd")}";
+            l_type = _type;
+            mac = testing.GetType().GetProperty("macWan").GetValue(testing, null).ToString();
+            result = testing.GetType().GetProperty("totalResult").GetValue(testing, null).ToString();
+
+            dir = $"{AppDomain.CurrentDomain.BaseDirectory}Log_{l_type.ToString()}\\{DateTime.Now.ToString("yyyy-MM-dd")}\\{string.Format("{0}_{1}_{2}", mac, DateTime.Now.ToString("HHmmss"), result)}";
             if (Directory.Exists(dir) == false) Directory.CreateDirectory(dir);
+
         }
 
 
@@ -34,28 +41,21 @@ namespace EW30CX.Asset.IO
 
         bool save_log_system() {
             try {
-                string mac = testing.GetType().GetProperty("macWan").GetValue(testing, null).ToString();
-                string result = testing.GetType().GetProperty("totalResult").GetValue(testing, null).ToString();
+
                 string log_content = testing.GetType().GetProperty("logSystem").GetValue(testing, null).ToString();
-
-                string d = $"{dir}\\{mac}_{DateTime.Now.ToString("HHmmss")}";
-                if (Directory.Exists(d) == false) Directory.CreateDirectory(d);
-
+                string d = dir;
                 string f = $"{d}\\{mac}_logsystem_{result}.txt";
                 File.WriteAllText(f, log_content);
                 return true;
-            } catch { return false; }
+            }
+            catch { return false; }
         }
 
 
         bool save_log_dut() {
             try {
-                string mac = testing.GetType().GetProperty("macWan").GetValue(testing, null).ToString();
-                string result = testing.GetType().GetProperty("totalResult").GetValue(testing, null).ToString();
                 string log_content = testing.GetType().GetProperty("logDUT").GetValue(testing, null).ToString();
-
-                string d = $"{dir}\\{mac}_{DateTime.Now.ToString("HHmmss")}";
-                if (Directory.Exists(d) == false) Directory.CreateDirectory(d);
+                string d = dir;
 
                 string f = $"{d}\\{mac}_logdut_{result}.txt";
                 File.WriteAllText(f, log_content);
@@ -67,13 +67,8 @@ namespace EW30CX.Asset.IO
 
         bool save_log_qspr() {
             try {
-                string mac = testing.GetType().GetProperty("macWan").GetValue(testing, null).ToString();
-                string result = testing.GetType().GetProperty("totalResult").GetValue(testing, null).ToString();
                 string log_content = testing.GetType().GetProperty("logQSPR").GetValue(testing, null).ToString();
-
-                string d = $"{dir}\\{mac}_{DateTime.Now.ToString("HHmmss")}";
-                if (Directory.Exists(d) == false) Directory.CreateDirectory(d);
-
+                string d = dir;
                 string f = $"{d}\\{mac}_logqspr_{result}.txt";
                 File.WriteAllText(f, log_content);
                 return true;
@@ -98,7 +93,7 @@ namespace EW30CX.Asset.IO
                                      $"{testing.GetType().GetProperty("switchModeResult").GetValue(testing, null).ToString()}," +
                                      $"{testing.GetType().GetProperty("calibWlanResult").GetValue(testing, null).ToString()}";
 
-                string f = $"{AppDomain.CurrentDomain.BaseDirectory}Log\\{DateTime.Now.ToString("yyyy-MM-dd")}.csv";
+                string f = $"{AppDomain.CurrentDomain.BaseDirectory}Log_{l_type.ToString()}\\{DateTime.Now.ToString("yyyy-MM-dd")}\\{DateTime.Now.ToString("yyyy-MM-dd")}.csv";
                 if (File.Exists(f) == false) {
                     using (var sw = new StreamWriter(f, true, Encoding.Unicode)) {
                         sw.WriteLine(title);
@@ -111,7 +106,8 @@ namespace EW30CX.Asset.IO
                     }
                 }
                 return true;
-            } catch { return false; }
+            }
+            catch { return false; }
         }
 
 

@@ -9,7 +9,7 @@ namespace EW30SX.Models {
     public class LogModel : INotifyPropertyChanged {
 
         public LogModel() {
-            isAccess = isSetting = isSoftware = isGolden = isLog = false;
+            isAccess = isSetting = isSoftware = isGolden = isLog = isQPST = false;
         }
 
 
@@ -51,6 +51,14 @@ namespace EW30SX.Models {
             set {
                 _is_log = value;
                 OnPropertyChanged(nameof(isLog));
+            }
+        }
+        bool _is_qpst;
+        public bool isQPST {
+            get { return _is_qpst; }
+            set {
+                _is_qpst = value;
+                OnPropertyChanged(nameof(isQPST));
             }
         }
 
