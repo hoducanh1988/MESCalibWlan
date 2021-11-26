@@ -18,7 +18,7 @@ namespace EW30CX.Models {
 
         public MainContentModel() {
             Init();
-            isSmall = false;
+            isSmall = true;
         }
 
         public void Init() {

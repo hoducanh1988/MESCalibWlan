@@ -1,0 +1,1325 @@
+Tree contains 162 tests and was started with serial number: IMAP_D49AA00B41BE
+Temp: Loading Assembly: C:\Qualcomm\WCN\ProdTests\BIN\QC.CTE.WLANTestSuite.DLL
+Test started: InitializeWlanTester-SCPI at: 10/29/2021 3:36:07 PM
+Log: TesterConfig :C:\Users\chien\Desktop\MES_WIFI6\Config\Keysight_E6640A_WCNTesterConfig_2.10 _TRX1.xml
+Log: StationCal   :C:\Users\chien\Desktop\MES_WIFI6\Config\StationCal_pathloss_22OCT2021.xml
+Debug: =================================================
+Debug: WLAN Tester Version
+Debug: =================================================
+Log: =================================================
+Log: WLAN Tester Version
+Log: =================================================
+Log: SCPI Firmware Rev.= QTI_WLAN_SCPI_revision_2018-08-04 ; Instrument ID= Agilent Technologies,E6640A,MY54450490,E.27.06;1.0.22.50 ; System Ver.= 1.90 ; WLAN Ver.= 2.0 ; Instrument Ver.= 1.0.22.50
+Debug: SCPI Firmware Rev.= QTI_WLAN_SCPI_revision_2018-08-04 ; Instrument ID= Agilent Technologies,E6640A,MY54450490,E.27.06;1.0.22.50 ; System Ver.= 1.90 ; WLAN Ver.= 2.0 ; Instrument Ver.= 1.0.22.50
+Debug: Add wlanTester: WLANTester
+Test finished: InitializeWlanTester-SCPI with result: Passed LOOP_DETAILS=testerConfigFileName__C:\Users\chien\Desktop\MES_WIFI6\Config\Keysight_E6640A_WCNTesterConfig_2.10 _TRX1.xml_ _stationCalFileName__C:\Users\chien\Desktop\MES_WIFI6\Config\StationCal_pathloss_22OCT2021.xml_ _WlanTesterResourceID__WLANTester_ _TxStationCalPathName__BH0_LP,BH1_LP,BH2_LP,BH3_LP,BH4_LP,BH5_LP,BH6_LP,BH7_LP_ _RxStationCalPathName__BH0_LP,BH1_LP,BH2_LP,BH3_LP,BH4_LP,BH5_LP,BH6_LP,BH7_LP
+OutputParam_ErrorMessage:
+Test started: ConnectDut at: 10/29/2021 3:36:13 PM
+Debug: Add dut: QC.CTE.WlanDutControl.DUT_IPQ807x @ COM30001
+Test finished: ConnectDut with result: Passed LOOP_DETAILS=
+Test started: DutLog at: 10/29/2021 3:36:13 PM
+Log: Log enable params: Enable - True, File Name - C:\log\dutlog_5g.txt
+Test finished: DutLog with result: Passed LOOP_DETAILS=fileName__C:\log\dutlog_5g.txt
+Test started: WlanSetInstance at: 10/29/2021 3:36:13 PM
+Test finished: WlanSetInstance with result: Passed LOOP_DETAILS=
+Test started: WlanLoadDut at: 10/29/2021 3:36:13 PM
+Debug: Testsuite Callback Msg is installed
+Test finished: WlanLoadDut with result: Passed LOOP_DETAILS=DevDLLName__ipq8070w6g_ _refDesign__ipq8070_ _eepFName__C:\Users\chien\Desktop\MES_WIFI6\BDF\5g\bdwlan.b60_ _iNVMemOption__5_ _ssid__0x40
+Test started: SetPhyDutIndex at: 10/29/2021 3:36:14 PM
+Test finished: SetPhyDutIndex with result: Passed LOOP_DETAILS=
+Test started: WlanSetDutTxMacAddressBssId at: 10/29/2021 3:36:14 PM
+Test finished: WlanSetDutTxMacAddressBssId with result: Passed LOOP_DETAILS=
+Test started: WlanSetLocalMac_WIFI1 at: 10/29/2021 3:36:14 PM
+Test finished: WlanSetLocalMac_WIFI1 with result: Passed LOOP_DETAILS=
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:36:14 PM
+Debug: freq: 5500 freq2: 0 Rate: 20 ChainMask: 1
+Debug: gain: 30 digitalGain: 0 PAcfg: 5
+Debug: Waiting for dutTxSettlingDelayMs = 500ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=
+OutputParam_txPower:0
+Test started: GetTxReport2 at: 10/29/2021 3:36:17 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 0, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=
+OutputParam_TxRGdPkt:0
+OutputParam_TxRput:0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_rssi:0
+OutputParam_TxRGainIdx:0
+OutputParam_TxRDacGain:0
+OutputParam_TxRPAcfg:0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: WlanXtalCalInit2 at: 10/29/2021 3:36:17 PM
+Test finished: WlanXtalCalInit2 with result: Passed LOOP_DETAILS=
+Test started: WlanXtalCalibration2 at: 10/29/2021 3:36:17 PM
+Debug:  
+Debug: FreqErr:0.69   Power: 7.75   ChannelFreq: 5500    txchainMask: 1    capOutValue:207    capInValue:591
+DUT API Call Log: Xtal Calibration Failed. 
+Log: Xtal Calibration Failed: FTM_WLAN_Atheros_xtal_CAL2(): failed
+XTAL_OTP_WRITE_FAILURE: Cal values already present in OTP !
+Error: Xtal Calibration Failed: FTM_WLAN_Atheros_xtal_CAL2(): failed
+XTAL_OTP_WRITE_FAILURE: Cal values already present in OTP !
+Test finished: WlanXtalCalibration2 with result: Failed LOOP_DETAILS=
+OutputParam_xtalCapIn:0
+OutputParam_xtalCapOut:0
+OutputParam_freqErrPPM:-999
+Test started: SetBDFVersion at: 10/29/2021 3:36:24 PM
+Test finished: SetBDFVersion with result: Passed LOOP_DETAILS=
+Test started: GetBDFVersion at: 10/29/2021 3:36:25 PM
+DUT API Call Log: GetBDFVersion--BDFVerType:ProjectIdToOTP  ,Version:0x00 00 00 00
+Test finished: GetBDFVersion with result: Passed LOOP_DETAILS=
+OutputParam_Version:0x00 00 00 00
+Test started: WlanTxCalibrationFWControlled2 at: 10/29/2021 3:36:25 PM
+Debug: TxCal2 Begin
+
+Debug: Goal: -1.25    MeasPwr:-6.11   gain: 4   lFreq: 5180    chainMask: 1
+Debug: Goal: 0.00    MeasPwr:-4.75   gain: 6   lFreq: 5180    chainMask: 1
+Debug: Goal: 1.00    MeasPwr:-2.88   gain: 8   lFreq: 5180    chainMask: 1
+Debug: Goal: 3.13    MeasPwr:-0.54   gain: 10   lFreq: 5180    chainMask: 1
+Debug: Goal: 5.00    MeasPwr:1.24   gain: 12   lFreq: 5180    chainMask: 1
+Debug: Goal: 7.25    MeasPwr:3.14   gain: 14   lFreq: 5180    chainMask: 1
+Debug: Goal: 9.25    MeasPwr:5.04   gain: 16   lFreq: 5180    chainMask: 1
+Debug: Goal: 10.38    MeasPwr:7.11   gain: 18   lFreq: 5180    chainMask: 1
+Debug: Goal: 11.50    MeasPwr:8.22   gain: 19   lFreq: 5180    chainMask: 1
+Debug: Goal: 12.75    MeasPwr:9.27   gain: 20   lFreq: 5180    chainMask: 1
+Debug: Goal: 14.63    MeasPwr:10.21   gain: 21   lFreq: 5180    chainMask: 1
+Debug: Goal: 15.88    MeasPwr:11.25   gain: 22   lFreq: 5180    chainMask: 1
+Debug: Goal: 17.38    MeasPwr:12.22   gain: 23   lFreq: 5180    chainMask: 1
+Debug: Goal: 18.50    MeasPwr:13.20   gain: 24   lFreq: 5180    chainMask: 1
+Debug: Goal: 19.00    MeasPwr:14.61   gain: 25   lFreq: 5180    chainMask: 1
+Debug: Goal: 20.50    MeasPwr:15.55   gain: 26   lFreq: 5180    chainMask: 1
+Debug: Goal: 21.50    MeasPwr:16.51   gain: 27   lFreq: 5180    chainMask: 1
+Debug: Goal: 22.50    MeasPwr:17.60   gain: 28   lFreq: 5180    chainMask: 1
+Debug: Goal: 23.25    MeasPwr:18.48   gain: 29   lFreq: 5180    chainMask: 1
+Debug: Goal: 24.25    MeasPwr:19.26   gain: 30   lFreq: 5180    chainMask: 1
+Debug: Goal: 25.13    MeasPwr:20.28   gain: 31   lFreq: 5180    chainMask: 1
+Debug: Goal: 25.88    MeasPwr:21.17   gain: 32   lFreq: 5180    chainMask: 1
+Debug: Goal: 26.75    MeasPwr:22.09   gain: 33   lFreq: 5180    chainMask: 1
+Debug: Goal: 27.38    MeasPwr:23.01   gain: 34   lFreq: 5180    chainMask: 1
+Debug: Goal: 28.00    MeasPwr:23.80   gain: 35   lFreq: 5180    chainMask: 1
+Debug: Goal: 28.00    MeasPwr:24.58   gain: 36   lFreq: 5180    chainMask: 1
+Debug: Goal: -1.25    MeasPwr:-5.86   gain: 4   lFreq: 5180    chainMask: 2
+Debug: Goal: 0.00    MeasPwr:-4.53   gain: 6   lFreq: 5180    chainMask: 2
+Debug: Goal: 1.00    MeasPwr:-2.56   gain: 8   lFreq: 5180    chainMask: 2
+Debug: Goal: 3.13    MeasPwr:-0.25   gain: 10   lFreq: 5180    chainMask: 2
+Debug: Goal: 5.00    MeasPwr:1.50   gain: 12   lFreq: 5180    chainMask: 2
+Debug: Goal: 7.25    MeasPwr:3.43   gain: 14   lFreq: 5180    chainMask: 2
+Debug: Goal: 9.25    MeasPwr:5.32   gain: 16   lFreq: 5180    chainMask: 2
+Debug: Goal: 10.38    MeasPwr:7.39   gain: 18   lFreq: 5180    chainMask: 2
+Debug: Goal: 11.50    MeasPwr:8.48   gain: 19   lFreq: 5180    chainMask: 2
+Debug: Goal: 12.75    MeasPwr:9.43   gain: 20   lFreq: 5180    chainMask: 2
+Debug: Goal: 14.63    MeasPwr:10.47   gain: 21   lFreq: 5180    chainMask: 2
+Debug: Goal: 15.88    MeasPwr:11.52   gain: 22   lFreq: 5180    chainMask: 2
+Debug: Goal: 17.38    MeasPwr:12.49   gain: 23   lFreq: 5180    chainMask: 2
+Debug: Goal: 18.50    MeasPwr:13.52   gain: 24   lFreq: 5180    chainMask: 2
+Debug: Goal: 19.00    MeasPwr:14.86   gain: 25   lFreq: 5180    chainMask: 2
+Debug: Goal: 20.50    MeasPwr:15.84   gain: 26   lFreq: 5180    chainMask: 2
+Log: WlanTxCalibrationFWControlled2() failed: FTM_WLAN_Atheros_Tx_FW_CAL2(): failed
+Error: WlanTxCalibrationFWControlled2() failed: FTM_WLAN_Atheros_Tx_FW_CAL2(): failed
+Debug: TxCal2 End
+
+Test finished: WlanTxCalibrationFWControlled2 with result: Failed LOOP_DETAILS=
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:37:52 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:37:52 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:37:52 PM
+Debug: CBW: cbState: BW80_20_40Low_40_80Low, bandwidthMhz:80
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:37:52 PM
+Debug: freq: 5210 freq2: 0 Rate: 29 ChainMask: 1
+Debug: powerLevel: 21
+Debug: Waiting for dutTxSettlingDelayMs = 1500ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_txPower:0
+Test started: dpdComplete at: 10/29/2021 3:37:56 PM
+Debug: dpdComplete elapsed time: 118 ms
+Test finished: dpdComplete with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_dpdStatus:1
+OutputParam_dpdDesc:DPD complete (Pass)
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:37:56 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+Test started: TxWlanMeasurementQueryChannels at: 10/29/2021 3:37:56 PM
+Test finished: TxWlanMeasurementQueryChannels with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_chEvmDb:-40.9140952128342
+OutputParam_chAmpImbDb:-0.022124290094
+OutputParam_chPhaseImbDeg:0.17908765676
+OutputParam_chCarrierFreqErrorPpm:-0.633748509865643
+OutputParam_chSymbolClockErrorPpm:-0.46673095522
+OutputParam_chLoLeakageDbc:-42.275811768
+OutputParam_chAvgTxPowerDbm:21.232561963579
+OutputParam_chAvgTxPowerDeltaDb:0.2326
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:37:57 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 432, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRlatestMeasPwrOut:0_,_0_,_0_,_0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:37:57 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:37:57 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:37:57 PM
+Debug: CBW: cbState: BW80_20_40Low_40_80Low, bandwidthMhz:80
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:37:57 PM
+Debug: freq: 5210 freq2: 0 Rate: 29 ChainMask: 2
+Debug: powerLevel: 21
+Debug: Waiting for dutTxSettlingDelayMs = 1500ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_txPower:0
+Test started: dpdComplete at: 10/29/2021 3:38:00 PM
+Debug: dpdComplete elapsed time: 118 ms
+Test finished: dpdComplete with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_dpdStatus:1
+OutputParam_dpdDesc:DPD complete (Pass)
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:38:00 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+Test started: TxWlanMeasurementQueryChannels at: 10/29/2021 3:38:01 PM
+Test finished: TxWlanMeasurementQueryChannels with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_chEvmDb:-40.266627606098
+OutputParam_chAmpImbDb:-0.051227555424
+OutputParam_chPhaseImbDeg:0.17840397358
+OutputParam_chCarrierFreqErrorPpm:-0.676452210287908
+OutputParam_chSymbolClockErrorPpm:-0.60127051472
+OutputParam_chLoLeakageDbc:-43.191944122
+OutputParam_chAvgTxPowerDbm:21.6123916858886
+OutputParam_chAvgTxPowerDeltaDb:0.6124
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:38:01 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 431, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5210_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRlatestMeasPwrOut:0_,_0_,_0_,_0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:38:01 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:38:02 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:38:02 PM
+Debug: CBW: cbState: BW80_20_40Low_40_80Low, bandwidthMhz:80
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:38:02 PM
+Debug: freq: 5775 freq2: 0 Rate: 29 ChainMask: 1
+Debug: powerLevel: 21
+Debug: Waiting for dutTxSettlingDelayMs = 1500ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_txPower:0
+Test started: dpdComplete at: 10/29/2021 3:38:06 PM
+Debug: dpdComplete elapsed time: 105 ms
+Test finished: dpdComplete with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_dpdStatus:1
+OutputParam_dpdDesc:DPD complete (Pass)
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:38:06 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+Test started: TxWlanMeasurementQueryChannels at: 10/29/2021 3:38:06 PM
+Test finished: TxWlanMeasurementQueryChannels with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_chEvmDb:-38.5073255215866
+OutputParam_chAmpImbDb:-0.0069254384376
+OutputParam_chPhaseImbDeg:0.23924461006
+OutputParam_chCarrierFreqErrorPpm:-0.800991105246753
+OutputParam_chSymbolClockErrorPpm:-0.82984582194
+OutputParam_chLoLeakageDbc:-40.17780304
+OutputParam_chAvgTxPowerDbm:21.5401391924572
+OutputParam_chAvgTxPowerDeltaDb:0.5401
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:38:07 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 433, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__21
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRlatestMeasPwrOut:0_,_0_,_0_,_0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:38:07 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:38:07 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:38:07 PM
+Debug: CBW: cbState: BW80_20_40Low_40_80Low, bandwidthMhz:80
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:38:07 PM
+Debug: freq: 5775 freq2: 0 Rate: 29 ChainMask: 2
+Debug: powerLevel: 21
+Debug: Waiting for dutTxSettlingDelayMs = 1500ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_txPower:0
+Test started: dpdComplete at: 10/29/2021 3:38:10 PM
+Debug: dpdComplete elapsed time: 125 ms
+Test finished: dpdComplete with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_dpdStatus:1
+OutputParam_dpdDesc:DPD complete (Pass)
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:38:10 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+Test started: TxWlanMeasurementQueryChannels at: 10/29/2021 3:38:11 PM
+Test finished: TxWlanMeasurementQueryChannels with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_chEvmDb:-39.2845974980293
+OutputParam_chAmpImbDb:-0.027255684884
+OutputParam_chPhaseImbDeg:0.036559620128
+OutputParam_chCarrierFreqErrorPpm:-0.798939749090909
+OutputParam_chSymbolClockErrorPpm:-0.69266135692
+OutputParam_chLoLeakageDbc:-40.248314668
+OutputParam_chAvgTxPowerDbm:21.4078372440737
+OutputParam_chAvgTxPowerDeltaDb:0.4078
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:38:11 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 422, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT80_ _rate__RATE_MCS_9_ _cbState__BW80_20_40Low_40_80Low_ _channel__5775_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__21
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRlatestMeasPwrOut:0_,_0_,_0_,_0
+Temp: Loading Assembly: C:\Qualcomm\WCN\ProdTests\BIN\QC.CTE.QSPRWCNUtility.DLL
+Test started: Time-2 at: 10/29/2021 3:38:13 PM
+Test finished: Time-2 with result: Passed LOOP_DETAILS=
+OutputParam_ReturnValue:15_38_13_47
+Test started: RxWlanGenerationClear at: 10/29/2021 3:38:13 PM
+Test finished: RxWlanGenerationClear with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5210_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_1
+OutputParam_ErrorMessage:
+Test started: WlanSetDutRxMacAddressBssId at: 10/29/2021 3:38:13 PM
+Test finished: WlanSetDutRxMacAddressBssId with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5210_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_1
+Test started: WlanPerTest_NxN2 at: 10/29/2021 3:38:13 PM
+DUT API Call Log: RxMacAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: RxBssidAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: FTM_WLAN_Atheros_Rx()
+DUT API Call Log: FTM_WLAN_Atheros_Rx_Report(totalPkt 99, Throughput 0, rssi -54, evm0 0, evm1 0, evm2 0, evm3 0, evm4 0, evm5 0, evm6 0, evm7 0, crcErrPkt 0, secErrPktCount 0)
+Debug: rxChainMask : 1  RxTotalPckts: 100  totalPktCount: 99  goodPktCount: 99  rssiDbm: -54
+Debug: pilotEvm0 : -37pilotEvm1 : 0pilotEvm2 : 0pilotEvm3 : 0pilotEvm4 : 0pilotEvm5 : 0pilotEvm6 : 0pilotEvm7 : 0
+Test finished: WlanPerTest_NxN2 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5210_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_1
+OutputParam_PER:1
+OutputParam_PerPower:-51
+OutputParam_rssi:-54
+OutputParam_rssiPowerDelta:-3
+OutputParam_ErrorMessage:
+Test started: Time-3 at: 10/29/2021 3:38:14 PM
+Test finished: Time-3 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5210_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_1
+OutputParam_ReturnValue:15_38_14_959
+Test started: RxWlanGenerationClear at: 10/29/2021 3:38:14 PM
+Test finished: RxWlanGenerationClear with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5210_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_2
+OutputParam_ErrorMessage:
+Test started: WlanSetDutRxMacAddressBssId at: 10/29/2021 3:38:15 PM
+Test finished: WlanSetDutRxMacAddressBssId with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5210_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_2
+Test started: WlanPerTest_NxN2 at: 10/29/2021 3:38:15 PM
+DUT API Call Log: RxMacAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: RxBssidAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: FTM_WLAN_Atheros_Rx()
+DUT API Call Log: FTM_WLAN_Atheros_Rx_Report(totalPkt 99, Throughput 0, rssi -54, evm0 0, evm1 0, evm2 0, evm3 0, evm4 0, evm5 0, evm6 0, evm7 0, crcErrPkt 0, secErrPktCount 0)
+Debug: rxChainMask : 2  RxTotalPckts: 100  totalPktCount: 99  goodPktCount: 99  rssiDbm: -54
+Debug: pilotEvm0 : -37pilotEvm1 : 0pilotEvm2 : 0pilotEvm3 : 0pilotEvm4 : 0pilotEvm5 : 0pilotEvm6 : 0pilotEvm7 : 0
+Test finished: WlanPerTest_NxN2 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5210_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_2
+OutputParam_PER:1
+OutputParam_PerPower:-51
+OutputParam_rssi:-54
+OutputParam_rssiPowerDelta:-3
+OutputParam_ErrorMessage:
+Test started: Time-3 at: 10/29/2021 3:38:16 PM
+Test finished: Time-3 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5210_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_2
+OutputParam_ReturnValue:15_38_16_245
+Test started: RxWlanGenerationClear at: 10/29/2021 3:38:16 PM
+Test finished: RxWlanGenerationClear with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5755_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_1
+OutputParam_ErrorMessage:
+Test started: WlanSetDutRxMacAddressBssId at: 10/29/2021 3:38:16 PM
+Test finished: WlanSetDutRxMacAddressBssId with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5755_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_1
+Test started: WlanPerTest_NxN2 at: 10/29/2021 3:38:16 PM
+DUT API Call Log: RxMacAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: RxBssidAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: FTM_WLAN_Atheros_Rx()
+DUT API Call Log: FTM_WLAN_Atheros_Rx_Report(totalPkt 99, Throughput 0, rssi -53, evm0 0, evm1 0, evm2 0, evm3 0, evm4 0, evm5 0, evm6 0, evm7 0, crcErrPkt 0, secErrPktCount 0)
+Debug: rxChainMask : 1  RxTotalPckts: 100  totalPktCount: 99  goodPktCount: 98  rssiDbm: -53
+Debug: pilotEvm0 : -37pilotEvm1 : 0pilotEvm2 : 0pilotEvm3 : 0pilotEvm4 : 0pilotEvm5 : 0pilotEvm6 : 0pilotEvm7 : 0
+Test finished: WlanPerTest_NxN2 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5755_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_1
+OutputParam_PER:2
+OutputParam_PerPower:-51
+OutputParam_rssi:-53
+OutputParam_rssiPowerDelta:-2
+OutputParam_ErrorMessage:
+Test started: Time-3 at: 10/29/2021 3:38:18 PM
+Test finished: Time-3 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5755_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_1
+OutputParam_ReturnValue:15_38_18_119
+Test started: RxWlanGenerationClear at: 10/29/2021 3:38:18 PM
+Test finished: RxWlanGenerationClear with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5755_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_2
+OutputParam_ErrorMessage:
+Test started: WlanSetDutRxMacAddressBssId at: 10/29/2021 3:38:18 PM
+Test finished: WlanSetDutRxMacAddressBssId with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5755_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_2
+Test started: WlanPerTest_NxN2 at: 10/29/2021 3:38:18 PM
+DUT API Call Log: RxMacAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: RxBssidAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: FTM_WLAN_Atheros_Rx()
+DUT API Call Log: FTM_WLAN_Atheros_Rx_Report(totalPkt 99, Throughput 0, rssi -54, evm0 0, evm1 0, evm2 0, evm3 0, evm4 0, evm5 0, evm6 0, evm7 0, crcErrPkt 0, secErrPktCount 0)
+Debug: rxChainMask : 2  RxTotalPckts: 100  totalPktCount: 99  goodPktCount: 98  rssiDbm: -54
+Debug: pilotEvm0 : -37pilotEvm1 : 0pilotEvm2 : 0pilotEvm3 : 0pilotEvm4 : 0pilotEvm5 : 0pilotEvm6 : 0pilotEvm7 : 0
+Test finished: WlanPerTest_NxN2 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5755_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_2
+OutputParam_PER:2
+OutputParam_PerPower:-51
+OutputParam_rssi:-54
+OutputParam_rssiPowerDelta:-3
+OutputParam_ErrorMessage:
+Test started: Time-3 at: 10/29/2021 3:38:19 PM
+Test finished: Time-3 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._rate__RATE_MCS_9_ _rateBw__RateBW_11AC_VHT80_ _cbState__BW80_20_40Low_40_80Low_ _startPower__-51_ _stopPower__-51_ _channel__5755_ _channel2__0_ _LDPC__False_._chainMask__WLAN_CHAIN_2
+OutputParam_ReturnValue:15_38_19_535
+Test started: WlanSetSlotInstance at: 10/29/2021 3:38:19 PM
+Test finished: WlanSetSlotInstance with result: Passed LOOP_DETAILS=
+Test started: WlanSaveBDF2_to_Flash at: 10/29/2021 3:38:19 PM
+Test finished: WlanSaveBDF2_to_Flash with result: Passed LOOP_DETAILS=saveOption__0_ _bdfFileName__bdf.bin
+Test started: WlanSaveBDF2_to_File at: 10/29/2021 3:39:09 PM
+Log: WlanSaveBDF() failed: FTM_WLAN_Atheros_Save_BDF(): failed
+Error: WlanSaveBDF() failed: FTM_WLAN_Atheros_Save_BDF(): failed
+Test finished: WlanSaveBDF2_to_File with result: Failed LOOP_DETAILS=saveOption__2_ _bdfFileName__C:\caldata_Spruce_5G.bin
+Test started: ConnectDut at: 10/29/2021 3:39:50 PM
+Debug: Add dut: QC.CTE.WlanDutControl.DUT_IPQ807x @ COM30001
+Test finished: ConnectDut with result: Passed LOOP_DETAILS=
+Test started: DutLog at: 10/29/2021 3:39:50 PM
+Log: Log enable params: Enable - True, File Name - C:\log\dutlog_5g.txt
+Test finished: DutLog with result: Passed LOOP_DETAILS=fileName__C:\log\dutlog_5g.txt
+Test started: WlanSetInstance at: 10/29/2021 3:39:50 PM
+Test finished: WlanSetInstance with result: Passed LOOP_DETAILS=
+Test started: WlanLoadDut at: 10/29/2021 3:39:50 PM
+Debug: Testsuite Callback Msg is installed
+Debug: Testsuite Callback Msg is installed
+Test finished: WlanLoadDut with result: Passed LOOP_DETAILS=DevDLLName__ipq8070_ _refDesign__ipq8070_ _eepFName__C:\Users\chien\Desktop\MES_WIFI6\BDF\2g\bdwlan.b10_ _iNVMemOption__5_ _ssid__0x40
+Test started: SetPhyDutIndex at: 10/29/2021 3:39:51 PM
+Test finished: SetPhyDutIndex with result: Passed LOOP_DETAILS=
+Test started: WlanSetDutTxMacAddressBssId at: 10/29/2021 3:39:51 PM
+Test finished: WlanSetDutTxMacAddressBssId with result: Passed LOOP_DETAILS=
+Test started: WlanSetLocalMac_WIFI0 at: 10/29/2021 3:39:51 PM
+Test finished: WlanSetLocalMac_WIFI0 with result: Passed LOOP_DETAILS=
+Test started: WlanTxCalibrationFWControlled2 at: 10/29/2021 3:39:51 PM
+Debug: TxCal2 Begin
+
+Log: getPower2() failed: MeasurePower() failed: QC.TILib.WCNTester.WCNCustomException: TxMeasurePower() failed: QC.TILib.WCNTester.WCNCustomException: SendCommandCheckForError() failed: Instrument Error: -1,Settings conflict;Not available for this model number, ':QCOM:WLAN:SENS:INIT (@1);:QCOM:WLAN:ERR?'
+   at QC.TILib.WCNTester.WCNTester_CommonSCPICommon.SendCommandCheckForError(StringBuilder scpiCommand, Int64 timeoutMsec, String technology)
+   at QC.TILib.WCNTester.WCNTester_CommonSCPIWLAN.InitiateFetchVsaData()
+   at QC.TILib.WCNTester.WCNTester_CommonSCPIWLAN.TxMeasurePower(UInt32 dutPortMask, WLAN_RATE[] rate, UInt32[] portBonding, Double[] channelFreqHz, Double[] powerLevelDbm, Double[] vsaTriggerLevelOffsetDbr, Int32[] vsaAverages, Double[]& avgTxPowerDbm, Double[]& avgTxPowerMinDbm, Double[]& avgTxPowerMaxDbm, Double[]& pkTxPowerDbm, Double[]& pkTxPowerMinDbm, Double[]& pkTxPowerMaxDbm)
+   at QC.TILib.WCNTester.WCNTester_CommonSCPIWLAN.TxMeasurePower(UInt32 dutPortMask, WLAN_RATE[] rate, UInt32[] portBonding, Double[] channelFreqHz, Double[] powerLevelDbm, Double[] vsaTriggerLevelOffsetDbr, Int32[] vsaAverages, Double[]& avgTxPowerDbm, Double[]& avgTxPowerMinDbm, Double[]& avgTxPowerMaxDbm, Double[]& pkTxPowerDbm, Double[]& pkTxPowerMinDbm, Double[]& pkTxPowerMaxDbm)
+   at QC.TILib.WCNTester.WCNTester_CommonSCPIWLAN.MeasurePower(WLAN_RATE rate, Double channelFreqMhz, Double[] powerLevelDbm, ChainMask txChainMask, TriggerType triggerType, Double[] pathLossDb, Double[] vsaTriggerLevelOffsetDbr, Boolean shortGuardInterval, Double[]& powerAvgEachBurst, Double[]& powerPkEachBurst, Int32 vsaAverages)
+Debug: Goal: -2.00    MeasPwr:-5.40   gain: 3   lFreq: 2412    chainMask: 1
+Debug: Goal: -1.00    MeasPwr:-4.75   gain: 4   lFreq: 2412    chainMask: 1
+Debug: Goal: 0.00    MeasPwr:-2.87   gain: 5   lFreq: 2412    chainMask: 1
+Debug: Goal: 0.88    MeasPwr:-1.60   gain: 6   lFreq: 2412    chainMask: 1
+Debug: Goal: 2.00    MeasPwr:-0.54   gain: 7   lFreq: 2412    chainMask: 1
+Debug: Goal: 3.00    MeasPwr:0.83   gain: 8   lFreq: 2412    chainMask: 1
+Debug: Goal: 4.00    MeasPwr:1.67   gain: 9   lFreq: 2412    chainMask: 1
+Debug: Goal: 5.00    MeasPwr:2.38   gain: 10   lFreq: 2412    chainMask: 1
+Debug: Goal: 6.00    MeasPwr:3.33   gain: 11   lFreq: 2412    chainMask: 1
+Debug: Goal: 7.00    MeasPwr:4.32   gain: 12   lFreq: 2412    chainMask: 1
+Debug: Goal: 8.00    MeasPwr:5.77   gain: 13   lFreq: 2412    chainMask: 1
+Debug: Goal: 9.00    MeasPwr:6.72   gain: 14   lFreq: 2412    chainMask: 1
+Debug: Goal: 10.00    MeasPwr:7.82   gain: 15   lFreq: 2412    chainMask: 1
+Debug: Goal: 11.00    MeasPwr:8.93   gain: 16   lFreq: 2412    chainMask: 1
+Debug: Goal: 12.00    MeasPwr:9.83   gain: 17   lFreq: 2412    chainMask: 1
+Debug: Goal: 13.00    MeasPwr:10.59   gain: 18   lFreq: 2412    chainMask: 1
+Debug: Goal: 14.00    MeasPwr:11.26   gain: 19   lFreq: 2412    chainMask: 1
+Debug: Goal: 15.00    MeasPwr:12.07   gain: 20   lFreq: 2412    chainMask: 1
+Debug: Goal: 16.00    MeasPwr:13.23   gain: 21   lFreq: 2412    chainMask: 1
+Debug: Goal: 17.00    MeasPwr:14.00   gain: 22   lFreq: 2412    chainMask: 1
+Debug: Goal: 18.00    MeasPwr:14.86   gain: 23   lFreq: 2412    chainMask: 1
+Debug: Goal: 19.00    MeasPwr:15.76   gain: 24   lFreq: 2412    chainMask: 1
+Debug: Goal: 20.00    MeasPwr:16.76   gain: 25   lFreq: 2412    chainMask: 1
+Debug: Goal: 21.00    MeasPwr:16.92   gain: 26   lFreq: 2412    chainMask: 1
+Debug: Goal: 22.00    MeasPwr:17.87   gain: 27   lFreq: 2412    chainMask: 1
+Debug: Goal: 23.00    MeasPwr:19.25   gain: 28   lFreq: 2412    chainMask: 1
+Debug: Goal: -2.00    MeasPwr:-4.18   gain: 3   lFreq: 2412    chainMask: 2
+Debug: Goal: -1.00    MeasPwr:-3.41   gain: 4   lFreq: 2412    chainMask: 2
+Debug: Goal: 0.00    MeasPwr:-1.72   gain: 5   lFreq: 2412    chainMask: 2
+Debug: Goal: 0.88    MeasPwr:-0.47   gain: 6   lFreq: 2412    chainMask: 2
+Debug: Goal: 2.00    MeasPwr:0.60   gain: 7   lFreq: 2412    chainMask: 2
+Debug: Goal: 3.00    MeasPwr:1.99   gain: 8   lFreq: 2412    chainMask: 2
+Debug: Goal: 4.00    MeasPwr:2.82   gain: 9   lFreq: 2412    chainMask: 2
+Debug: Goal: 5.00    MeasPwr:3.53   gain: 10   lFreq: 2412    chainMask: 2
+Debug: Goal: 6.00    MeasPwr:4.50   gain: 11   lFreq: 2412    chainMask: 2
+Debug: Goal: 7.00    MeasPwr:5.57   gain: 12   lFreq: 2412    chainMask: 2
+Debug: Goal: 8.00    MeasPwr:7.00   gain: 13   lFreq: 2412    chainMask: 2
+Debug: Goal: 9.00    MeasPwr:7.95   gain: 14   lFreq: 2412    chainMask: 2
+Debug: Goal: 10.00    MeasPwr:9.09   gain: 15   lFreq: 2412    chainMask: 2
+Debug: Goal: 11.00    MeasPwr:10.21   gain: 16   lFreq: 2412    chainMask: 2
+Debug: Goal: 12.00    MeasPwr:11.29   gain: 17   lFreq: 2412    chainMask: 2
+Debug: Goal: 13.00    MeasPwr:12.06   gain: 18   lFreq: 2412    chainMask: 2
+Debug: Goal: 14.00    MeasPwr:12.73   gain: 19   lFreq: 2412    chainMask: 2
+Debug: Goal: 15.00    MeasPwr:13.71   gain: 20   lFreq: 2412    chainMask: 2
+Debug: Goal: 16.00    MeasPwr:14.88   gain: 21   lFreq: 2412    chainMask: 2
+Debug: Goal: 17.00    MeasPwr:15.64   gain: 22   lFreq: 2412    chainMask: 2
+Debug: Goal: 18.00    MeasPwr:16.49   gain: 23   lFreq: 2412    chainMask: 2
+Debug: Goal: 19.00    MeasPwr:17.34   gain: 24   lFreq: 2412    chainMask: 2
+Debug: Goal: 20.00    MeasPwr:18.31   gain: 25   lFreq: 2412    chainMask: 2
+Debug: Goal: 21.00    MeasPwr:18.93   gain: 26   lFreq: 2412    chainMask: 2
+Debug: Goal: 22.00    MeasPwr:19.79   gain: 27   lFreq: 2412    chainMask: 2
+Debug: Goal: 23.00    MeasPwr:21.00   gain: 28   lFreq: 2412    chainMask: 2
+Debug: Goal: -2.00    MeasPwr:-5.73   gain: 3   lFreq: 2422    chainMask: 1
+Debug: Goal: -1.00    MeasPwr:-5.00   gain: 4   lFreq: 2422    chainMask: 1
+Debug: Goal: 0.00    MeasPwr:-3.17   gain: 5   lFreq: 2422    chainMask: 1
+Debug: Goal: 0.88    MeasPwr:-1.86   gain: 6   lFreq: 2422    chainMask: 1
+Debug: Goal: 2.00    MeasPwr:-0.80   gain: 7   lFreq: 2422    chainMask: 1
+Debug: Goal: 3.00    MeasPwr:0.59   gain: 8   lFreq: 2422    chainMask: 1
+Debug: Goal: 4.00    MeasPwr:1.38   gain: 9   lFreq: 2422    chainMask: 1
+Debug: Goal: 5.00    MeasPwr:2.13   gain: 10   lFreq: 2422    chainMask: 1
+Debug: Goal: 6.00    MeasPwr:3.11   gain: 11   lFreq: 2422    chainMask: 1
+Debug: Goal: 7.00    MeasPwr:4.07   gain: 12   lFreq: 2422    chainMask: 1
+Debug: Goal: 8.00    MeasPwr:5.55   gain: 13   lFreq: 2422    chainMask: 1
+Debug: Goal: 9.00    MeasPwr:6.52   gain: 14   lFreq: 2422    chainMask: 1
+Debug: Goal: 10.00    MeasPwr:7.67   gain: 15   lFreq: 2422    chainMask: 1
+Debug: Goal: 11.00    MeasPwr:8.74   gain: 16   lFreq: 2422    chainMask: 1
+Debug: Goal: 12.00    MeasPwr:9.80   gain: 17   lFreq: 2422    chainMask: 1
+Debug: Goal: 13.00    MeasPwr:10.55   gain: 18   lFreq: 2422    chainMask: 1
+Debug: Goal: 14.00    MeasPwr:11.21   gain: 19   lFreq: 2422    chainMask: 1
+Debug: Goal: 15.00    MeasPwr:12.07   gain: 20   lFreq: 2422    chainMask: 1
+Debug: Goal: 16.00    MeasPwr:13.23   gain: 21   lFreq: 2422    chainMask: 1
+Debug: Goal: 17.00    MeasPwr:13.97   gain: 22   lFreq: 2422    chainMask: 1
+Debug: Goal: 18.00    MeasPwr:14.80   gain: 23   lFreq: 2422    chainMask: 1
+Debug: Goal: 19.00    MeasPwr:15.67   gain: 24   lFreq: 2422    chainMask: 1
+Debug: Goal: 20.00    MeasPwr:16.64   gain: 25   lFreq: 2422    chainMask: 1
+Debug: Goal: 21.00    MeasPwr:16.93   gain: 26   lFreq: 2422    chainMask: 1
+Debug: Goal: 22.00    MeasPwr:17.86   gain: 27   lFreq: 2422    chainMask: 1
+Debug: Goal: 23.00    MeasPwr:19.18   gain: 28   lFreq: 2422    chainMask: 1
+Debug: Goal: -2.00    MeasPwr:-4.22   gain: 3   lFreq: 2422    chainMask: 2
+Debug: Goal: -1.00    MeasPwr:-3.48   gain: 4   lFreq: 2422    chainMask: 2
+Debug: Goal: 0.00    MeasPwr:-1.85   gain: 5   lFreq: 2422    chainMask: 2
+Debug: Goal: 0.88    MeasPwr:-0.52   gain: 6   lFreq: 2422    chainMask: 2
+Debug: Goal: 2.00    MeasPwr:0.55   gain: 7   lFreq: 2422    chainMask: 2
+Debug: Goal: 3.00    MeasPwr:1.92   gain: 8   lFreq: 2422    chainMask: 2
+Debug: Goal: 4.00    MeasPwr:2.77   gain: 9   lFreq: 2422    chainMask: 2
+Debug: Goal: 5.00    MeasPwr:3.49   gain: 10   lFreq: 2422    chainMask: 2
+Debug: Goal: 6.00    MeasPwr:4.47   gain: 11   lFreq: 2422    chainMask: 2
+Debug: Goal: 7.00    MeasPwr:5.53   gain: 12   lFreq: 2422    chainMask: 2
+Debug: Goal: 8.00    MeasPwr:6.95   gain: 13   lFreq: 2422    chainMask: 2
+Debug: Goal: 9.00    MeasPwr:7.91   gain: 14   lFreq: 2422    chainMask: 2
+Debug: Goal: 10.00    MeasPwr:9.05   gain: 15   lFreq: 2422    chainMask: 2
+Debug: Goal: 11.00    MeasPwr:10.19   gain: 16   lFreq: 2422    chainMask: 2
+Debug: Goal: 12.00    MeasPwr:11.29   gain: 17   lFreq: 2422    chainMask: 2
+Debug: Goal: 13.00    MeasPwr:12.04   gain: 18   lFreq: 2422    chainMask: 2
+Debug: Goal: 14.00    MeasPwr:12.73   gain: 19   lFreq: 2422    chainMask: 2
+Debug: Goal: 15.00    MeasPwr:13.74   gain: 20   lFreq: 2422    chainMask: 2
+Debug: Goal: 16.00    MeasPwr:14.91   gain: 21   lFreq: 2422    chainMask: 2
+Debug: Goal: 17.00    MeasPwr:15.65   gain: 22   lFreq: 2422    chainMask: 2
+Debug: Goal: 18.00    MeasPwr:16.52   gain: 23   lFreq: 2422    chainMask: 2
+Debug: Goal: 19.00    MeasPwr:17.36   gain: 24   lFreq: 2422    chainMask: 2
+Debug: Goal: 20.00    MeasPwr:18.33   gain: 25   lFreq: 2422    chainMask: 2
+Debug: Goal: 21.00    MeasPwr:18.97   gain: 26   lFreq: 2422    chainMask: 2
+Debug: Goal: 22.00    MeasPwr:19.83   gain: 27   lFreq: 2422    chainMask: 2
+Debug: Goal: 23.00    MeasPwr:21.03   gain: 28   lFreq: 2422    chainMask: 2
+Debug: Goal: -2.00    MeasPwr:-5.59   gain: 3   lFreq: 2437    chainMask: 1
+Debug: Goal: -1.00    MeasPwr:-4.83   gain: 4   lFreq: 2437    chainMask: 1
+Debug: Goal: 0.00    MeasPwr:-3.07   gain: 5   lFreq: 2437    chainMask: 1
+Debug: Goal: 0.88    MeasPwr:-1.79   gain: 6   lFreq: 2437    chainMask: 1
+Debug: Goal: 2.00    MeasPwr:-0.71   gain: 7   lFreq: 2437    chainMask: 1
+Debug: Goal: 3.00    MeasPwr:0.70   gain: 8   lFreq: 2437    chainMask: 1
+Debug: Goal: 4.00    MeasPwr:1.52   gain: 9   lFreq: 2437    chainMask: 1
+Debug: Goal: 5.00    MeasPwr:2.23   gain: 10   lFreq: 2437    chainMask: 1
+Debug: Goal: 6.00    MeasPwr:3.21   gain: 11   lFreq: 2437    chainMask: 1
+Debug: Goal: 7.00    MeasPwr:4.19   gain: 12   lFreq: 2437    chainMask: 1
+Debug: Goal: 8.00    MeasPwr:5.66   gain: 13   lFreq: 2437    chainMask: 1
+Debug: Goal: 9.00    MeasPwr:6.61   gain: 14   lFreq: 2437    chainMask: 1
+Debug: Goal: 10.00    MeasPwr:7.76   gain: 15   lFreq: 2437    chainMask: 1
+Debug: Goal: 11.00    MeasPwr:8.86   gain: 16   lFreq: 2437    chainMask: 1
+Debug: Goal: 12.00    MeasPwr:9.99   gain: 17   lFreq: 2437    chainMask: 1
+Debug: Goal: 13.00    MeasPwr:10.73   gain: 18   lFreq: 2437    chainMask: 1
+Debug: Goal: 14.00    MeasPwr:11.38   gain: 19   lFreq: 2437    chainMask: 1
+Debug: Goal: 15.00    MeasPwr:12.28   gain: 20   lFreq: 2437    chainMask: 1
+Debug: Goal: 16.00    MeasPwr:13.45   gain: 21   lFreq: 2437    chainMask: 1
+Debug: Goal: 17.00    MeasPwr:14.14   gain: 22   lFreq: 2437    chainMask: 1
+Debug: Goal: 18.00    MeasPwr:14.96   gain: 23   lFreq: 2437    chainMask: 1
+Debug: Goal: 19.00    MeasPwr:15.82   gain: 24   lFreq: 2437    chainMask: 1
+Debug: Goal: 20.00    MeasPwr:16.80   gain: 25   lFreq: 2437    chainMask: 1
+Debug: Goal: 21.00    MeasPwr:17.16   gain: 26   lFreq: 2437    chainMask: 1
+Debug: Goal: 22.00    MeasPwr:18.10   gain: 27   lFreq: 2437    chainMask: 1
+Debug: Goal: 23.00    MeasPwr:19.43   gain: 28   lFreq: 2437    chainMask: 1
+Debug: Goal: -2.00    MeasPwr:-4.03   gain: 3   lFreq: 2437    chainMask: 2
+Debug: Goal: -1.00    MeasPwr:-3.22   gain: 4   lFreq: 2437    chainMask: 2
+Debug: Goal: 0.00    MeasPwr:-1.61   gain: 5   lFreq: 2437    chainMask: 2
+Debug: Goal: 0.88    MeasPwr:-0.35   gain: 6   lFreq: 2437    chainMask: 2
+Debug: Goal: 2.00    MeasPwr:0.77   gain: 7   lFreq: 2437    chainMask: 2
+Debug: Goal: 3.00    MeasPwr:2.17   gain: 8   lFreq: 2437    chainMask: 2
+Debug: Goal: 4.00    MeasPwr:2.99   gain: 9   lFreq: 2437    chainMask: 2
+Debug: Goal: 5.00    MeasPwr:3.72   gain: 10   lFreq: 2437    chainMask: 2
+Debug: Goal: 6.00    MeasPwr:4.68   gain: 11   lFreq: 2437    chainMask: 2
+Debug: Goal: 7.00    MeasPwr:5.73   gain: 12   lFreq: 2437    chainMask: 2
+Debug: Goal: 8.00    MeasPwr:7.17   gain: 13   lFreq: 2437    chainMask: 2
+Debug: Goal: 9.00    MeasPwr:8.15   gain: 14   lFreq: 2437    chainMask: 2
+Debug: Goal: 10.00    MeasPwr:9.26   gain: 15   lFreq: 2437    chainMask: 2
+Debug: Goal: 11.00    MeasPwr:10.40   gain: 16   lFreq: 2437    chainMask: 2
+Debug: Goal: 12.00    MeasPwr:11.53   gain: 17   lFreq: 2437    chainMask: 2
+Debug: Goal: 13.00    MeasPwr:12.29   gain: 18   lFreq: 2437    chainMask: 2
+Debug: Goal: 14.00    MeasPwr:12.97   gain: 19   lFreq: 2437    chainMask: 2
+Debug: Goal: 15.00    MeasPwr:13.99   gain: 20   lFreq: 2437    chainMask: 2
+Debug: Goal: 16.00    MeasPwr:15.21   gain: 21   lFreq: 2437    chainMask: 2
+Debug: Goal: 17.00    MeasPwr:15.89   gain: 22   lFreq: 2437    chainMask: 2
+Debug: Goal: 18.00    MeasPwr:16.74   gain: 23   lFreq: 2437    chainMask: 2
+Debug: Goal: 19.00    MeasPwr:17.59   gain: 24   lFreq: 2437    chainMask: 2
+Debug: Goal: 20.00    MeasPwr:18.55   gain: 25   lFreq: 2437    chainMask: 2
+Debug: Goal: 21.00    MeasPwr:19.26   gain: 26   lFreq: 2437    chainMask: 2
+Debug: Goal: 22.00    MeasPwr:20.12   gain: 27   lFreq: 2437    chainMask: 2
+Debug: Goal: 23.00    MeasPwr:21.31   gain: 28   lFreq: 2437    chainMask: 2
+Debug: Goal: -2.00    MeasPwr:-5.95   gain: 3   lFreq: 2452    chainMask: 1
+Debug: Goal: -1.00    MeasPwr:-5.08   gain: 4   lFreq: 2452    chainMask: 1
+Debug: Goal: 0.00    MeasPwr:-3.40   gain: 5   lFreq: 2452    chainMask: 1
+Debug: Goal: 0.88    MeasPwr:-2.10   gain: 6   lFreq: 2452    chainMask: 1
+Debug: Goal: 2.00    MeasPwr:-1.05   gain: 7   lFreq: 2452    chainMask: 1
+Debug: Goal: 3.00    MeasPwr:0.34   gain: 8   lFreq: 2452    chainMask: 1
+Debug: Goal: 4.00    MeasPwr:1.16   gain: 9   lFreq: 2452    chainMask: 1
+Debug: Goal: 5.00    MeasPwr:1.88   gain: 10   lFreq: 2452    chainMask: 1
+Debug: Goal: 6.00    MeasPwr:2.85   gain: 11   lFreq: 2452    chainMask: 1
+Debug: Goal: 7.00    MeasPwr:3.84   gain: 12   lFreq: 2452    chainMask: 1
+Debug: Goal: 8.00    MeasPwr:5.32   gain: 13   lFreq: 2452    chainMask: 1
+Debug: Goal: 9.00    MeasPwr:6.29   gain: 14   lFreq: 2452    chainMask: 1
+Debug: Goal: 10.00    MeasPwr:7.45   gain: 15   lFreq: 2452    chainMask: 1
+Debug: Goal: 11.00    MeasPwr:8.53   gain: 16   lFreq: 2452    chainMask: 1
+Debug: Goal: 12.00    MeasPwr:9.73   gain: 17   lFreq: 2452    chainMask: 1
+Debug: Goal: 13.00    MeasPwr:10.48   gain: 18   lFreq: 2452    chainMask: 1
+Debug: Goal: 14.00    MeasPwr:11.12   gain: 19   lFreq: 2452    chainMask: 1
+Debug: Goal: 15.00    MeasPwr:12.06   gain: 20   lFreq: 2452    chainMask: 1
+Debug: Goal: 16.00    MeasPwr:13.23   gain: 21   lFreq: 2452    chainMask: 1
+Debug: Goal: 17.00    MeasPwr:13.89   gain: 22   lFreq: 2452    chainMask: 1
+Debug: Goal: 18.00    MeasPwr:14.73   gain: 23   lFreq: 2452    chainMask: 1
+Debug: Goal: 19.00    MeasPwr:15.57   gain: 24   lFreq: 2452    chainMask: 1
+Debug: Goal: 20.00    MeasPwr:16.56   gain: 25   lFreq: 2452    chainMask: 1
+Debug: Goal: 21.00    MeasPwr:17.04   gain: 26   lFreq: 2452    chainMask: 1
+Debug: Goal: 22.00    MeasPwr:17.99   gain: 27   lFreq: 2452    chainMask: 1
+Debug: Goal: 23.00    MeasPwr:19.31   gain: 28   lFreq: 2452    chainMask: 1
+Debug: Goal: -2.00    MeasPwr:-4.43   gain: 3   lFreq: 2452    chainMask: 2
+Debug: Goal: -1.00    MeasPwr:-3.57   gain: 4   lFreq: 2452    chainMask: 2
+Debug: Goal: 0.00    MeasPwr:-2.03   gain: 5   lFreq: 2452    chainMask: 2
+Debug: Goal: 0.88    MeasPwr:-0.71   gain: 6   lFreq: 2452    chainMask: 2
+Debug: Goal: 2.00    MeasPwr:0.35   gain: 7   lFreq: 2452    chainMask: 2
+Debug: Goal: 3.00    MeasPwr:1.74   gain: 8   lFreq: 2452    chainMask: 2
+Debug: Goal: 4.00    MeasPwr:2.57   gain: 9   lFreq: 2452    chainMask: 2
+Debug: Goal: 5.00    MeasPwr:3.28   gain: 10   lFreq: 2452    chainMask: 2
+Debug: Goal: 6.00    MeasPwr:4.26   gain: 11   lFreq: 2452    chainMask: 2
+Debug: Goal: 7.00    MeasPwr:5.29   gain: 12   lFreq: 2452    chainMask: 2
+Debug: Goal: 8.00    MeasPwr:6.75   gain: 13   lFreq: 2452    chainMask: 2
+Debug: Goal: 9.00    MeasPwr:7.72   gain: 14   lFreq: 2452    chainMask: 2
+Debug: Goal: 10.00    MeasPwr:8.86   gain: 15   lFreq: 2452    chainMask: 2
+Debug: Goal: 11.00    MeasPwr:9.98   gain: 16   lFreq: 2452    chainMask: 2
+Debug: Goal: 12.00    MeasPwr:11.14   gain: 17   lFreq: 2452    chainMask: 2
+Debug: Goal: 13.00    MeasPwr:11.91   gain: 18   lFreq: 2452    chainMask: 2
+Debug: Goal: 14.00    MeasPwr:12.57   gain: 19   lFreq: 2452    chainMask: 2
+Debug: Goal: 15.00    MeasPwr:13.63   gain: 20   lFreq: 2452    chainMask: 2
+Debug: Goal: 16.00    MeasPwr:14.77   gain: 21   lFreq: 2452    chainMask: 2
+Debug: Goal: 17.00    MeasPwr:15.51   gain: 22   lFreq: 2452    chainMask: 2
+Debug: Goal: 18.00    MeasPwr:16.36   gain: 23   lFreq: 2452    chainMask: 2
+Debug: Goal: 19.00    MeasPwr:17.22   gain: 24   lFreq: 2452    chainMask: 2
+Debug: Goal: 20.00    MeasPwr:18.17   gain: 25   lFreq: 2452    chainMask: 2
+Debug: Goal: 21.00    MeasPwr:18.97   gain: 26   lFreq: 2452    chainMask: 2
+Debug: Goal: 22.00    MeasPwr:19.83   gain: 27   lFreq: 2452    chainMask: 2
+Debug: Goal: 23.00    MeasPwr:21.07   gain: 28   lFreq: 2452    chainMask: 2
+Debug: Goal: -2.00    MeasPwr:-6.14   gain: 3   lFreq: 2462    chainMask: 1
+Debug: Goal: -1.00    MeasPwr:-5.24   gain: 4   lFreq: 2462    chainMask: 1
+Debug: Goal: 0.00    MeasPwr:-3.61   gain: 5   lFreq: 2462    chainMask: 1
+Debug: Goal: 0.88    MeasPwr:-2.29   gain: 6   lFreq: 2462    chainMask: 1
+Debug: Goal: 2.00    MeasPwr:-1.26   gain: 7   lFreq: 2462    chainMask: 1
+Debug: Goal: 3.00    MeasPwr:0.13   gain: 8   lFreq: 2462    chainMask: 1
+Debug: Goal: 4.00    MeasPwr:0.95   gain: 9   lFreq: 2462    chainMask: 1
+Debug: Goal: 5.00    MeasPwr:1.68   gain: 10   lFreq: 2462    chainMask: 1
+Debug: Goal: 6.00    MeasPwr:2.65   gain: 11   lFreq: 2462    chainMask: 1
+Debug: Goal: 7.00    MeasPwr:3.64   gain: 12   lFreq: 2462    chainMask: 1
+Debug: Goal: 8.00    MeasPwr:5.14   gain: 13   lFreq: 2462    chainMask: 1
+Debug: Goal: 9.00    MeasPwr:6.11   gain: 14   lFreq: 2462    chainMask: 1
+Debug: Goal: 10.00    MeasPwr:7.27   gain: 15   lFreq: 2462    chainMask: 1
+Debug: Goal: 11.00    MeasPwr:8.35   gain: 16   lFreq: 2462    chainMask: 1
+Debug: Goal: 12.00    MeasPwr:9.63   gain: 17   lFreq: 2462    chainMask: 1
+Debug: Goal: 13.00    MeasPwr:10.36   gain: 18   lFreq: 2462    chainMask: 1
+Debug: Goal: 14.00    MeasPwr:11.00   gain: 19   lFreq: 2462    chainMask: 1
+Debug: Goal: 15.00    MeasPwr:11.99   gain: 20   lFreq: 2462    chainMask: 1
+Debug: Goal: 16.00    MeasPwr:13.09   gain: 21   lFreq: 2462    chainMask: 1
+Debug: Goal: 17.00    MeasPwr:13.82   gain: 22   lFreq: 2462    chainMask: 1
+Debug: Goal: 18.00    MeasPwr:14.64   gain: 23   lFreq: 2462    chainMask: 1
+Debug: Goal: 19.00    MeasPwr:15.50   gain: 24   lFreq: 2462    chainMask: 1
+Debug: Goal: 20.00    MeasPwr:16.46   gain: 25   lFreq: 2462    chainMask: 1
+Debug: Goal: 21.00    MeasPwr:17.04   gain: 26   lFreq: 2462    chainMask: 1
+Debug: Goal: 22.00    MeasPwr:18.00   gain: 27   lFreq: 2462    chainMask: 1
+Debug: Goal: 23.00    MeasPwr:19.31   gain: 28   lFreq: 2462    chainMask: 1
+Debug: Goal: -2.00    MeasPwr:-4.66   gain: 3   lFreq: 2462    chainMask: 2
+Debug: Goal: -1.00    MeasPwr:-3.79   gain: 4   lFreq: 2462    chainMask: 2
+Debug: Goal: 0.00    MeasPwr:-2.27   gain: 5   lFreq: 2462    chainMask: 2
+Debug: Goal: 0.88    MeasPwr:-0.95   gain: 6   lFreq: 2462    chainMask: 2
+Debug: Goal: 2.00    MeasPwr:0.11   gain: 7   lFreq: 2462    chainMask: 2
+Debug: Goal: 3.00    MeasPwr:1.51   gain: 8   lFreq: 2462    chainMask: 2
+Debug: Goal: 4.00    MeasPwr:2.33   gain: 9   lFreq: 2462    chainMask: 2
+Debug: Goal: 5.00    MeasPwr:3.04   gain: 10   lFreq: 2462    chainMask: 2
+Debug: Goal: 6.00    MeasPwr:4.02   gain: 11   lFreq: 2462    chainMask: 2
+Debug: Goal: 7.00    MeasPwr:5.08   gain: 12   lFreq: 2462    chainMask: 2
+Debug: Goal: 8.00    MeasPwr:6.49   gain: 13   lFreq: 2462    chainMask: 2
+Debug: Goal: 9.00    MeasPwr:7.47   gain: 14   lFreq: 2462    chainMask: 2
+Debug: Goal: 10.00    MeasPwr:8.62   gain: 15   lFreq: 2462    chainMask: 2
+Debug: Goal: 11.00    MeasPwr:9.74   gain: 16   lFreq: 2462    chainMask: 2
+Debug: Goal: 12.00    MeasPwr:10.93   gain: 17   lFreq: 2462    chainMask: 2
+Debug: Goal: 13.00    MeasPwr:11.70   gain: 18   lFreq: 2462    chainMask: 2
+Debug: Goal: 14.00    MeasPwr:12.39   gain: 19   lFreq: 2462    chainMask: 2
+Debug: Goal: 15.00    MeasPwr:13.45   gain: 20   lFreq: 2462    chainMask: 2
+Debug: Goal: 16.00    MeasPwr:14.60   gain: 21   lFreq: 2462    chainMask: 2
+Debug: Goal: 17.00    MeasPwr:15.35   gain: 22   lFreq: 2462    chainMask: 2
+Debug: Goal: 18.00    MeasPwr:16.20   gain: 23   lFreq: 2462    chainMask: 2
+Debug: Goal: 19.00    MeasPwr:17.04   gain: 24   lFreq: 2462    chainMask: 2
+Debug: Goal: 20.00    MeasPwr:18.00   gain: 25   lFreq: 2462    chainMask: 2
+Debug: Goal: 21.00    MeasPwr:18.88   gain: 26   lFreq: 2462    chainMask: 2
+Debug: Goal: 22.00    MeasPwr:19.75   gain: 27   lFreq: 2462    chainMask: 2
+Debug: Goal: 23.00    MeasPwr:20.98   gain: 28   lFreq: 2462    chainMask: 2
+Debug: Goal: -2.00    MeasPwr:-6.10   gain: 3   lFreq: 2472    chainMask: 1
+Debug: Goal: -1.00    MeasPwr:-5.13   gain: 4   lFreq: 2472    chainMask: 1
+Debug: Goal: 0.00    MeasPwr:-3.53   gain: 5   lFreq: 2472    chainMask: 1
+Debug: Goal: 0.88    MeasPwr:-2.24   gain: 6   lFreq: 2472    chainMask: 1
+Debug: Goal: 2.00    MeasPwr:-1.19   gain: 7   lFreq: 2472    chainMask: 1
+Debug: Goal: 3.00    MeasPwr:0.19   gain: 8   lFreq: 2472    chainMask: 1
+Debug: Goal: 4.00    MeasPwr:1.00   gain: 9   lFreq: 2472    chainMask: 1
+Debug: Goal: 5.00    MeasPwr:1.72   gain: 10   lFreq: 2472    chainMask: 1
+Debug: Goal: 6.00    MeasPwr:2.70   gain: 11   lFreq: 2472    chainMask: 1
+Debug: Goal: 7.00    MeasPwr:3.69   gain: 12   lFreq: 2472    chainMask: 1
+Debug: Goal: 8.00    MeasPwr:5.19   gain: 13   lFreq: 2472    chainMask: 1
+Debug: Goal: 9.00    MeasPwr:6.17   gain: 14   lFreq: 2472    chainMask: 1
+Debug: Goal: 10.00    MeasPwr:7.35   gain: 15   lFreq: 2472    chainMask: 1
+Debug: Goal: 11.00    MeasPwr:8.43   gain: 16   lFreq: 2472    chainMask: 1
+Debug: Goal: 12.00    MeasPwr:9.76   gain: 17   lFreq: 2472    chainMask: 1
+Debug: Goal: 13.00    MeasPwr:10.49   gain: 18   lFreq: 2472    chainMask: 1
+Debug: Goal: 14.00    MeasPwr:11.14   gain: 19   lFreq: 2472    chainMask: 1
+Debug: Goal: 15.00    MeasPwr:12.15   gain: 20   lFreq: 2472    chainMask: 1
+Debug: Goal: 16.00    MeasPwr:13.30   gain: 21   lFreq: 2472    chainMask: 1
+Debug: Goal: 17.00    MeasPwr:13.97   gain: 22   lFreq: 2472    chainMask: 1
+Debug: Goal: 18.00    MeasPwr:14.81   gain: 23   lFreq: 2472    chainMask: 1
+Debug: Goal: 19.00    MeasPwr:15.64   gain: 24   lFreq: 2472    chainMask: 1
+Debug: Goal: 20.00    MeasPwr:16.62   gain: 25   lFreq: 2472    chainMask: 1
+Debug: Goal: 21.00    MeasPwr:17.32   gain: 26   lFreq: 2472    chainMask: 1
+Debug: Goal: 22.00    MeasPwr:18.27   gain: 27   lFreq: 2472    chainMask: 1
+Debug: Goal: 23.00    MeasPwr:19.57   gain: 28   lFreq: 2472    chainMask: 1
+Debug: Goal: -2.00    MeasPwr:-4.69   gain: 3   lFreq: 2472    chainMask: 2
+Debug: Goal: -1.00    MeasPwr:-3.78   gain: 4   lFreq: 2472    chainMask: 2
+Debug: Goal: 0.00    MeasPwr:-2.29   gain: 5   lFreq: 2472    chainMask: 2
+Debug: Goal: 0.88    MeasPwr:-0.97   gain: 6   lFreq: 2472    chainMask: 2
+Debug: Goal: 2.00    MeasPwr:0.10   gain: 7   lFreq: 2472    chainMask: 2
+Debug: Goal: 3.00    MeasPwr:1.48   gain: 8   lFreq: 2472    chainMask: 2
+Debug: Goal: 4.00    MeasPwr:2.31   gain: 9   lFreq: 2472    chainMask: 2
+Debug: Goal: 5.00    MeasPwr:3.02   gain: 10   lFreq: 2472    chainMask: 2
+Debug: Goal: 6.00    MeasPwr:4.02   gain: 11   lFreq: 2472    chainMask: 2
+Debug: Goal: 7.00    MeasPwr:5.04   gain: 12   lFreq: 2472    chainMask: 2
+Debug: Goal: 8.00    MeasPwr:6.49   gain: 13   lFreq: 2472    chainMask: 2
+Debug: Goal: 9.00    MeasPwr:7.46   gain: 14   lFreq: 2472    chainMask: 2
+Debug: Goal: 10.00    MeasPwr:8.60   gain: 15   lFreq: 2472    chainMask: 2
+Debug: Goal: 11.00    MeasPwr:9.73   gain: 16   lFreq: 2472    chainMask: 2
+Debug: Goal: 12.00    MeasPwr:10.96   gain: 17   lFreq: 2472    chainMask: 2
+Debug: Goal: 13.00    MeasPwr:11.74   gain: 18   lFreq: 2472    chainMask: 2
+Debug: Goal: 14.00    MeasPwr:12.40   gain: 19   lFreq: 2472    chainMask: 2
+Debug: Goal: 15.00    MeasPwr:13.48   gain: 20   lFreq: 2472    chainMask: 2
+Debug: Goal: 16.00    MeasPwr:14.70   gain: 21   lFreq: 2472    chainMask: 2
+Debug: Goal: 17.00    MeasPwr:15.38   gain: 22   lFreq: 2472    chainMask: 2
+Debug: Goal: 18.00    MeasPwr:16.22   gain: 23   lFreq: 2472    chainMask: 2
+Debug: Goal: 19.00    MeasPwr:17.09   gain: 24   lFreq: 2472    chainMask: 2
+Debug: Goal: 20.00    MeasPwr:18.05   gain: 25   lFreq: 2472    chainMask: 2
+Debug: Goal: 21.00    MeasPwr:19.00   gain: 26   lFreq: 2472    chainMask: 2
+Debug: Goal: 22.00    MeasPwr:19.89   gain: 27   lFreq: 2472    chainMask: 2
+Debug: Goal: 23.00    MeasPwr:21.12   gain: 28   lFreq: 2472    chainMask: 2
+Debug: TxCal2 End
+
+Test finished: WlanTxCalibrationFWControlled2 with result: Passed LOOP_DETAILS=
+Test started: WlanRxCalibrationFWControlled2 at: 10/29/2021 3:43:11 PM
+Debug: In WlanRxCalibrationFWControlled2() phyId: 0chainToCalibrate: 0band: 1
+Debug: WlanTestSharedInfo.RxCal: QC.CTE.WlanDutControl.DUT_IPQ807x
+Log: WlanRxCalibrationFWControlled2() failed: FTM_WLAN_Atheros_Rx_FW_CAL2(): failed
+Error: WlanRxCalibrationFWControlled2() failed: FTM_WLAN_Atheros_Rx_FW_CAL2(): failed
+Debug: WlanRxCalibrationFWControlled2() exception  FTM_WLAN_Atheros_Rx_FW_CAL2(): failed
+Test finished: WlanRxCalibrationFWControlled2 with result: Failed LOOP_DETAILS=chainToCalibrate__0
+Debug: In WlanRxCalibrationFWControlled2() phyId: 0chainToCalibrate: 1band: 1
+Debug: WlanTestSharedInfo.RxCal: QC.CTE.WlanDutControl.DUT_IPQ807x
+Test finished: WlanRxCalibrationFWControlled2 with result: Passed LOOP_DETAILS=chainToCalibrate__1
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:43:13 PM
+Debug: freq: 2412 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 18
+Debug: Waiting for dutTxSettlingDelayMs = 4000ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_txPower:0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:43:19 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:43:19 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:43:19 PM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:43:19 PM
+Log: TxWlanMeasurementInitiate() failed: SendCommandCheckForError() failed: Instrument Error: -1,Settings conflict;Not available for this model number, ':QCOM:WLAN:SENS:INIT (@1);:QCOM:WLAN:ERR?'
+Error: TxWlanMeasurementInitiate() failed: SendCommandCheckForError() failed: Instrument Error: -1,Settings conflict;Not available for this model number, ':QCOM:WLAN:SENS:INIT (@1);:QCOM:WLAN:ERR?'
+Test finished: TxWlanMeasurementInitiate with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Temp: Loading Assembly: C:\Program Files (x86)\Qualcomm\QDART\bin\QC.QSPRToolKit.dll
+Test started: Sleep at: 10/29/2021 3:43:20 PM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:43:22 PM
+Log: TxWlanMeasurementQueryChannels() failed: SetInstrumentMeasuredPhyDutIndex() failed: phyIdentifier (0) was not measured
+Error: TxWlanMeasurementQueryChannels() failed: SetInstrumentMeasuredPhyDutIndex() failed: phyIdentifier (0) was not measured
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+OutputParam_chEvmDb:
+OutputParam_chEvmMinDb:
+OutputParam_chEvmMaxDb:
+OutputParam_chEvmRateMbps:
+OutputParam_chAmpImbDb:
+OutputParam_chPhaseImbDeg:
+OutputParam_chResidualSidebandDb:
+OutputParam_chCarrierFreqErrorPpm:
+OutputParam_chSymbolClockErrorPpm:
+OutputParam_chLoLeakageDbc:
+OutputParam_chAvgTxPowerDbm:
+OutputParam_chAvgTxPowerMinDbm:
+OutputParam_chAvgTxPowerMaxDbm:
+OutputParam_chAvgTxPowerDeltaDb:
+OutputParam_chPeakTxPowerDbm:
+OutputParam_chPeakTxPowerMinDbm:
+OutputParam_chPeakTxPowerMaxDbm:
+OutputParam_errorQueue:
+OutputParam_ErrorMessage:TxWlanMeasurementQueryChannels() failed: SetInstrumentMeasuredPhyDutIndex() failed: phyIdentifier (0) was not measured
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:43:22 PM
+Log: TxWlanMeasurementQueryChannels() failed: SetInstrumentMeasuredPhyDutIndex() failed: phyIdentifier (0) was not measured
+Error: TxWlanMeasurementQueryChannels() failed: SetInstrumentMeasuredPhyDutIndex() failed: phyIdentifier (0) was not measured
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+OutputParam_chEvmDb:
+OutputParam_chEvmMinDb:
+OutputParam_chEvmMaxDb:
+OutputParam_chEvmRateMbps:
+OutputParam_chAmpImbDb:
+OutputParam_chPhaseImbDeg:
+OutputParam_chResidualSidebandDb:
+OutputParam_chCarrierFreqErrorPpm:
+OutputParam_chSymbolClockErrorPpm:
+OutputParam_chLoLeakageDbc:
+OutputParam_chAvgTxPowerDbm:
+OutputParam_chAvgTxPowerMinDbm:
+OutputParam_chAvgTxPowerMaxDbm:
+OutputParam_chAvgTxPowerDeltaDb:
+OutputParam_chPeakTxPowerDbm:
+OutputParam_chPeakTxPowerMinDbm:
+OutputParam_chPeakTxPowerMaxDbm:
+OutputParam_errorQueue:
+OutputParam_ErrorMessage:TxWlanMeasurementQueryChannels() failed: SetInstrumentMeasuredPhyDutIndex() failed: phyIdentifier (0) was not measured
+Test started: GetTxReport2 at: 10/29/2021 3:43:23 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 1273, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:43:23 PM
+Debug: freq: 2412 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 18
+Debug: Waiting for dutTxSettlingDelayMs = 4000ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_txPower:0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:43:28 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:43:28 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:43:28 PM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:43:29 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/29/2021 3:43:29 PM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:43:31 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+OutputParam_chEvmDb:-23.5518482122407
+OutputParam_chEvmMinDb:-23.65105247
+OutputParam_chEvmMaxDb:-23.26320267
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.1423930794
+OutputParam_chPhaseImbDeg:0.229489137598
+OutputParam_chResidualSidebandDb:-41.5423671985303
+OutputParam_chCarrierFreqErrorPpm:-0.748123204311774
+OutputParam_chSymbolClockErrorPpm:-1.019778442
+OutputParam_chLoLeakageDbc:-40.318840026
+OutputParam_chAvgTxPowerDbm:17.4127825466349
+OutputParam_chAvgTxPowerMinDbm:17.32189178
+OutputParam_chAvgTxPowerMaxDbm:17.46825218
+OutputParam_chAvgTxPowerDeltaDb:-0.5872
+OutputParam_chPeakTxPowerDbm:23.7160144003304
+OutputParam_chPeakTxPowerMinDbm:23.29980469
+OutputParam_chPeakTxPowerMaxDbm:24.11726761
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:43:31 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+OutputParam_chEvmDb:-23.5518482122407
+OutputParam_chEvmMinDb:-23.65105247
+OutputParam_chEvmMaxDb:-23.26320267
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.1423930794
+OutputParam_chPhaseImbDeg:0.229489137598
+OutputParam_chResidualSidebandDb:-41.5423671985303
+OutputParam_chCarrierFreqErrorPpm:-0.748123204311774
+OutputParam_chSymbolClockErrorPpm:-1.019778442
+OutputParam_chLoLeakageDbc:-40.318840026
+OutputParam_chAvgTxPowerDbm:17.4127825466349
+OutputParam_chAvgTxPowerMinDbm:17.32189178
+OutputParam_chAvgTxPowerMaxDbm:17.46825218
+OutputParam_chAvgTxPowerDeltaDb:-0.5872
+OutputParam_chPeakTxPowerDbm:23.7160144003304
+OutputParam_chPeakTxPowerMinDbm:23.29980469
+OutputParam_chPeakTxPowerMaxDbm:24.11726761
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:43:32 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 1292, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: GetTxReport2 at: 10/29/2021 3:43:32 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 0, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:43:32 PM
+Debug: freq: 2462 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 18
+Debug: Waiting for dutTxSettlingDelayMs = 4000ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_txPower:0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:43:38 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:43:38 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:43:38 PM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:43:38 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/29/2021 3:43:39 PM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:43:41 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+OutputParam_chEvmDb:-23.2364449571432
+OutputParam_chEvmMinDb:-23.30784416
+OutputParam_chEvmMaxDb:-23.00304222
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.097371445598
+OutputParam_chPhaseImbDeg:0.39111552834
+OutputParam_chResidualSidebandDb:-43.6939678968493
+OutputParam_chCarrierFreqErrorPpm:-0.77837401941511
+OutputParam_chSymbolClockErrorPpm:0.0452063559999996
+OutputParam_chLoLeakageDbc:-38.58140259
+OutputParam_chAvgTxPowerDbm:16.776510300578
+OutputParam_chAvgTxPowerMinDbm:16.76308823
+OutputParam_chAvgTxPowerMaxDbm:16.80705833
+OutputParam_chAvgTxPowerDeltaDb:-1.2235
+OutputParam_chPeakTxPowerDbm:23.0896604717705
+OutputParam_chPeakTxPowerMinDbm:22.7026329
+OutputParam_chPeakTxPowerMaxDbm:23.46445656
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:43:41 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+OutputParam_chEvmDb:-23.2364449571432
+OutputParam_chEvmMinDb:-23.30784416
+OutputParam_chEvmMaxDb:-23.00304222
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.097371445598
+OutputParam_chPhaseImbDeg:0.39111552834
+OutputParam_chResidualSidebandDb:-43.6939678968493
+OutputParam_chCarrierFreqErrorPpm:-0.77837401941511
+OutputParam_chSymbolClockErrorPpm:0.0452063559999996
+OutputParam_chLoLeakageDbc:-38.58140259
+OutputParam_chAvgTxPowerDbm:16.776510300578
+OutputParam_chAvgTxPowerMinDbm:16.76308823
+OutputParam_chAvgTxPowerMaxDbm:16.80705833
+OutputParam_chAvgTxPowerDeltaDb:-1.2235
+OutputParam_chPeakTxPowerDbm:23.0896604717705
+OutputParam_chPeakTxPowerMinDbm:22.7026329
+OutputParam_chPeakTxPowerMaxDbm:23.46445656
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:43:42 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 1280, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:43:42 PM
+Debug: freq: 2462 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 18
+Debug: Waiting for dutTxSettlingDelayMs = 4000ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_txPower:0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:43:48 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:43:48 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:43:48 PM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:43:48 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/29/2021 3:43:48 PM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:43:50 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+OutputParam_chEvmDb:-23.5190352395372
+OutputParam_chEvmMinDb:-23.77766991
+OutputParam_chEvmMaxDb:-23.25710678
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.09977079181
+OutputParam_chPhaseImbDeg:0.42639659046
+OutputParam_chResidualSidebandDb:-43.3297028720498
+OutputParam_chCarrierFreqErrorPpm:-0.79563045792039
+OutputParam_chSymbolClockErrorPpm:-10.2474005216
+OutputParam_chLoLeakageDbc:-40.033231352
+OutputParam_chAvgTxPowerDbm:17.4673907651631
+OutputParam_chAvgTxPowerMinDbm:17.42455292
+OutputParam_chAvgTxPowerMaxDbm:17.50944901
+OutputParam_chAvgTxPowerDeltaDb:-0.5326
+OutputParam_chPeakTxPowerDbm:24.010536256829
+OutputParam_chPeakTxPowerMinDbm:23.54689598
+OutputParam_chPeakTxPowerMaxDbm:24.28964806
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:43:51 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+OutputParam_chEvmDb:-23.5190352395372
+OutputParam_chEvmMinDb:-23.77766991
+OutputParam_chEvmMaxDb:-23.25710678
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.09977079181
+OutputParam_chPhaseImbDeg:0.42639659046
+OutputParam_chResidualSidebandDb:-43.3297028720498
+OutputParam_chCarrierFreqErrorPpm:-0.79563045792039
+OutputParam_chSymbolClockErrorPpm:-10.2474005216
+OutputParam_chLoLeakageDbc:-40.033231352
+OutputParam_chAvgTxPowerDbm:17.4673907651631
+OutputParam_chAvgTxPowerMinDbm:17.42455292
+OutputParam_chAvgTxPowerMaxDbm:17.50944901
+OutputParam_chAvgTxPowerDeltaDb:-0.5326
+OutputParam_chPeakTxPowerDbm:24.010536256829
+OutputParam_chPeakTxPowerMinDbm:23.54689598
+OutputParam_chPeakTxPowerMaxDbm:24.28964806
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:43:51 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 1266, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: GetTxReport2 at: 10/29/2021 3:43:51 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 0, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:43:52 PM
+Debug: freq: 2412 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 18
+Debug: Waiting for dutTxSettlingDelayMs = 4000ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_txPower:0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:43:57 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:43:57 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:43:57 PM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:43:57 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/29/2021 3:43:58 PM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:44:00 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+OutputParam_chEvmDb:-23.2953173949354
+OutputParam_chEvmMinDb:-23.61867332
+OutputParam_chEvmMaxDb:-23.10514259
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.095974321664
+OutputParam_chPhaseImbDeg:0.19107428341
+OutputParam_chResidualSidebandDb:-44.8190934798689
+OutputParam_chCarrierFreqErrorPpm:-0.815152488723051
+OutputParam_chSymbolClockErrorPpm:0.116174984600001
+OutputParam_chLoLeakageDbc:-39.615390016
+OutputParam_chAvgTxPowerDbm:16.6263926217859
+OutputParam_chAvgTxPowerMinDbm:16.59768677
+OutputParam_chAvgTxPowerMaxDbm:16.65597534
+OutputParam_chAvgTxPowerDeltaDb:-1.3736
+OutputParam_chPeakTxPowerDbm:22.6311982263903
+OutputParam_chPeakTxPowerMinDbm:22.32162476
+OutputParam_chPeakTxPowerMaxDbm:22.9472847
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:44:00 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+OutputParam_chEvmDb:-23.2953173949354
+OutputParam_chEvmMinDb:-23.61867332
+OutputParam_chEvmMaxDb:-23.10514259
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.095974321664
+OutputParam_chPhaseImbDeg:0.19107428341
+OutputParam_chResidualSidebandDb:-44.8190934798689
+OutputParam_chCarrierFreqErrorPpm:-0.815152488723051
+OutputParam_chSymbolClockErrorPpm:0.116174984600001
+OutputParam_chLoLeakageDbc:-39.615390016
+OutputParam_chAvgTxPowerDbm:16.6263926217859
+OutputParam_chAvgTxPowerMinDbm:16.59768677
+OutputParam_chAvgTxPowerMaxDbm:16.65597534
+OutputParam_chAvgTxPowerDeltaDb:-1.3736
+OutputParam_chPeakTxPowerDbm:22.6311982263903
+OutputParam_chPeakTxPowerMinDbm:22.32162476
+OutputParam_chPeakTxPowerMaxDbm:22.9472847
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:44:01 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 1287, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:44:01 PM
+Debug: freq: 2412 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 18
+Debug: Waiting for dutTxSettlingDelayMs = 4000ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_txPower:0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:44:07 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:44:07 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:44:07 PM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:44:07 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/29/2021 3:44:07 PM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:44:09 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+OutputParam_chEvmDb:-23.5602724467855
+OutputParam_chEvmMinDb:-23.61093712
+OutputParam_chEvmMaxDb:-23.4960289
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.14560405016
+OutputParam_chPhaseImbDeg:0.27932451816
+OutputParam_chResidualSidebandDb:-41.2477983160145
+OutputParam_chCarrierFreqErrorPpm:-0.820842270978441
+OutputParam_chSymbolClockErrorPpm:-5.6058717712
+OutputParam_chLoLeakageDbc:-41.071936034
+OutputParam_chAvgTxPowerDbm:17.3776874735896
+OutputParam_chAvgTxPowerMinDbm:17.35094643
+OutputParam_chAvgTxPowerMaxDbm:17.40267754
+OutputParam_chAvgTxPowerDeltaDb:-0.6223
+OutputParam_chPeakTxPowerDbm:23.6176217691309
+OutputParam_chPeakTxPowerMinDbm:23.32535934
+OutputParam_chPeakTxPowerMaxDbm:24.05207443
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:44:10 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+OutputParam_chEvmDb:-23.5602724467855
+OutputParam_chEvmMinDb:-23.61093712
+OutputParam_chEvmMaxDb:-23.4960289
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.14560405016
+OutputParam_chPhaseImbDeg:0.27932451816
+OutputParam_chResidualSidebandDb:-41.2477983160145
+OutputParam_chCarrierFreqErrorPpm:-0.820842270978441
+OutputParam_chSymbolClockErrorPpm:-5.6058717712
+OutputParam_chLoLeakageDbc:-41.071936034
+OutputParam_chAvgTxPowerDbm:17.3776874735896
+OutputParam_chAvgTxPowerMinDbm:17.35094643
+OutputParam_chAvgTxPowerMaxDbm:17.40267754
+OutputParam_chAvgTxPowerDeltaDb:-0.6223
+OutputParam_chPeakTxPowerDbm:23.6176217691309
+OutputParam_chPeakTxPowerMinDbm:23.32535934
+OutputParam_chPeakTxPowerMaxDbm:24.05207443
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:44:10 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 1293, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: GetTxReport2 at: 10/29/2021 3:44:11 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 0, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:44:11 PM
+Debug: freq: 2462 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 18
+Debug: Waiting for dutTxSettlingDelayMs = 4000ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_txPower:0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:44:17 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:44:17 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:44:17 PM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:44:17 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/29/2021 3:44:17 PM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:44:19 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+OutputParam_chEvmDb:-23.4455948577973
+OutputParam_chEvmMinDb:-23.62395287
+OutputParam_chEvmMaxDb:-23.15732765
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.077121030538
+OutputParam_chPhaseImbDeg:0.32836398484
+OutputParam_chResidualSidebandDb:-45.5680347800064
+OutputParam_chCarrierFreqErrorPpm:-0.873707413241267
+OutputParam_chSymbolClockErrorPpm:-0.5046663287
+OutputParam_chLoLeakageDbc:-38.893253326
+OutputParam_chAvgTxPowerDbm:16.7779045901639
+OutputParam_chAvgTxPowerMinDbm:16.75493813
+OutputParam_chAvgTxPowerMaxDbm:16.80572891
+OutputParam_chAvgTxPowerDeltaDb:-1.2221
+OutputParam_chPeakTxPowerDbm:22.8121403272781
+OutputParam_chPeakTxPowerMinDbm:22.58336449
+OutputParam_chPeakTxPowerMaxDbm:23.04884338
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:44:20 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+OutputParam_chEvmDb:-23.4455948577973
+OutputParam_chEvmMinDb:-23.62395287
+OutputParam_chEvmMaxDb:-23.15732765
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.077121030538
+OutputParam_chPhaseImbDeg:0.32836398484
+OutputParam_chResidualSidebandDb:-45.5680347800064
+OutputParam_chCarrierFreqErrorPpm:-0.873707413241267
+OutputParam_chSymbolClockErrorPpm:-0.5046663287
+OutputParam_chLoLeakageDbc:-38.893253326
+OutputParam_chAvgTxPowerDbm:16.7779045901639
+OutputParam_chAvgTxPowerMinDbm:16.75493813
+OutputParam_chAvgTxPowerMaxDbm:16.80572891
+OutputParam_chAvgTxPowerDeltaDb:-1.2221
+OutputParam_chPeakTxPowerDbm:22.8121403272781
+OutputParam_chPeakTxPowerMinDbm:22.58336449
+OutputParam_chPeakTxPowerMaxDbm:23.04884338
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:44:20 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 1289, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: SetUpDutTxDetails2 at: 10/29/2021 3:44:21 PM
+Debug: freq: 2462 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 18
+Debug: Waiting for dutTxSettlingDelayMs = 4000ms
+Test finished: SetUpDutTxDetails2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_txPower:0
+Test started: Clear_Instrument_Errors at: 10/29/2021 3:44:25 PM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/29/2021 3:44:25 PM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/29/2021 3:44:25 PM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_errorQueue:TxMeasureWlanConfigure PRE-TEST: 0,"No Error"_,_TxMeasureWlanConfigure POST-TEST: 0,"No Error"
+Test started: TxWlanMeasurementInitiate at: 10/29/2021 3:44:26 PM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/29/2021 3:44:26 PM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:44:28 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+OutputParam_chEvmDb:-23.4495989993523
+OutputParam_chEvmMinDb:-23.57480049
+OutputParam_chEvmMaxDb:-23.34739494
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.089952484522
+OutputParam_chPhaseImbDeg:0.35753977
+OutputParam_chResidualSidebandDb:-44.4043222421016
+OutputParam_chCarrierFreqErrorPpm:-0.842529039073924
+OutputParam_chSymbolClockErrorPpm:2.063218307
+OutputParam_chLoLeakageDbc:-39.464397428
+OutputParam_chAvgTxPowerDbm:17.4321598772358
+OutputParam_chAvgTxPowerMinDbm:17.40329742
+OutputParam_chAvgTxPowerMaxDbm:17.4603653
+OutputParam_chAvgTxPowerDeltaDb:-0.5678
+OutputParam_chPeakTxPowerDbm:23.7239986999831
+OutputParam_chPeakTxPowerMinDbm:23.26605988
+OutputParam_chPeakTxPowerMaxDbm:24.21178246
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/29/2021 3:44:28 PM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+OutputParam_chEvmDb:-23.4495989993523
+OutputParam_chEvmMinDb:-23.57480049
+OutputParam_chEvmMaxDb:-23.34739494
+OutputParam_chEvmRateMbps:78
+OutputParam_chAmpImbDb:-0.089952484522
+OutputParam_chPhaseImbDeg:0.35753977
+OutputParam_chResidualSidebandDb:-44.4043222421016
+OutputParam_chCarrierFreqErrorPpm:-0.842529039073924
+OutputParam_chSymbolClockErrorPpm:2.063218307
+OutputParam_chLoLeakageDbc:-39.464397428
+OutputParam_chAvgTxPowerDbm:17.4321598772358
+OutputParam_chAvgTxPowerMinDbm:17.40329742
+OutputParam_chAvgTxPowerMaxDbm:17.4603653
+OutputParam_chAvgTxPowerDeltaDb:-0.5678
+OutputParam_chPeakTxPowerDbm:23.7239986999831
+OutputParam_chPeakTxPowerMinDbm:23.26605988
+OutputParam_chPeakTxPowerMaxDbm:24.21178246
+OutputParam_errorQueue:TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"_,_TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+OutputParam_ErrorMessage:
+Test started: GetTxReport2 at: 10/29/2021 3:44:29 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 1286, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: GetTxReport2 at: 10/29/2021 3:44:29 PM
+DUT API Call Log: FTM_WLAN_Atheros_Tx_Report(goodPackets 0, thermCal chain0 0, thermCal chain1 0, Throughput 0, rssi 0, gainIdx 0, dacGain 0, paCfg 0, pdadc for chain 0 0)
+Test finished: GetTxReport2 with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__18_ _chEvmMaxDbUL__-30_._channel__2462_ _channel2__0
+OutputParam_TxRTemp:0_,_0_,_0_,_0
+OutputParam_TxRpdadc:0_,_0_,_0_,_0
+Test started: Time-2 at: 10/29/2021 3:44:29 PM
+Test finished: Time-2 with result: Passed LOOP_DETAILS=
+OutputParam_ReturnValue:15_44_29_982
+Test started: RxWlanGenerationClear at: 10/29/2021 3:44:30 PM
+Test finished: RxWlanGenerationClear with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._phyId__PHY_A0_ _rate__RATE_MCS_8_ _rateBw__RateBW_11AC_VHT20_ _cbState__primary20_ _startPower__-59_ _stopPower__-59_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0
+OutputParam_ErrorMessage:
+Test started: WlanSetDutRxMacAddressBssId at: 10/29/2021 3:44:30 PM
+Test finished: WlanSetDutRxMacAddressBssId with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._phyId__PHY_A0_ _rate__RATE_MCS_8_ _rateBw__RateBW_11AC_VHT20_ _cbState__primary20_ _startPower__-59_ _stopPower__-59_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0
+Test started: WlanPerTest_NxN2 at: 10/29/2021 3:44:30 PM
+DUT API Call Log: RxMacAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: RxBssidAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: FTM_WLAN_Atheros_Rx()
+DUT API Call Log: FTM_WLAN_Atheros_Rx_Report(totalPkt 92, Throughput 0, rssi -64, evm0 0, evm1 0, evm2 0, evm3 0, evm4 0, evm5 0, evm6 0, evm7 0, crcErrPkt 0, secErrPktCount 0)
+Debug: rxChainMask : 1  RxTotalPckts: 100  totalPktCount: 92  goodPktCount: 92  rssiDbm: -64
+Debug: pilotEvm0 : -34pilotEvm1 : 0pilotEvm2 : 0pilotEvm3 : 0pilotEvm4 : 0pilotEvm5 : 0pilotEvm6 : 0pilotEvm7 : 0
+Test finished: WlanPerTest_NxN2 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._phyId__PHY_A0_ _rate__RATE_MCS_8_ _rateBw__RateBW_11AC_VHT20_ _cbState__primary20_ _startPower__-59_ _stopPower__-59_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0
+OutputParam_PER:8
+OutputParam_PerPower:-59
+OutputParam_rssi:-64
+OutputParam_rssiPowerDelta:-5
+OutputParam_ErrorMessage:
+Test started: Time-3 at: 10/29/2021 3:44:31 PM
+Test finished: Time-3 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._phyId__PHY_A0_ _rate__RATE_MCS_8_ _rateBw__RateBW_11AC_VHT20_ _cbState__primary20_ _startPower__-59_ _stopPower__-59_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0
+OutputParam_ReturnValue:15_44_31_450
+Test started: RxWlanGenerationClear at: 10/29/2021 3:44:31 PM
+Test finished: RxWlanGenerationClear with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._phyId__PHY_A0_ _rate__RATE_MCS_8_ _rateBw__RateBW_11AC_VHT20_ _cbState__primary20_ _startPower__-59_ _stopPower__-59_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1
+OutputParam_ErrorMessage:
+Test started: WlanSetDutRxMacAddressBssId at: 10/29/2021 3:44:31 PM
+Test finished: WlanSetDutRxMacAddressBssId with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._phyId__PHY_A0_ _rate__RATE_MCS_8_ _rateBw__RateBW_11AC_VHT20_ _cbState__primary20_ _startPower__-59_ _stopPower__-59_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1
+Test started: WlanPerTest_NxN2 at: 10/29/2021 3:44:31 PM
+DUT API Call Log: RxMacAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: RxBssidAddr 0x01 0x00 0x00 0xC0 0xFF 0xEE 
+DUT API Call Log: FTM_WLAN_Atheros_Rx()
+DUT API Call Log: FTM_WLAN_Atheros_Rx_Report(totalPkt 97, Throughput 0, rssi -60, evm0 0, evm1 0, evm2 0, evm3 0, evm4 0, evm5 0, evm6 0, evm7 0, crcErrPkt 0, secErrPktCount 0)
+Debug: rxChainMask : 2  RxTotalPckts: 100  totalPktCount: 97  goodPktCount: 97  rssiDbm: -60
+Debug: pilotEvm0 : -9pilotEvm1 : 0pilotEvm2 : 0pilotEvm3 : 0pilotEvm4 : 0pilotEvm5 : 0pilotEvm6 : 0pilotEvm7 : 0
+Test finished: WlanPerTest_NxN2 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._phyId__PHY_A0_ _rate__RATE_MCS_8_ _rateBw__RateBW_11AC_VHT20_ _cbState__primary20_ _startPower__-59_ _stopPower__-59_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1
+OutputParam_PER:3
+OutputParam_PerPower:-59
+OutputParam_rssi:-60
+OutputParam_rssiPowerDelta:-1
+OutputParam_ErrorMessage:
+Test started: Time-3 at: 10/29/2021 3:44:32 PM
+Test finished: Time-3 with result: Passed LOOP_DETAILS=rxFilterMode__FilterMode_._phyId__PHY_A0_ _rate__RATE_MCS_8_ _rateBw__RateBW_11AC_VHT20_ _cbState__primary20_ _startPower__-59_ _stopPower__-59_._channel__2462_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1
+OutputParam_ReturnValue:15_44_32_973
+Test started: WlanSaveFlash at: 10/29/2021 3:44:33 PM
+Test finished: WlanSaveFlash with result: Passed LOOP_DETAILS=
+Test started: WlanSaveBDF2 at: 10/29/2021 3:45:32 PM
+Log: WlanSaveBDF() failed: FTM_WLAN_Atheros_Save_BDF(): failed
+Error: WlanSaveBDF() failed: FTM_WLAN_Atheros_Save_BDF(): failed
+Test finished: WlanSaveBDF2 with result: Failed LOOP_DETAILS=
+Test started: SetDutIndexToDefault at: 10/29/2021 3:46:38 PM
+Test finished: SetDutIndexToDefault with result: Passed LOOP_DETAILS=
+OutputParam_ErrorMessage:
+Log: Log enable params: Enable - True, File Name - C:\log\dut_log.txt
+Test finished: DutLog with result: Passed LOOP_DETAILS=
+Test started: DisconnectDut at: 10/29/2021 3:46:39 PM
+Debug: Remove dut: QC.CTE.WlanDutControl.DUT_IPQ807x @ COM30001
+Test finished: DisconnectDut with result: Passed LOOP_DETAILS=
+Test started: Time-4 at: 10/29/2021 3:46:39 PM
+Test finished: Time-4 with result: Passed LOOP_DETAILS=
+OutputParam_ReturnValue:15_46_39_71
+Test started: DisconnectWlanTester at: 10/29/2021 3:46:39 PM
+Debug: Remove wlanTester: WLANTester
+Test finished: DisconnectWlanTester with result: Passed LOOP_DETAILS=
+OutputParam_ErrorMessage:
+Test started: Time-5 at: 10/29/2021 3:46:39 PM
+Test finished: Time-5 with result: Passed LOOP_DETAILS=
+OutputParam_ReturnValue:15_46_39_136
+Tree finished with result: Failed and error code: 

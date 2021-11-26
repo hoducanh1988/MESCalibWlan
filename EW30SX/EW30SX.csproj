@@ -68,10 +68,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Asset\IO\AccountHelper.cs" />
+    <Compile Include="Commands\LoginGoCommand.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\AttenuationViewModel.cs" />
     <Compile Include="ViewModels\CalibViewModel.cs" />
     <Compile Include="ViewModels\HelpViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\LogViewModel.cs" />
     <Compile Include="ViewModels\MainContentViewModel.cs" />
     <Compile Include="ViewModels\MainHeaderViewModel.cs" />
@@ -80,6 +84,9 @@
     <Compile Include="Views\AttenuationView.xaml.cs" />
     <Compile Include="Views\CalibView.xaml.cs" />
     <Compile Include="Views\HelpView.xaml.cs" />
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LogView.xaml.cs" />
     <Compile Include="Views\MainContentView.xaml.cs" />
     <Compile Include="Views\MainHeaderView.xaml.cs" />
@@ -142,6 +149,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LogView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -194,7 +205,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Asset\Image\next.png" />
+    <Resource Include="Asset\Image\password.png" />
+    <Resource Include="Asset\Image\user.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Asset\Icon\mesh.ico" />
   </ItemGroup>

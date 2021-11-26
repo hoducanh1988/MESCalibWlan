@@ -1,0 +1,7 @@
+
+11/25/2021 11:20:53 AM, Mở cổng COM5,115200:
+...Kết quả = False
+
+11/25/2021 11:20:53 AM, End test:
+...Total result: Failed
+...Total time: 00:00:00

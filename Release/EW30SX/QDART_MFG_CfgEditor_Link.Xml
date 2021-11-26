@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Config>
+    <LanguageUsed>ENGLISH</LanguageUsed>
+    <Station>RFCalVerify</Station>
+    <Language>ENGLISH</Language>
+    <AutoStart>False</AutoStart>
+    <MultiDUT>False</MultiDUT>
+    <DUTs>4</DUTs>
+    <BlankWhenNull>False</BlankWhenNull>
+    <SaveAs>False</SaveAs>
+    <Backup>False</Backup>
+    <All>
+      <Panel>
+        <Name>RFCalVerify</Name>
+        <File Index="1" Type="Target" Name="equipconfig" Value="..\Databases\equipconfig.xml" />
+      </Panel>
+      <Panel>
+        <Name>RFStationCal</Name>
+        <File Index="1" Type="Target" Name="equipconfig" Value="..\Databases\equipconfig.xml" />
+      </Panel>
+      <Panel>
+        <Name>BTWLAN</Name>
+        <File Index="1" Type="Target" Name="TesterConfig" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\TesterConfig.xml" />
+        <File Index="1" Type="Source" Name="QTI SCPI" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\SCPI_Config_Files\SCPI_Generic_Config_Example.xml" />
+        <File Index="2" Type="Source" Name="AgilentN4010A" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\Agilent_N4010--WCNTesterConfig.xml" />
+        <File Index="3" Type="Source" Name="LPIQ2010" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\LP_IQ2010--WCNTesterConfig.xml" />
+        <File Index="4" Type="Source" Name="CMW100" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\R&amp;S_CMW100--WCNTesterConfig.xml" />
+        <File Index="5" Type="Source" Name="CMW500" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\R&amp;S_CMW500--WCNTesterConfig.xml" />
+        <File Index="6" Type="Source" Name="LPIQxel" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\LP_IQxel--WCNTesterConfig.xml" />
+        <File Index="7" Type="Source" Name="NITrident" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\NI_PXI-5644R--WCNTesterConfig.xml" />
+        <File Index="8" Type="Source" Name="AnritsuMT8870A" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\Anritsu_8870A--WCNTesterConfig.xml" />
+        <File Index="1" Type="Other" Name="StationCalInstrumentConfigFile.xml" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\StationCalInstrumentConfigFile.xml" />
+        <File Index="2" Type="Other" Name="BluetoothDUTConfig.xml" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\BluetoothDUTConfig_Sample.xml" />
+        <File Index="3" Type="Other" Name="StationCalPathDefinitionFile.xml" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\Sample\StationCalInstrumentConfigFile.xml" />
+        <File Index="4" Type="Other" Name="QTI SCPI" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\SCPI_Config_Files\BT_SCPI_TesterConfig_Anritsu8870A.xml" />
+        <File Index="1" Type="SCPI_Option_Config_Info" Name="RefLevelHeadspace" Value="Anritsu:0;Keysight:10;LitePoint:10;NI:10;RS:10" />
+        <File Index="2" Type="SCPI_Option_Config_Info" Name="TriggerLevelMax" Value="Anritsu:-20;Keysight:0;LitePoint:-25;NI:0;RS:-20" />
+        <File Index="3" Type="SCPI_Option_Config_Info" Name="80p80PowerOffset" Value="Anritsu:3;Keysight:3;LitePoint:0;NI:3;RS:0" />
+      </Panel>
+      <Panel>
+        <Name>BTWLANStationCal</Name>
+        <File Index="1" Type="Target" Name="TesterConfig" Value="C:\Qualcomm\WCN\ProdTests\ConfigFiles\StationCalInstrumentConfigFile.xml" />
+      </Panel>
+      <Panel>
+        <Name>LossEditorRF</Name>
+        <File Index="1" Type="Target" Name="CalDB_NET" Value="..\Databases\CalDB_NET.xml" />
+      </Panel>
+      <Panel>
+        <Name>LossEditorBTWLAN</Name>
+        <File Index="1" Type="Target" Name="QTA_CalDataFile" Value="C:\Qualcomm\WCN\ProdTests\StationCal\QTA_CalDataFile.xml" />
+      </Panel>
+      <Panel>
+        <Name>QSeq</Name>
+        <File Index="1" Type="Target" Name="QSeq" Value="..\Databases\QSEQ_DeviceConfig.xml" />
+      </Panel>
+      <Panel>
+        <Name>MultiDUT</Name>
+        <File Index="1" Type="Target" Name="MultiDUT" Value="..\Databases\MultiplexManagerConfigFile.xml" />
+        <InfoItem Name="WCDMA" Value="C0_WCDMA_TX0,C0_WCDMA_RX0,C0_WCDMA_RX1" />
+        <InfoItem Name="CDMA" Value="C0_CDMA_TX0,C0_CDMA_RX0,C0_CDMA_RX1" />
+        <InfoItem Name="LTE" Value="C0_LTE_TX0,C0_LTE_RX0,C0_LTE_RX1,C1_LTE_RX0,C1_LTE_RX1" />
+        <InfoItem Name="GSM" Value="C0_GSM_TX0,C0_GSM_RX0,C1_GSM_TX0,C1_GSM_RX0" />
+        <InfoItem Name="TDSCDMA" Value="C0_TDSCDMA_TX0,C0_TDSCDMA_RX0,C0_TDSCDMA_RX1" />
+        <InfoItem Name="GNSS" Value="GNSS" />
+        <InfoItem Name="BT" Value="BT" />
+        <InfoItem Name="WLAN" Value="WLAN" />
+        <InfoItem Name="WCDMA_B" Value="1,2,4,5,8,20" />
+        <InfoItem Name="CDMA_B" Value="0,1,16" />
+        <InfoItem Name="LTE_B" Value="38,39,40,41,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37" />
+        <InfoItem Name="TDSCDMA_B" Value="34,39" />
+      </Panel>
+      <Panel>
+        <Name>GPS</Name>
+        <File Index="1" Type="Target" Name="equipconfig" Value="..\Databases\equipconfig.xml" />
+      </Panel>
+      <Panel>
+        <Name>LogCfg</Name>
+        <File Index="1" Type="Target" Name="loggingconfig" Value="C:\Qualcomm\QDART\LogConfig\QDART_Logging_Configuration.xml" />
+        <InfoItem Name="Folder" Value="%PCNAME%,%DATE%,%TREENAME%" />
+        <InfoItem Name="File" Value="%SN%,%DATE_TIME%,%TECHNOLOGIES%,%DUT_ID%" />
+      </Panel>
+      <Panel>
+        <Name>MMICfg</Name>
+        <File Index="1" Type="Target" Name="mmiconfig" Value="..\Databases\mmi_stationConfig.xml" />
+      </Panel>
+      <InstList>
+        <Name>PS</Name>
+        <InfoItem Name="HP 6632X" Value="GPIB" />
+        <InfoItem Name="Keithley 2304" Value="GPIB" />
+        <InfoItem Name="SCPI Power Supply" Value="GPIB" />
+      </InstList>
+      <InstList>
+        <Name>CP</Name>
+        <InfoItem Name="Aeroflex 3000" Value="aeroflex 3000" />
+        <InfoItem Name="Anritsu MT8820" Value="Anritsu MT8820" />
+        <InfoItem Name="Anritsu MT8821" Value="Anritsu MT8821" />
+        <InfoItem Name="Anritsu MT8870" Value="Anritsu MT8870a" />
+        <InfoItem Name="Keysight 8960" Value="HP 8960" />
+        <InfoItem Name="Keysight EXT/6607/6640" Value="agilent ext" />
+        <InfoItem Name="Litepoint IQXStream" Value="litepoint iqxstream" />
+        <InfoItem Name="NI PXI-5644R" Value="ni pxi-5644r" />
+        <InfoItem Name="R&amp;S CMW100" Value="CMW100" />
+        <InfoItem Name="R&amp;S CMW500" Value="CMW500" />
+        <InfoItem Name="R&amp;S CMU" Value="CMU" />
+        <InfoItem Name="Starpoint 6010" Value="StarPoint 6010" />
+        <InfoItem Name="Starpoint 8011" Value="StarPoint 8011" />
+        <InfoItem Name="Starpoint 9010" Value="StarPoint 9010" />
+		<InfoItem Name="WELZEK T6290D" Value="WELZEK T6290D" />
+		<InfoItem Name="WELZEK T6290E" Value="WELZEK T6290E" />
+      </InstList>
+      <InstList>
+        <Name>CP_LAN</Name>
+        <InfoItem Name="Aeroflex 3000" Value="0(Default),wan_rfcal_qcom_scpi" />
+        <InfoItem Name="Anritsu MT8820" Value="0(Default),wan_rfcal_qcom_scpi,wan_rfcal_native" />
+        <InfoItem Name="Anritsu MT8821" Value="0(Default),wan_rfcal_qcom_scpi,wan_rfcal_native" />
+        <InfoItem Name="Anritsu MT8870" Value="0(Default),wan_rfcal_qcom_scpi" />
+        <InfoItem Name="Keysight 8960" Value="0(Default),wan_rfcal_native" />
+        <InfoItem Name="Keysight EXT/6607/6640" Value="0(Default),wan_rfcal_qcom_scpi" />
+        <InfoItem Name="Litepoint IQXStream" Value="0(Default),wan_rfcal_qcom_scpi" />
+        <InfoItem Name="NI PXI-5644R" Value="0(Default),wan_rfcal_qcom_scpi" />
+        <InfoItem Name="R&amp;S CMW100" Value="0(Default),wan_rfcal_qcom_scpi,wan_rfcal_native" />
+        <InfoItem Name="R&amp;S CMW500" Value="0(Default),wan_rfcal_qcom_scpi,wan_rfcal_native" />
+        <InfoItem Name="R&amp;S CMU" Value="0(Default)" />
+        <InfoItem Name="Starpoint 6010" Value="0(Default),wan_rfcal_qcom_scpi" />
+        <InfoItem Name="Starpoint 8011" Value="0(Default),wan_rfcal_qcom_scpi" />
+        <InfoItem Name="Starpoint 9010" Value="0(Default),wan_rfcal_qcom_scpi" />
+        <InfoItem Name="WELZEK T6290D" Value="0(Default)" />
+		<InfoItem Name="WELZEK T6290E" Value="0(Default)" />
+      </InstList>
+      <InstList>
+        <Name>StationCalSG</Name>
+        <InfoItem Name="IFR 20XX" Value="GPIB" />
+        <InfoItem Name="RS SMIQ" Value="GPIB" />
+        <InfoItem Name="Agilent PSG" Value="GPIB" />
+        <InfoItem Name="SMA" Value="GPIB" />
+        <InfoItem Name="SMU Chan1" Value="GPIB" />
+        <InfoItem Name="RS SMBV" Value="GPIB" />
+      </InstList>
+      <InstList>
+        <Name>DSG</Name>
+        <InfoItem Name="RS SMIQ" Value="GPIB" />
+        <InfoItem Name="RS SMJ" Value="GPIB" />
+        <InfoItem Name="CMW" Value="IP" />
+        <InfoItem Name="CMU" Value="GPIBEXT" />
+        <InfoItem Name="E4432B" Value="GPIB" />
+        <InfoItem Name="Agilent" Value="GPIB" />
+        <InfoItem Name="E5515" Value="GPIB" />
+        <InfoItem Name="MT8820" Value="GPIB" />
+      </InstList>
+      <InstList>
+        <Name>PM</Name>
+        <InfoItem Name="Gigatronics 8540C" Value="GPIB" />
+        <InfoItem Name="Agilent E4418B" Value="GPIB" />
+        <InfoItem Name="Agilent N1913A" Value="GPIB" />
+        <InfoItem Name="NRP2" Value="GPIB" />
+        <InfoItem Name="NRP-Z" Value="GPIB" />
+      </InstList>
+      <InstList>
+        <Name>Emulator</Name>
+        <InfoItem Name="GSS4100" Value="GPIB" />
+        <InfoItem Name="GSS6300" Value="GPIB" />
+        <InfoItem Name="GSS6100" Value="GPIB" />        
+        <InfoItem Name="SMBV100A/B" Value="GPIB" />
+        <InfoItem Name="Qualcomm SCPI" Value="GPIB" />
+      </InstList>
+      <InstList>
+        <Name>UC</Name>
+        <InfoItem Name="Agilent 53132A" Value="GPIB" />
+      </InstList>
+      <InstList>
+        <Name>TempChamber</Name>
+        <InfoItem Name="CSZ F4" Value="CSZ SERIES F4 CONTROLLER" />
+        <InfoItem Name="CSZ DEMENSIONII" Value="CSZ SERIES DEMENSIONII CONTROLLER" />
+        <InfoItem Name="TENNEY 942" Value="TENNEY 942 SERIES CONTROLLER" />
+        <InfoItem Name="SIGMA C3_C5" Value="SIGMA C3_C5 CONTROLLER" />
+        <InfoItem Name="TE115 F4" Value="TE115 F4 Controller" />
+        <InfoItem Name="ESPEC" Value="ESPEC" />
+        <InfoItem Name="TPO4300" Value="TPO4300" />
+        <InfoItem Name="THERMOTRON3X00" Value="THERMOTRON3X00" />
+        <InfoItem Name="Voetsch" Value="Votech VT4002 Serial V3" />
+      </InstList>
+      <InstList>
+        <Name>WLANInst</Name>
+        <InfoItem Name="QTI SCPI" Value="SWFacade,USB,GPIB;TcpClient,IP;GPIB,GPIB" />
+        <InfoItem Name="AgilentN4010A" Value="SWFacade,USB,GPIB" />
+        <InfoItem Name="CMW100" Value="TcpClient,IP" />
+        <InfoItem Name="CMW500" Value="GPIB,GPIB;TcpClient,IP" />
+        <InfoItem Name="LPIQ2010" Value="SWFacade,IP,USB" />
+        <InfoItem Name="LPIQxel" Value="TcpClient,IP" />
+        <InfoItem Name="NITrident" Value="SWFacade" />
+        <InfoItem Name="AnritsuMT8870A" Value="TcpClient,IP" />
+      </InstList>
+      <InstList>
+        <Name>BTInst</Name>
+        <InfoItem Name="QTI SCPI" Value="SWFacade,USB,GPIB;TcpClient,IP;GPIB,GPIB" />
+        <InfoItem Name="AgilentN4010A" Value="Visa32,USB,GPIB" />
+        <InfoItem Name="CMW100" Value="TcpClient,IP" />
+        <InfoItem Name="CMW500" Value="GPIB,GPIB;TcpClient,IP" />
+        <InfoItem Name="LPIQ2010" Value="SWFacade,IP,USB" />
+        <InfoItem Name="LPIQxel" Value="TcpClient,IP" />
+        <InfoItem Name="NITrident" Value="SWFacade" />
+        <InfoItem Name="AnritsuMT8870A" Value="TcpClient,IP" />
+      </InstList>
+      <InstList>
+        <Name>WCNStationCalSG</Name>
+        <InfoItem Name="AgilentN4010A" Value="USB,GPIB" />
+        <InfoItem Name="CMW500" Value="GPIB,IP" />
+        <InfoItem Name="LPIQ2010" Value="IP,USB" />
+      </InstList>
+      <InstList>
+        <Name>LinkCPSG</Name>
+        <InfoItem Name="Anritsu MT8820" Value="MT8820" />
+        <InfoItem Name="Keysight 8960" Value="E5515" />
+        <InfoItem Name="Keysight EXT/6607C/6640" Value="AGILENTEXT" />
+        <InfoItem Name="R&amp;S CMW500" Value="CMW" />
+        <InfoItem Name="R&amp;S CMU" Value="CMU" />
+        <InfoItem Name="QTI RFCal SCPI" Value="SCPI" />
+        <InfoItem Name="SP6010" Value="SP6010" />
+      </InstList>
+    </All>
+  </Config>
+</Root>

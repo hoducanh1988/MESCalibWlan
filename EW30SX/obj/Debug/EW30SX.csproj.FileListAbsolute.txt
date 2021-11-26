@@ -57,3 +57,5 @@ G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\EW30SX\obj\Debug\EW30SX.pdb
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\Release\EW30SX\EW30SX.exe.config
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\Release\EW30SX\EW30SX.exe
 G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\Release\EW30SX\EW30SX.pdb
+G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\EW30SX\obj\Debug\Views\LoginView.g.cs
+G:\Backup_Tool_Test\repos\06.MESH\02. MESCalibWlan\EW30SX\obj\Debug\Views\LoginView.baml

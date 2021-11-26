@@ -25,8 +25,10 @@ namespace EW30SX.Views {
         AttenuationView atv = new AttenuationView();
         SettingView stv = new SettingView();
         LogView lgv = new LogView();
+        LoginView liv = new LoginView();
         HelpView hpv = new HelpView();
         AboutView abv = new AboutView();
+        public bool isBreak = false;
 
         public MainContentView() {
             InitializeComponent();
@@ -42,6 +44,8 @@ namespace EW30SX.Views {
             if (e.LeftButton == MouseButtonState.Pressed) {
                 mcvm.MCM.Init();
                 this.grid_content.Children.Clear();
+                myGlobal.calibviewmodel.CM.isLogin = false;
+                isBreak = true;
                 switch (control_tag) {
                     case "calibrate": {
                             mcvm.MCM.isCalib = true;
@@ -55,7 +59,21 @@ namespace EW30SX.Views {
                         }
                     case "setting": {
                             mcvm.MCM.isSetting = true;
-                            this.grid_content.Children.Add(stv);
+                            isBreak = false;
+                            liv.lvm.LM.Clear();
+                            this.grid_content.Children.Add(liv);
+                            Thread t = new Thread(new ThreadStart(() => {
+                            RE:
+                                Thread.Sleep(100);
+                                if (myGlobal.calibviewmodel.CM.isLogin == true) {
+                                    App.Current.Dispatcher.Invoke(new Action(() => { this.grid_content.Children.Add(stv); }));
+                                }
+                                else {
+                                    if (isBreak == false) goto RE;
+                                }
+                            }));
+                            t.IsBackground = true;
+                            t.Start();
                             break; 
                         }
                     case "log": {

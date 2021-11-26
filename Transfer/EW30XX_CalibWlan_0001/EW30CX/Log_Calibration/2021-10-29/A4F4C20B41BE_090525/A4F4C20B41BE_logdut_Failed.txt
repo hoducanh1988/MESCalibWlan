@@ -1,0 +1,25 @@
+
+root@VNPT:/# 
+root@VNPT:/# 
+root@VNPT:/# 
+root@VNPT:/# 
+root@VNPT:/# cat /sys/class/net/eth0/address
+a4:f4:c2:0b:41:be
+root@VNPT:/# 
+root@VNPT:/# wifi down
+[  175.375078] mc_detach: disabled snooping on br-lan.
+qcawificfg80211 disable radio wifi0
+qcawificfg80211 disable radio wifi1
+device: wifi0 vifs: cfg023579
+device: wifi1 vifs: cfg043579
+root@VNPT:/# 
+root@VNPT:/# rmmod wifi_3_0
+module is not loaded
+root@VNPT:/# 
+root@VNPT:/# rmmod qca_ol
+root@VNPT:/# 
+root@VNPT:/# insmod qca_ol testmode=1
+root@VNPT:/# 
+root@VNPT:/# insmod wifi_3_0
+[  180.197364] remoteproc remoteproc0: powering up cd00000.qcom_q6v5_wcss
+[  180.839279] remoteproc remoteproc0: Booting fw image IPQ5018/q6_fw.mdt, size 1820

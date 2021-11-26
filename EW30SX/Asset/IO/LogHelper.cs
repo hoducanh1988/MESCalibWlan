@@ -25,7 +25,6 @@ namespace EW30SX.Asset.IO
 
             dir = $"{AppDomain.CurrentDomain.BaseDirectory}Log_{l_type.ToString()}\\{DateTime.Now.ToString("yyyy-MM-dd")}\\{string.Format("{0}_{1}_{2}", mac, DateTime.Now.ToString("HHmmss"), result)}";
             if (Directory.Exists(dir) == false) Directory.CreateDirectory(dir);
-            
         }
 
 

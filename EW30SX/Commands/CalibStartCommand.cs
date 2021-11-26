@@ -49,10 +49,12 @@ namespace EW30SX.Commands {
                 //check QPST app running or not
                 r = WindowProcess.isProcessRunning("QPSTServer");
                 if (!r) {
-                    System.Windows.MessageBox.Show(@"Vui lòng chạy file QPSTServer.exe trong đường dẫn C:\Program Files (x86)\Qualcomm\QPST\bin trước khi calib sản phẩm.", 
-                        "QPST ERROR", 
-                        System.Windows.MessageBoxButton.OK, 
-                        System.Windows.MessageBoxImage.Error);
+                    if (System.Windows.MessageBox.Show("Vui lòng chạy file QPSTServer.exe trong đường dẫn C:\\Program Files (x86)\\Qualcomm\\QPST\\bin trước khi calib sản phẩm.\nBạn có muốn mở file ngay không?",
+                        "QPST ERROR",
+                        System.Windows.MessageBoxButton.YesNo,
+                        System.Windows.MessageBoxImage.Error) == System.Windows.MessageBoxResult.Yes) {
+                        Process.Start(@"C:\Program Files (x86)\Qualcomm\QPST\bin\QPSTConfig.exe");
+                    }
                     return;
                 }
 

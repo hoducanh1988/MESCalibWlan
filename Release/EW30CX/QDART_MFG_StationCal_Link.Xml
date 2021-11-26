@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Config>
+    <LanguageUsed>ENGLISH</LanguageUsed>
+    <Station>LossEditorRF</Station>
+    <Language>ENGLISH</Language>
+    <MultiDUT>False</MultiDUT>
+    <DUTBaseOnPanels>True</DUTBaseOnPanels>
+    <FreqListMethod>2</FreqListMethod>
+    <NumToBand>3</NumToBand>
+    <DUTs>3</DUTs>
+    <File>C:\Program Files (x86)\Qualcomm\QDART\Databases\MultiplexManagerConfigFile.xml</File>
+    <PassWord>qc123</PassWord>
+    <DRxUseAux>true</DRxUseAux>
+    <Engine>QSPR</Engine>
+    <All>
+      <Panel>
+        <Name>LossEditorRF</Name>
+        <File Index="1" Type="Source" Name="xml" Value="..\Databases\CalDB_NET.xml" />
+        <InfoItem Name="MfgNodes" Value="5GNR_SUB6,QTA,CDMA,CDMA_DIV,CDMA_HDR_SUITE,CDMA_HDR_SUITE_DIV,CDMA_SUITE,CDMA_SUITE_DIV,GENERIC,GENERIC_DIV,GSM,GSM_SUITE,LTE,LTE_DIV,RFCAL_CDMA,RFCAL_CDMA_DIV,RFCAL_GSM,RFCAL_LTE,RFCAL_LTE_DIV,RFCAL_WCDMA,RFCAL_WCDMA_DIV,TDSCDMA,WCDMA,WCDMA_DIV,WCDMA_SUITE,WCDMA_SUITE_DIV" />
+      </Panel>
+      <Panel>
+        <Name>GoldUnitStationCal</Name>
+        <File Index="1" Type="Source" Name="xtt" Value="..\XTT\SubSysStationCalibration\QDART_MFG__AllTechnologies__GoldUnit__x1__StnCal3.0.xtt" />
+        <InfoItem Name="DataNV" Value="2500" />
+        <InfoItem Name="PS" Value="Power Supply On,PS Off" />
+      </Panel>
+      <Panel>
+        <Name>GoldUnitStationCalForceTRxXML</Name>
+        <File Index="1" Type="Source" Name="xtt" Value="..\XTT\SubSysStationCalibration\QDART_AllTech__Force_TRx_GoldUnit__StnCal1.0.xtt" />
+      </Panel>
+      <Panel>
+        <Name>GoldUnitStationCalXML</Name>
+        <File Index="1" Type="Source" Name="xtt" Value="..\XTT\SubSysStationCalibration\QDART_AllTech__RF_FTM_CalVer__StnCal1.0.xtt" />
+        <InfoItem Name="DataNV" Value="2500" />
+        <InfoItem Name="PS" Value="Power Supply On,PS Off" />
+      </Panel>
+      <Panel>
+        <Name>GoldUnitStationCalXMLSUB6</Name>
+        <File Index="1" Type="Source" Name="xtt" Value="..\XTT\SubSysStationCalibration\QDART_AllTech__RF_FTM_CalVer__NR5GSUB6__StnCal1.0.xtt" />
+        <InfoItem Name="DataNV" Value="2500" />
+        <InfoItem Name="PS" Value="Power Supply On,PS Off" />
+      </Panel>
+      <Panel>
+        <Name>SG_PM_StationCal</Name>
+        <File Index="1" Type="Source" Name="xtt" Value="..\XTT\SubSysStationCalibration\QDART_MFG__AllTechnologies__StationCal__x1__StnCal3.0.xtt" />
+        <InfoItem Name="DoPmSelfCal" Value="PowerMeterSelfCal" />
+        <InfoItem Name="DoCpSelfCal" Value="CallProcSelfCal" />
+        <InfoItem Name="DoRefCal" Value="ReferenceCalibration" />
+        <InfoItem Name="DoRefCalHookUp" Value="Connect PM to SG Msg" />
+        <InfoItem Name="GSM" Value="CStnCal_CallProcSelfCal_GSM,GSM,Link GSM,Link GSM RFCAL" />
+        <InfoItem Name="WCDMA" Value="CStnCal_CallProcSelfCal_WCDMA,WCDMA,Link WCDMA,Link WCDMA RFCAL" />
+        <InfoItem Name="CDMA" Value="CStnCal_CallProcSelfCal_CDMA,CDMA_HDR,Link CDMA,Link CDMA RFCAL" />
+        <InfoItem Name="TD_SCDMA" Value="CStnCal_CallProcSelfCal_TDSCDMA,TD_SCDMA,Link TDSCDMA" />
+        <InfoItem Name="LTE" Value="Link LTE" />
+        <InfoItem Name="FreqList" Value="CStnCal_ReferenceCal,CStnCal_UplinkPathCal" />
+        <InfoItem Name="FreqListExt" Value="CStnCal_DownlinkPathCal" />
+      </Panel>
+      <Panel>
+        <Name>PM_StationCal</Name>
+        <File Index="1" Type="Source" Name="xtt" Value="..\XTT\SubSysStationCalibration\StationCal__AllTechnologies__C_W_G_T__Xvc__StnCal3.0.xtt" />
+        <InfoItem Name="DoPmSelfCal" Value="PowerMeterSelfCal" />
+        <InfoItem Name="DoCpSelfCal" Value="CallProcSelfCal" />
+        <InfoItem Name="DoRefCal" Value="ReferenceCalibration" />
+        <InfoItem Name="DoRefCalOptional" Value="RefCal Optional Msg" />
+        <InfoItem Name="DoRefCalHookUp" Value="RefCal Connect PM Msg" />
+        <InfoItem Name="DoRefCalAfter" Value="Connect RF Msg" />
+        <InfoItem Name="GSM" Value="CStnCal_CallProcSelfCal_GSM,GSM,Link GSM,Link GSM RFCAL" />
+        <InfoItem Name="WCDMA" Value="CStnCal_CallProcSelfCal_WCDMA,WCDMA,Link WCDMA,Link WCDMA RFCAL" />
+        <InfoItem Name="CDMA" Value="CStnCal_CallProcSelfCal_CDMA,CDMA_HDR,Link CDMA,Link CDMA RFCAL" />
+        <InfoItem Name="TD_SCDMA" Value="CStnCal_CallProcSelfCal_TDSCDMA,TD_SCDMA,Link TDSCDMA" />
+        <InfoItem Name="LTE" Value="CStnCal_CallProcSelfCal_LTE,LTE,Link LTE,Link LTE RFCAL,Link LTE DIV" />
+        <InfoItem Name="FreqList" Value="UplinkPathCal_V2" />
+        <InfoItem Name="FreqListExt" Value="DownlinkRefCal,DownlinkPathCal" />
+      </Panel>
+      <Panel>
+        <Name>PM_StationCal_SCPI</Name>
+        <File Index="1" Type="Source" Name="xtt" Value="..\XTT\SubSysStationCalibration\StationCal__AllTech__SCPI__C_W_G_T_L__Xvc__StnCal3.0.xtt" />
+        <InfoItem Name="DoPmSelfCal" Value="PowerMeterSelfCal" />
+        <InfoItem Name="DoCpSelfCal" Value="CallProcSelfCal" />
+        <InfoItem Name="DoRefCal" Value="ReferenceCalibration" />
+        <InfoItem Name="DoRefCalOptional" Value="RefCal Optional Msg" />
+        <InfoItem Name="DoRefCalHookUp" Value="RefCal Connect PM Msg" />
+        <InfoItem Name="DoRefCalAfter" Value="Connect RF Msg" />
+        <InfoItem Name="GSM" Value="CStnCal_CallProcSelfCal_GSM,GSM,Link GSM,Link GSM RFCAL" />
+        <InfoItem Name="WCDMA" Value="CStnCal_CallProcSelfCal_WCDMA,WCDMA,Link WCDMA,Link WCDMA RFCAL" />
+        <InfoItem Name="CDMA" Value="CStnCal_CallProcSelfCal_CDMA,CDMA_HDR,Link CDMA,Link CDMA RFCAL" />
+        <InfoItem Name="TD_SCDMA" Value="CStnCal_CallProcSelfCal_TDSCDMA,TD_SCDMA,Link TDSCDMA" />
+        <InfoItem Name="LTE" Value="CStnCal_CallProcSelfCal_LTE,LTE,Link LTE,Link LTE RFCAL,Link LTE DIV" />
+        <InfoItem Name="FreqList" Value="UplinkPathCal_V2" />
+        <InfoItem Name="FreqListExt" Value="DownlinkRefCal,DownlinkPathCal" />
+      </Panel>
+      <Panel>
+        <Name>WCNStationCal</Name>
+        <File Index="1" Type="Source" Name="xtt" Value="C:\Qualcomm\WCN\ProdTests\Test Trees\StationalCalibration_v1.0.xtt" />
+        <InfoItem Name="BT" Value="BT Station Calibration" />
+        <InfoItem Name="WLAN" Value="WLAN Station Calibration" />
+        <InfoItem Name="FM" Value="FM Station Calibration" />
+      </Panel>
+      <TechList>
+        <Name>CDMA</Name>
+        <Value>False</Value>
+        <InfoItem Name="BC0" Value="False" />
+        <InfoItem Name="BC1" Value="False" />
+        <InfoItem Name="BC6" Value="False" />
+        <InfoItem Name="BC15" Value="False" />
+      </TechList>
+      <TechList>
+        <Name>GSM</Name>
+        <Value>True</Value>
+        <InfoItem Name="850" Value="True" />
+        <InfoItem Name="900" Value="True" />
+        <InfoItem Name="1800" Value="True" />
+        <InfoItem Name="1900" Value="True" />
+      </TechList>
+      <TechList>
+        <Name>LTE</Name>
+        <Value>True</Value>
+        <InfoItem Name="BC1" Value="False" />
+        <InfoItem Name="BC2" Value="False" />
+        <InfoItem Name="BC3" Value="False" />
+        <InfoItem Name="BC4" Value="False" />
+        <InfoItem Name="BC5" Value="False" />
+        <InfoItem Name="BC7" Value="False" />
+        <InfoItem Name="BC8" Value="False" />
+        <InfoItem Name="BC17" Value="False" />
+        <InfoItem Name="BC20" Value="False" />
+        <InfoItem Name="BC26" Value="False" />
+        <InfoItem Name="BC28" Value="False" />
+        <InfoItem Name="BC38" Value="True" />
+        <InfoItem Name="BC39" Value="True" />
+        <InfoItem Name="BC40" Value="False" />
+        <InfoItem Name="BC41" Value="False" />
+		    <InfoItem Name="BC42" Value="False" />
+		    <InfoItem Name="BC43" Value="False" />
+		    <InfoItem Name="BC66" Value="False" />
+		    <InfoItem Name="BC252" Value="False" />
+		    <InfoItem Name="BC255" Value="False" />
+      </TechList>
+      <TechList>
+        <Name>TD_SCDMA</Name>
+        <Value>True</Value>
+        <InfoItem Name="BC34" Value="True" />
+        <InfoItem Name="BC39" Value="True" />
+        <InfoItem Name="BC40" Value="False" />
+      </TechList>
+      <TechList>
+        <Name>WCDMA</Name>
+        <Value>True</Value>
+        <InfoItem Name="BC1" Value="True" />
+        <InfoItem Name="BC2" Value="False" />
+        <InfoItem Name="BC4" Value="False" />
+        <InfoItem Name="BC5" Value="False" />
+        <InfoItem Name="BC8" Value="False" />
+      </TechList>
+      <TechList>
+        <Name>NR5GSUB6</Name>
+        <Value>True</Value>
+        <InfoItem Name="n41" Value="True" />
+        <InfoItem Name="n77" Value="False" />
+        <InfoItem Name="n78" Value="True" />
+        <InfoItem Name="n79" Value="False" />
+      </TechList>
+      <FreqList>
+        <InfoItem Name="GSM" Value="820,825,830,840,845,850,870,875,880,885,890,895,900,905,910,915,920,925,930,935,940,945,950,960,1710,1715,1720,1725,1730,1735,1740,1745,1750,1755,1760,1765,1770,1775,1780,1785,1805,1810,1815,1820,1830,1835,1840,1845,1850,1855,1860,1865,1870,1875,1880,1885,1890,1895,1900,1905,1910,1930,1935,1940,1945,1950,1955,1960,1965,1970,1975,1980,1985,1990" />
+        <InfoItem Name="WCDMA" Value="600,630,660,690,720,750,780,810,840,870,900,930,960,1410,1440,1470,1500,1530,1560,1590,1620,1650,1680,1710,1740,1770,1800,1830,1860,1890,1920,1950,1980,2010,2040,2070,2100,2130,2160,2190,2220,2250,2280,2310,2340,2370,2400,2430,2460,2490,2520,2550,2580,2610,2640,2670,2700,3400,3420,3440,3460,3480,3500,3520,3540,3560,3580,3600,3620,3640,3660,3680,3700,3720,3740,3760,3780,3800,5150,5175,5200,5225,5250,5275,5300,5325,5350,5375,5400,5425,5450,5475,5500,5525,5550,5575,5600,5625,5650,5675,5700,5725,5750,5775,5800,5825,5850,5875,5900,5925" />
+        <InfoItem Name="CDMA" Value="450,460,465,470,690,700,710,720,730,740,750,820,830,840,850,860,870,890,900,910,920,930,940,950,960,1710,1720,1730,1740,1750,1760,1770,1780,1790,1800,1810,1820,1830,1840,1850,1860,1870,1880,1900,1910,1920,1930,1940,1950,1960,1970,1980,1990,2110,2120,2130,2140,2150,2160,2170" />
+        <InfoItem Name="TD_SCDMA" Value="1880.8,1882.8,1884.8,1886.8,1888.8,1890.8,1892.8,1894.8,1896.8,1898.8,1900.8,1902.8,1904.8,1906.8,1908.8,1910.8,1912.8,1914.8,1916.8,1918.8,1919.2,2010.8,2012.8,2014.8,2016.8,2018.8,2020.8,2022.8,2024.2,2300.8,2302.8,2304.8,2306.8,2308.8,2310.8,2312.8,2314.8,2316.8,2318.8,2320.8,2322.8,2324.8,2326.8,2328.8,2330.8,2332.8,2334.8,2336.8,2338.8,2340.8,2342.8,2344.8,2346.8,2348.8,2350.8,2352.8,2354.8,2356.8,2358.8,2360.8,2362.8,2364.8,2366.8,2368.8,2370.8,2372.8,2374.8,2376.8,2378.8,2380.8,2382.8,2384.8,2386.8,2388.8,2390.8,2392.8,2394.8,2396.8,2398.8,2399.2" />
+        <InfoItem Name="LTE" Value="600,630,660,690,720,750,780,810,840,870,900,930,960,1410,1440,1470,1500,1530,1560,1590,1620,1650,1680,1710,1740,1770,1800,1830,1860,1890,1920,1950,1980,2010,2040,2070,2100,2130,2160,2190,2220,2250,2280,2310,2340,2370,2400,2430,2460,2490,2520,2550,2580,2610,2640,2670,2700,3400,3420,3440,3460,3480,3500,3520,3540,3560,3580,3600,3620,3640,3660,3680,3700,3720,3740,3760,3780,3800,5150,5175,5200,5225,5250,5275,5300,5325,5350,5375,5400,5425,5450,5475,5500,5525,5550,5575,5600,5625,5650,5675,5700,5725,5750,5775,5800,5825,5850,5875,5900,5925" />
+        <InfoItem Name="GSM:900" Value="880,915;925,960" />
+        <InfoItem Name="GSM:1800" Value="1710,1785;1805,1880" />
+        <InfoItem Name="GSM:1900" Value="1850,1910;1930,1990" />
+        <InfoItem Name="GSM:850" Value="820,850;865,895" />
+        <InfoItem Name="WCDMA:BC1" Value="1920,1980;2110,2170" />
+        <InfoItem Name="WCDMA:BC2" Value="1850,1910;1930,1990" />
+        <InfoItem Name="WCDMA:BC4" Value="1710,1755;2110,2155" />
+        <InfoItem Name="WCDMA:BC5" Value="825,850;870,895" />
+        <InfoItem Name="WCDMA:BC8" Value="880,915;925,960" />
+        <InfoItem Name="CDMA:BC0" Value="815,850;860,895" />
+        <InfoItem Name="CDMA:BC1" Value="1850,1910;1930,1990" />
+        <InfoItem Name="CDMA:BC6" Value="1920,1980;2110,2170" />
+        <InfoItem Name="CDMA:BC15" Value="1710,1755;2110,2155" />
+        <InfoItem Name="TD_SCDMA:BC34" Value="2010,2025;2010,2025" />
+        <InfoItem Name="TD_SCDMA:BC39" Value="1880,1920;1880,1920" />
+        <InfoItem Name="TD_SCDMA:BC40" Value="2300,2400;2300,2400" />
+        <InfoItem Name="LTE:BC1" Value="1920,1979.9;2110,2169.9" />
+        <InfoItem Name="LTE:BC2" Value="1850,1909.9;1930,1989.9" />
+        <InfoItem Name="LTE:BC3" Value="1710,1784.9;1805,1879.9" />
+        <InfoItem Name="LTE:BC4" Value="1710,1754.9;2110,2154.9" />
+        <InfoItem Name="LTE:BC5" Value="824,848.9;869,893.9" />
+        <InfoItem Name="LTE:BC7" Value="2500,2570;2620,2690" />
+        <InfoItem Name="LTE:BC8" Value="880,915;925,960" />
+        <InfoItem Name="LTE:BC17" Value="704,715.9;734,745.9" />
+        <InfoItem Name="LTE:BC20" Value="832,862;791,821" />
+        <InfoItem Name="LTE:BC26" Value="814,848.9;859,893.9" />
+        <InfoItem Name="LTE:BC28" Value="703,747.9;758,802.9" />
+        <InfoItem Name="LTE:BC38" Value="2570,2620;2570,2620" />
+        <InfoItem Name="LTE:BC39" Value="1880,1920;1880,1920" />
+        <InfoItem Name="LTE:BC40" Value="2300,2400;2300,2400" />
+        <InfoItem Name="LTE:BC41" Value="2496,2689.9;2496,2689.9" />
+		    <InfoItem Name="LTE:BC42" Value="3400,3600;3400,3600" />
+		    <InfoItem Name="LTE:BC43" Value="3600,3800;3600,3800" />
+		    <InfoItem Name="LTE:BC66" Value="1710,1780;2110,2200" />
+		    <InfoItem Name="LTE:BC252" Value="5150,5250;5150,5250" />
+		    <InfoItem Name="LTE:BC255" Value="5725,5850;5725,5850" />
+      </FreqList>
+    </All>
+  </Config>
+</Root>

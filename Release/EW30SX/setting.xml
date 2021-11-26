@@ -19,9 +19,9 @@
   <valueAttMax>30</valueAttMax>
   <cycleMeasureAtt>500</cycleMeasureAtt>
   <qtyGoldenVerify>1</qtyGoldenVerify>
-  <isChangeIp>true</isChangeIp>
+  <isChangeIp>false</isChangeIp>
   <isRunTesttree>true</isRunTesttree>
-  <qty_remain>494</qty_remain>
+  <qty_remain>493</qty_remain>
   <golden_attenuation>A4F2C20B417A</golden_attenuation>
   <golden_verification>A4F2C20B417A</golden_verification>
 </SettingModel>

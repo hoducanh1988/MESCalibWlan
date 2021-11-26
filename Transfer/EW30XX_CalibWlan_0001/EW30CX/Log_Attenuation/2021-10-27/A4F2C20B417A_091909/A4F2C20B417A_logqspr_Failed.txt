@@ -1,0 +1,1024 @@
+Tree contains 329 tests and was started with serial number: IMAP_A4F2C20B417A
+Temp: Loading Assembly: C:\Qualcomm\WCN\ProdTests\BIN\QC.CTE.WLANTestSuite.DLL
+Test started: InitializeWlanTester-SCPI at: 10/27/2021 9:14:36 AM
+Log: TesterConfig :C:\Users\chien\Desktop\MES_WIFI6\Config\Keysight_E6640A_WCNTesterConfig_2.10 _TRX1.xml
+Log: StationCal   :C:\Users\chien\Desktop\MES_WIFI6\Config\StationCal_pathloss_22OCT2021.xml
+Debug: =================================================
+Debug: WLAN Tester Version
+Debug: =================================================
+Log: =================================================
+Log: WLAN Tester Version
+Log: =================================================
+Log: SCPI Firmware Rev.= QTI_WLAN_SCPI_revision_2018-08-04 ; Instrument ID= Agilent Technologies,E6640A,MY54450490,E.27.06;1.0.22.50 ; System Ver.= 1.90 ; WLAN Ver.= 2.0 ; Instrument Ver.= 1.0.22.50
+Debug: SCPI Firmware Rev.= QTI_WLAN_SCPI_revision_2018-08-04 ; Instrument ID= Agilent Technologies,E6640A,MY54450490,E.27.06;1.0.22.50 ; System Ver.= 1.90 ; WLAN Ver.= 2.0 ; Instrument Ver.= 1.0.22.50
+Debug: Add wlanTester: WLANTester
+Test finished: InitializeWlanTester-SCPI with result: Passed LOOP_DETAILS=testerConfigFileName__C:\Users\chien\Desktop\MES_WIFI6\Config\Keysight_E6640A_WCNTesterConfig_2.10 _TRX1.xml_ _stationCalFileName__C:\Users\chien\Desktop\MES_WIFI6\Config\StationCal_pathloss_22OCT2021.xml_ _WlanTesterResourceID__WLANTester_ _TxStationCalPathName__BH0_LP,BH1_LP,BH2_LP,BH3_LP,BH4_LP,BH5_LP,BH6_LP,BH7_LP_ _RxStationCalPathName__BH0_LP,BH1_LP,BH2_LP,BH3_LP,BH4_LP,BH5_LP,BH6_LP,BH7_LP
+Test started: ConnectDut at: 10/27/2021 9:14:43 AM
+Debug: Add dut: QC.CTE.WlanDutControl.DUT_IPQ807x @ COM30001
+Test finished: ConnectDut with result: Passed LOOP_DETAILS=
+Test started: DutLog at: 10/27/2021 9:14:43 AM
+Log: Log enable params: Enable - True, File Name - C:\log\dutlog_5g.txt
+Test finished: DutLog with result: Passed LOOP_DETAILS=fileName__C:\log\dutlog_5g.txt
+Test started: WlanSetInstance at: 10/27/2021 9:14:43 AM
+Test finished: WlanSetInstance with result: Passed LOOP_DETAILS=
+Test started: WlanLoadDut at: 10/27/2021 9:14:43 AM
+Log: WlanLoadDut() failed: Method not found: 'Void QC.QMSLPhone.Phone.FTM_WLAN_Atheros_SetTimeout(UInt32)'.
+
+Error: WlanLoadDut() failed: Method not found: 'Void QC.QMSLPhone.Phone.FTM_WLAN_Atheros_SetTimeout(UInt32)'.
+
+Test finished: WlanLoadDut with result: Failed LOOP_DETAILS=DevDLLName__ipq8070w6g_ _refDesign__ipq8070_ _eepFName__C:\Qfigs\boardData\bdwlan.bin_ _iNVMemOption__5_ _ssid__0x40
+Test started: SetPhyDutIndex at: 10/27/2021 9:14:43 AM
+Test finished: SetPhyDutIndex with result: Passed LOOP_DETAILS=
+Test started: WlanSetDutTxMacAddressBssId at: 10/27/2021 9:14:43 AM
+Log: Set_Rx_Mac_Address_BssId() failed: iOPCode must to follow tlv dictionary
+Error: Set_Rx_Mac_Address_BssId() failed: iOPCode must to follow tlv dictionary
+Test finished: WlanSetDutTxMacAddressBssId with result: Failed LOOP_DETAILS=
+Temp: Loading Assembly: C:\Program Files (x86)\Qualcomm\QDART\bin\QC.QSPRToolKit.dll
+Test started: Sleep_30s at: 10/27/2021 9:14:44 AM
+Test finished: Sleep_30s with result: Passed LOOP_DETAILS=
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:14 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:14 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:14 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:14 AM
+Debug: freq: 5180 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:14 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:14 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:19 AM
+Log: TxWlanMeasurementQueryChannels() failed: Instrument error queue
+Error: TxWlanMeasurementQueryChannels() failed: Instrument error queue
+Debug: =================================================
+Debug: TxWlanMeasurementQueryChannels() failed: Instrument error queue
+Debug: =================================================
+Log: =================================================
+Log: TxWlanMeasurementQueryChannels() failed: Instrument error queue
+Log: =================================================
+Debug: TxWlanMeasurementQueryChannels() failed: Instrument error queue
+Log: TxMeasureWlanQueryChannels PRE-TEST: -1,"+155,Trig Error - DETECTED;Trigger Timeout"
+Error: TxMeasureWlanQueryChannels PRE-TEST: -1,"+155,Trig Error - DETECTED;Trigger Timeout"
+Log: TxMeasureWlanQueryChannels PRE-TEST: -1,"+155,Trig Error - DETECTED;Trigger Timeout"
+Debug: TxMeasureWlanQueryChannels PRE-TEST: -1,"+155,Trig Error - DETECTED;Trigger Timeout"
+Log: TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"
+Error: TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"
+Log: TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"
+Debug: TxMeasureWlanQueryChannels PRE-TEST: 0,"No Error"
+Log: TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+Error: TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+Log: TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+Debug: TxMeasureWlanQueryChannels POST-TEST: 0,"No Error"
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:20 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:20 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:20 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:20 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:20 AM
+Debug: freq: 5220 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:20 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:20 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:25 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:26 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:26 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:26 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:26 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:26 AM
+Debug: freq: 5260 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:26 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:26 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:32 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:32 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:32 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:32 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:32 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:32 AM
+Debug: freq: 5300 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:32 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:32 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:37 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:38 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:38 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:38 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:38 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:38 AM
+Debug: freq: 5320 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:38 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:38 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:44 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:44 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:44 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:44 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:44 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:44 AM
+Debug: freq: 5500 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:44 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:44 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:45 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:45 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:45 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:45 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:45 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:45 AM
+Debug: freq: 5540 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:45 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:45 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:47 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:47 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:47 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:47 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:47 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:47 AM
+Debug: freq: 5580 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:47 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:47 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:48 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:48 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:48 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:48 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:48 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:49 AM
+Debug: freq: 5620 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:49 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:49 AM
+Log: TxWlanMeasurementInitiate() failed: SendCommandCheckForError() failed: Instrument Error: -1,"+155,Trig Error - DETECTED;Trigger Timeout", ':QCOM:WLAN:SENS:INIT (@1);:QCOM:WLAN:ERR?'
+Error: TxWlanMeasurementInitiate() failed: SendCommandCheckForError() failed: Instrument Error: -1,"+155,Trig Error - DETECTED;Trigger Timeout", ':QCOM:WLAN:SENS:INIT (@1);:QCOM:WLAN:ERR?'
+Test finished: TxWlanMeasurementInitiate with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:54 AM
+Log: TxWlanMeasurementQueryChannels() failed: SetInstrumentMeasuredPhyDutIndex() failed: phyIdentifier (0) was not measured
+Error: TxWlanMeasurementQueryChannels() failed: SetInstrumentMeasuredPhyDutIndex() failed: phyIdentifier (0) was not measured
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:15:54 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:15:54 AM
+Test finished: Clear_Instrument_Errors with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:15:54 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:15:54 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:15:54 AM
+Debug: freq: 5660 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:15:54 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:15:54 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:15:59 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:00 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:00 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:00 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:00 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:00 AM
+Debug: freq: 5700 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:00 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:00 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:05 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:06 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:06 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:06 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:06 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:06 AM
+Debug: freq: 5745 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:06 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:06 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:11 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:12 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:12 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:12 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:12 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:12 AM
+Debug: freq: 5785 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:12 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:12 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:17 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:18 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:18 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:18 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:18 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:18 AM
+Debug: freq: 5825 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:18 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:18 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:23 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:24 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:24 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:24 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:24 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:24 AM
+Debug: freq: 5865 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:24 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:24 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:29 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:30 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:30 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:30 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:30 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:30 AM
+Debug: freq: 5885 freq2: 0 Rate: 28 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:30 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:30 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:35 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:36 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_1_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:36 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:36 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:36 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:36 AM
+Debug: freq: 5180 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:36 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:36 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:41 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:42 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5180_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:42 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:42 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:42 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:42 AM
+Debug: freq: 5220 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:42 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:42 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:47 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:48 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5220_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:48 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:48 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:48 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:48 AM
+Debug: freq: 5260 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:48 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:48 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:53 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:16:54 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5260_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:16:54 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:16:54 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:16:54 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:16:54 AM
+Debug: freq: 5300 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:16:54 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:16:54 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:16:59 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:00 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5300_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:00 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:00 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:00 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:00 AM
+Debug: freq: 5320 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:17:00 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:00 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:05 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:06 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5320_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:06 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:06 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:06 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:06 AM
+Debug: freq: 5500 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:17:06 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:06 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:11 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:12 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5500_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:12 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:12 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:12 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:12 AM
+Debug: freq: 5540 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:12 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:17 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:18 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5540_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:18 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:18 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:18 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:18 AM
+Debug: freq: 5580 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:18 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:24 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:24 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5580_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:24 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:24 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:24 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:24 AM
+Debug: freq: 5620 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:17:24 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:24 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:30 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:30 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5620_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:30 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:30 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:30 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:30 AM
+Debug: freq: 5660 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:17:30 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:30 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:36 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:36 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5660_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:36 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:36 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:36 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:36 AM
+Debug: freq: 5700 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:17:36 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:37 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:42 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:42 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5700_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:42 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:42 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:42 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:42 AM
+Debug: freq: 5745 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:17:43 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:43 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:48 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:48 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5745_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:48 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:48 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:48 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:48 AM
+Debug: freq: 5785 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:17:49 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:49 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:17:54 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:17:54 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5785_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:17:54 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:17:54 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:17:54 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:17:55 AM
+Debug: freq: 5825 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: dpdComplete at: 10/27/2021 9:17:55 AM
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:17:55 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:18:00 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:18:00 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5825_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:18:00 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:18:00 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:18:00 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:18:01 AM
+Debug: freq: 5865 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:18:01 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:18:06 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:18:06 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5865_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:18:06 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:18:06 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:18:06 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:18:07 AM
+Debug: freq: 5885 freq2: 0 Rate: 28 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Log: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Error: dpdComplete() failed: iOPCode must to follow tlv dictionary
+Test finished: dpdComplete with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:18:07 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: TxWlanMeasurementQueryChannels at: 10/27/2021 9:18:12 AM
+Test finished: TxWlanMeasurementQueryChannels with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: GetTxReport2 at: 10/27/2021 9:18:12 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__3_ _Tx_ChainMaskH__0_._rateBw__RateBW_11AC_VHT20_ _rate__RATE_MCS_8_ _cbState__primary20_ _channel__5885_ _channel2__0_ _ldpcRate__False_._chainMask__WLAN_CHAIN_2_._powerLevel__10
+Test started: ConnectDut at: 10/27/2021 9:18:12 AM
+Debug: Add dut: QC.CTE.WlanDutControl.DUT_IPQ807x @ COM30001
+Test finished: ConnectDut with result: Passed LOOP_DETAILS=
+Log: Log enable params: Enable - True, File Name - C:\log\dutlog_5g.txt
+Test finished: DutLog with result: Passed LOOP_DETAILS=fileName__C:\log\dutlog_5g.txt
+Test started: WlanSetInstance at: 10/27/2021 9:18:12 AM
+Test finished: WlanSetInstance with result: Passed LOOP_DETAILS=
+Test started: WlanLoadDut at: 10/27/2021 9:18:13 AM
+Log: WlanLoadDut() failed: Method not found: 'Void QC.QMSLPhone.Phone.FTM_WLAN_Atheros_SetTimeout(UInt32)'.
+
+Error: WlanLoadDut() failed: Method not found: 'Void QC.QMSLPhone.Phone.FTM_WLAN_Atheros_SetTimeout(UInt32)'.
+
+Test finished: WlanLoadDut with result: Failed LOOP_DETAILS=DevDLLName__ipq8070_ _refDesign__ipq8070_ _eepFName__C:\Qfigs\boardData\bdwlan.bin_ _iNVMemOption__5_ _ssid__0x40
+Test started: SetPhyDutIndex at: 10/27/2021 9:18:13 AM
+Test finished: SetPhyDutIndex with result: Passed LOOP_DETAILS=
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:18:13 AM
+Debug: freq: 2412 freq2: 0 Rate: 27 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:18:13 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:18:13 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:18:13 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:18:13 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/27/2021 9:18:18 AM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:20 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:21 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+Test started: GetTxReport2 at: 10/27/2021 9:18:21 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: GetTxReport2 at: 10/27/2021 9:18:21 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:18:21 AM
+Debug: freq: 2437 freq2: 0 Rate: 27 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:18:21 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:18:21 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:18:21 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:18:21 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/27/2021 9:18:27 AM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:29 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:29 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+Test started: GetTxReport2 at: 10/27/2021 9:18:30 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: GetTxReport2 at: 10/27/2021 9:18:30 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:18:30 AM
+Debug: freq: 2472 freq2: 0 Rate: 27 ChainMask: 1
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:18:30 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:18:30 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:18:30 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:18:30 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/27/2021 9:18:35 AM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:37 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:38 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_1_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH0_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:18:38 AM
+Debug: freq: 2412 freq2: 0 Rate: 27 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:18:38 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:18:39 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:18:39 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:18:39 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/27/2021 9:18:44 AM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:46 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:46 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+Test started: GetTxReport2 at: 10/27/2021 9:18:47 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: GetTxReport2 at: 10/27/2021 9:18:47 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2412_ _channel2__0
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:18:47 AM
+Debug: freq: 2437 freq2: 0 Rate: 27 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:18:47 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:18:47 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:18:47 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:18:47 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/27/2021 9:18:52 AM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:54 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:18:55 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: GetTxReport2 at: 10/27/2021 9:18:56 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2437_ _channel2__0
+Test started: SetUpDutTxDetails2 at: 10/27/2021 9:18:56 AM
+Debug: freq: 2472 freq2: 0 Rate: 27 ChainMask: 2
+Debug: powerLevel: 10
+Log: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Error: SetUpDutTxDetails2() failed: iOPCode must to follow tlv dictionary
+Test finished: SetUpDutTxDetails2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Clear_Instrument_Errors at: 10/27/2021 9:18:56 AM
+Test finished: Clear_Instrument_Errors with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfigurationClear at: 10/27/2021 9:18:56 AM
+Test finished: TxWlanMeasurementConfigurationClear with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementConfiguration at: 10/27/2021 9:18:56 AM
+Test finished: TxWlanMeasurementConfiguration with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementInitiate at: 10/27/2021 9:18:56 AM
+Test finished: TxWlanMeasurementInitiate with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: Sleep at: 10/27/2021 9:19:01 AM
+Test finished: Sleep with result: Passed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:19:03 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__1
+Test started: TxWlanMeasurementQueryChannels_EVM at: 10/27/2021 9:19:04 AM
+Test finished: TxWlanMeasurementQueryChannels_EVM with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0_._retest__2
+Test started: GetTxReport2 at: 10/27/2021 9:19:04 AM
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0_._chainMask__WLAN_CHAIN_2_ _chainMaskH__WLAN_CHAIN_NONE_ _configName__CH1_ _Meas_Chainmask__1_ _Meas_ChainmaskH__0
+Log: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Error: GetTxReport2() failed: iOPCode must to follow tlv dictionary
+Test finished: GetTxReport2 with result: Failed LOOP_DETAILS=testSelect__EVM_Power_ _Tx_ChainMask__15_ _Tx_ChainMaskH__0_._phyId__PHY_A0_ _rateBw__RateBW_11N_HT20_ _rate__RATE_MCS_7_ _cbState__primary20_ _payLoadSize__64000_ _powerLevel__10_ _chEvmMaxDbUL__-30_._channel__2472_ _channel2__0
+Test started: SetDutIndexToDefault at: 10/27/2021 9:19:04 AM
+Test finished: SetDutIndexToDefault with result: Passed LOOP_DETAILS=
+Log: Log enable params: Enable - True, File Name - C:\log\dut_log.txt
+Test finished: DutLog with result: Passed LOOP_DETAILS=
+Test started: DisconnectDut at: 10/27/2021 9:19:04 AM
+Debug: Remove dut: QC.CTE.WlanDutControl.DUT_IPQ807x @ COM30001
+Log: DisconnectDut() failed: FTM_WLAN_Atheros_UNLoadDUT failed.
+Error: DisconnectDut() failed: FTM_WLAN_Atheros_UNLoadDUT failed.
+Test finished: DisconnectDut with result: Failed LOOP_DETAILS=
+Temp: Loading Assembly: C:\Qualcomm\WCN\ProdTests\BIN\QC.CTE.QSPRWCNUtility.DLL
+Test started: Time-4 at: 10/27/2021 9:19:06 AM
+Test finished: Time-4 with result: Passed LOOP_DETAILS=
+Test started: DisconnectWlanTester at: 10/27/2021 9:19:06 AM
+Debug: Remove wlanTester: WLANTester
+Test finished: DisconnectWlanTester with result: Passed LOOP_DETAILS=
+Test started: Time-5 at: 10/27/2021 9:19:06 AM
+Test finished: Time-5 with result: Passed LOOP_DETAILS=
+Tree finished with result: Failed and error code: 

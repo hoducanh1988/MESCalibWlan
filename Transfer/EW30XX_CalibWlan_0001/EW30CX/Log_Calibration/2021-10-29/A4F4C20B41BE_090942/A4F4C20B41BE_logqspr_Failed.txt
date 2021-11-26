@@ -1,0 +1,11 @@
+Tree contains 166 tests and was started with serial number: IMAP_A4F4C20B41BE
+Test started: InputDUT_2G_MAC_WIFI0 at: 10/29/2021 9:09:30 AM
+Test finished: InputDUT_2G_MAC_WIFI0 with result: Passed LOOP_DETAILS=
+OutputParam_UserInput:2
+Test started: InputDUT_5G_MAC_WIFI1 at: 10/29/2021 9:09:35 AM
+Test finished: InputDUT_5G_MAC_WIFI1 with result: Passed LOOP_DETAILS=
+OutputParam_UserInput:2
+Test started: InitializeWlanTester-SCPI at: 10/29/2021 9:09:41 AM
+Test finished: InitializeWlanTester-SCPI with result: Failed LOOP_DETAILS=testerConfigFileName__C:\Qfigs\TesterConfigFile\Keysight_Config_Example_VXT_4x1_FW.xml_ _stationCalFileName__C:\Qfigs\stationcal\StationCalDataFile.xml_ _WlanTesterResourceID__WLANTester_ _TxStationCalPathName__BH0_LP,BH1_LP,BH2_LP,BH3_LP,BH4_LP,BH5_LP,BH6_LP,BH7_LP_ _RxStationCalPathName__BH0_LP,BH1_LP,BH2_LP,BH3_LP,BH4_LP,BH5_LP,BH6_LP,BH7_LP
+OutputParam_ErrorMessage:InitializeWlanTester() failed: could not find stationCalFileName 'C:\Qfigs\stationcal\StationCalDataFile.xml'.
+Tree finished with result: Failed and error code: 

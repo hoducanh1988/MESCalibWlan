@@ -65,6 +65,8 @@ namespace EW30SX.Models {
             return true;
         }
 
+        public bool isLogin { get; set; }
+
         string _mac;
         public string macWan {
             get { return _mac; }

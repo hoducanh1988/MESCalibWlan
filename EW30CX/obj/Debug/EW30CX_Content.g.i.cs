@@ -8,12 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/image/about.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/image/attenuation.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/image/calib.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/image/help.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/image/log.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/image/setting.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/image/verify.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("qc.qmslphone.dll")]
 
 
